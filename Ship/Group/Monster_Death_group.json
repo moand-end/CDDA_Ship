@@ -1,0 +1,73 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "death_Sairen_drop",
+    "extend": {
+      "items": [
+        {
+          "item": "Supplies",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "petroleum",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "Tech_Box_T1",
+          "count": [
+            0,
+            1
+          ],
+          "prob": 25
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "death_Purity_drop",
+    "extend": {
+      "items": [
+        {
+          "item": "Supplies",
+          "count": [
+            2,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "petroleum",
+          "count": [
+            2,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "Tech_Box_T1",
+          "count": [
+            0,
+            1
+          ],
+          "prob": 75
+        },
+        {
+          "item": "Purity_head",
+          "count": 1,
+          "prob": 100
+        }
+      ]
+    }
+  }
+]

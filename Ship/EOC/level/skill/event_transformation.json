@@ -1,0 +1,34 @@
+[
+    {
+        "id": "JN_skill_attacks_monster_1",
+        "type": "event_transformation",
+        "event_type": "character_ranged_attacks_monster",
+        "value_constraints": {
+            "weapon": {
+                "equals": [
+                    "itype_id",
+                    "Single_127mm_Main_Gun"
+                ]
+            }
+        },
+        "drop_fields": [
+            "weapon"
+        ]
+    },
+    {
+        "id": "JN_skill_attacks_monster_2",
+        "type": "event_transformation",
+        "event_type": "character_ranged_attacks_monster",
+        "value_constraints": {
+            "weapon": {
+                "equals": [
+                    "itype_id",
+                    "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                ]
+            }
+        },
+        "drop_fields": [
+            "weapon"
+        ]
+    }
+]

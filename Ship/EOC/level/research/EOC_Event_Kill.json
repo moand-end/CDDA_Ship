@@ -1,0 +1,94 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Scientific_kill_sairen_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "只杀量产塞壬",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Study_selection",
+                        "==",
+                        "1"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "sairen_pawn",
+                        {
+                            "context_val": "victim_type"
+                        }
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_622_MI",
+                                "==",
+                                "1"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Scientific_kill_sairen",
+                    "+=",
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Scientific_kill_Knight_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "只杀轻巡「Knight」II型",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Study_selection",
+                        "==",
+                        "1"
+                    ]
+                },
+                {
+                    "compare_string": [
+                        "Knight",
+                        {
+                            "context_val": "victim_type"
+                        }
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_636_MI",
+                                "==",
+                                "1"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Scientific_kill_Knight",
+                    "+=",
+                    "1"
+                ]
+            }
+        ]
+    }
+]

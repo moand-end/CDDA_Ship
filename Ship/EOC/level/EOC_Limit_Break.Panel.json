@@ -1,0 +1,240 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_Limit_Break_1",
+                    "EOC_Ship_Limit_Break_2",
+                    "EOC_Ship_Limit_Break_3",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "突破一阶段",
+                    "突破二阶段",
+                    "突破三阶段",
+                    "返回"
+                ],
+                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<color_green><u_val:Ship_Level_EXP></color>/<u_val:Ship_Level_Need_EXP>)\n阶段:<u_val:Ship_Limit_Break>",
+                "descriptions": [
+                    "等级>10\n所需物品:\n物资:30\n心智魔方:1",
+                    "等级>30\n所需物品:\n物资:40\n心智魔方:1",
+                    "等级>70\n所需物品:\n物资:50\n心智魔方:2",
+                    "返回"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break_1",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                ">=",
+                                "10"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Limit_Break",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 30
+                            }
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Ship_Cubes_Item",
+                                "count": 1
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Limit_Break_end"
+                        ]
+                    },
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 1
+                    },
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 30
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break_2",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                ">=",
+                                "30"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Limit_Break",
+                                "==",
+                                "1"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 40
+                            }
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Ship_Cubes_Item",
+                                "count": 1
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Limit_Break_end"
+                        ]
+                    },
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 1
+                    },
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 40
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break_3",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                ">=",
+                                "70"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Limit_Break",
+                                "==",
+                                "2"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 50
+                            }
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Ship_Cubes_Item",
+                                "count": 2
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Limit_Break_end"
+                        ]
+                    },
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 1
+                    },
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 50
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break_end",
+        "effect": [
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "10 m"
+            },
+            {
+                "math": [
+                    "u_Ship_Limit_Break",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "u_message": "你突破到了第<u_val:Ship_Limit_Break>阶。",
+                "type": "good",
+                "popup": true
+            }
+        ]
+    }
+]

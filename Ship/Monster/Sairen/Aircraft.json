@@ -1,0 +1,248 @@
+[
+    {
+        "id": "Siren_Aircraft",
+        "type": "MONSTER",
+        "name": {
+            "str": "塞壬飞机I型"
+        },
+        "description": "",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "1000000 g",
+        "hp": 300,
+        "regenerates": 0,
+        "speed": 100,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "symbol": "H",
+        "color": "light_cyan",
+        "aggression": 5,
+        "morale": 100,
+        "luminance": 1,
+        "death_drops": "death_Sairen_drop",
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "Missiles_spawn_spell",
+                    "min_level": 1
+                },
+                "allow_no_target": true,
+                "cooldown": 5
+            }
+        ],
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS"
+        ]
+    },
+    {
+        "id": "Siren_Filfusa_Aircraft",
+        "type": "MONSTER",
+        "name": {
+            "str": "菲尔弗萨飞机"
+        },
+        "description": "",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "1000000 g",
+        "hp": 1000,
+        "regenerates": 0,
+        "speed": 100,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "symbol": "H",
+        "color": "light_cyan",
+        "aggression": 5,
+        "morale": 100,
+        "luminance": 1,
+        "death_drops": "death_Sairen_drop",
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "Missiles_spawn_spell_Filfusa_1",
+                    "min_level": 1
+                },
+                "allow_no_target": true,
+                "cooldown": 6
+            }
+        ],
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS"
+        ]
+    },
+    {
+        "id": "Siren_Aircraft_R",
+        "type": "MONSTER",
+        "name": {
+            "str": "塞壬飞机R型"
+        },
+        "description": "",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "1000000 g",
+        "hp": 750,
+        "regenerates": 0,
+        "speed": 75,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "symbol": "H",
+        "color": "light_cyan",
+        "aggression": 5,
+        "morale": 100,
+        "luminance": 1,
+        "death_drops": "death_Sairen_drop",
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "Missiles_spawn_spell_R",
+                    "min_level": 1
+                },
+                "allow_no_target": true,
+                "cooldown": 6
+            }
+        ],
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS"
+        ]
+    },
+    {
+        "id": "Siren_Aircraft_1",
+        "type": "MONSTER",
+        "name": {
+            "str": "导弹"
+        },
+        "description": "",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "1000000 g",
+        "hp": 200,
+        "regenerates": 0,
+        "speed": 200,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "symbol": "k",
+        "color": "light_cyan",
+        "aggression": 100,
+        "morale": 100,
+        "luminance": 1,
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "Spell_Aaircraft_Danmaku",
+                    "min_level": 1
+                },
+                "allow_no_target": true,
+                "cooldown": 5
+            }
+        ],
+        "death_function": {
+            "corpse_type": "NO_CORPSE",
+            "message": "导弹爆炸了！"
+        },
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS"
+        ]
+    },
+    {
+        "id": "Siren_Aircraft_special",
+        "type": "MONSTER",
+        "name": {
+            "str": "导弹"
+        },
+        "description": "",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "1000000 g",
+        "hp": 200,
+        "regenerates": 0,
+        "speed": 0,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "symbol": "k",
+        "color": "light_cyan",
+        "aggression": 100,
+        "morale": 100,
+        "luminance": 1,
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "Spell_Aaircraft_Danmaku",
+                    "min_level": 1
+                },
+                "allow_no_target": true,
+                "cooldown": 1
+            }
+        ],
+        "death_function": {
+            "corpse_type": "NO_CORPSE",
+            "message": "导弹爆炸了！"
+        },
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS"
+        ]
+    }
+]

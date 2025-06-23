@@ -1,0 +1,183 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_LEVER_AP_template",
+        "effect": [
+            {
+                "u_message": "您的舰娘等级已提升。",
+                "type": "good"
+            },
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "-=",
+                    "u_Ship_Level_Need_EXP"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Level",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Level_Need_EXP",
+                    "=",
+                    "100 * ( 1 + (u_Ship_Level / 12.5) + ( floor(u_Ship_Level/10) / 6.25) + ( floor(u_Ship_Level/100) / 3.125 ) )"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "升级计算",
+        "type": "effect_on_condition",
+        "id": "EOC_level_AP",
+        "recurrence": "1 s",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Ship_Judgment",
+                        "!=",
+                        "0"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_Level_EXP",
+                        ">=",
+                        "u_Ship_Level_Need_EXP"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Ship_Level",
+                        "<",
+                        "70"
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_LEVER_AP_template"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "and": [
+                                {
+                                    "math": [
+                                        "u_Ship_Level",
+                                        ">=",
+                                        "70"
+                                    ]
+                                },
+                                {
+                                    "math": [
+                                        "u_Ship_Level",
+                                        "<",
+                                        "80"
+                                    ]
+                                },
+                                {
+                                    "math": [
+                                        "u_Ship_Limit_Break",
+                                        ">=",
+                                        "1"
+                                    ]
+                                }
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "EOC_LEVER_AP_template"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "if": {
+                                    "and": [
+                                        {
+                                            "math": [
+                                                "u_Ship_Level",
+                                                ">=",
+                                                "80"
+                                            ]
+                                        },
+                                        {
+                                            "math": [
+                                                "u_Ship_Level",
+                                                "<",
+                                                "90"
+                                            ]
+                                        },
+                                        {
+                                            "math": [
+                                                "u_Ship_Limit_Break",
+                                                ">=",
+                                                "2"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "run_eocs": [
+                                            "EOC_LEVER_AP_template"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "if": {
+                                            "and": [
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Level",
+                                                        ">=",
+                                                        "90"
+                                                    ]
+                                                },
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Level",
+                                                        "<",
+                                                        "100"
+                                                    ]
+                                                },
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Limit_Break",
+                                                        "==",
+                                                        "3"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "then": [
+                                            {
+                                                "run_eocs": [
+                                                    "EOC_LEVER_AP_template"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

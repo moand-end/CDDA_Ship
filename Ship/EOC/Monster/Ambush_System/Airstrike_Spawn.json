@@ -1,0 +1,101 @@
+[
+    {
+        "//": "飞机空袭",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_Aircraft_bombing",
+        "effect": [
+            {
+                "u_spawn_monster": "Siren_Aircraft",
+                "open_air_allowed": true,
+                "lifespan": {
+                    "math": [
+                        "60 + 30 * u_Siren_activity_level"
+                    ]
+                },
+                "real_count": {
+                    "math": [
+                        "5 + rand(u_Ambush_Level -1)"
+                    ]
+                },
+                "min_radius": [
+                    15,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    25
+                ],
+                "spawn_message": "空袭来了！"
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft_R",
+                "open_air_allowed": true,
+                "lifespan": {
+                    "math": [
+                        "60 + 30 * u_Siren_activity_level"
+                    ]
+                },
+                "real_count": {
+                    "math": [
+                        "3 + rand(u_Ambush_Level -1)"
+                    ]
+                },
+                "min_radius": [
+                    15,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    25
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Filfusa_Aircraft",
+                "open_air_allowed": true,
+                "lifespan": {
+                    "math": [
+                        "60 + 30 * u_Siren_activity_level"
+                    ]
+                },
+                "real_count": {
+                    "math": [
+                        "2 + rand(u_Ambush_Level -1)"
+                    ]
+                },
+                "min_radius": [
+                    15,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    25
+                ]
+            }
+        ]
+    },
+    {
+        "//": "高空空袭",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_High_altitude_bombing",
+        "effect": [
+            {
+                "u_spawn_monster": "Siren_Aircraft",
+                "open_air_allowed": true,
+                "real_count": {
+                    "math": [
+                        "3 + rand(u_Ambush_Level -1) + u_Ambush_Level"
+                    ]
+                },
+                "min_radius": [
+                    0,
+                    5
+                ],
+                "max_radius": [
+                    0,
+                    10
+                ],
+                "spawn_message": "空袭来了！"
+            }
+        ]
+    }
+]

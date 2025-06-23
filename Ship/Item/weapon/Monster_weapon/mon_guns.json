@@ -1,0 +1,59 @@
+[
+  {
+    "id": "sairen_DD_Cannon",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "塞壬DD炮"
+    },
+    "description": "一个塞壬量产型「Pawn」所用的炮。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
+    "skill": "rifle",
+    "durability": 10,
+    "range": 30,
+    "dispersion": 1000,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 150,
+      "armor_penetration": 5
+    }
+  },
+  {
+    "id": "Purity_laser",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "净化者激光"
+    },
+    "description": "净化者激光",
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "LASER"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "rifle",
+    "durability": 10,
+    "range": 30,
+    "dispersion": 5000,
+    "sight_dispersion": 1000,
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        3
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 150,
+      "armor_penetration": 50
+    }
+  }
+]

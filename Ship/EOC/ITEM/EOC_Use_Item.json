@@ -1,0 +1,328 @@
+[
+    {
+        "//": "物品雷达使用(需要更改！！！！！！！！！)",
+        "type": "effect_on_condition",
+        "id": "EOC_radar_Detection",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Siren_Amount",
+                        ">=",
+                        "900"
+                    ]
+                },
+                "then": [
+                    {
+                        "u_message": "<color_red>塞壬无处不在</color>，小心！"
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "math": [
+                                "u_Siren_Amount",
+                                ">=",
+                                "600"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "u_message": "你时不时就能够看到塞壬的影子。"
+                            }
+                        ],
+                        "else": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Siren_Amount",
+                                        ">=",
+                                        "300"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "u_message": "只是偶尔， 雷达才会检测到塞壬。"
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "if": {
+                                            "math": [
+                                                "u_Siren_Amount",
+                                                ">=",
+                                                "0"
+                                            ]
+                                        },
+                                        "then": [
+                                            {
+                                                "u_message": "你等了好一会，都没见雷达有什么反应，差点以为它坏了。"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "之后改为switch",
+        "type": "effect_on_condition",
+        "id": "EOC_Tech_Box_T1_Open",
+        "effect": [
+            {
+                "math": [
+                    "u_Tech_Box_T1_Points",
+                    "=",
+                    "rand(4) + 1"
+                ]
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Tech_Box_T1_Points"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Single_127mm_Main_Gun",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 2,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 3,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 4,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 5,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_533mm_Quintuple_Torpedo_Mount",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "u_consume_item": "Tech_Box_T1",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "//": "武器装备",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Single_127mm_Main_Gun",
+        "condition": {
+            "and": [
+                {
+                    "//": "武器装备cbm",
+                    "not": {
+                        "u_has_bionics": "bio_Single_127mm_Main_Gun"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "//": "武器装备cbm名字",
+                "u_consume_item": "Item_Single_127mm_Main_Gun",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun"
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
+            }
+        ]
+    },
+    {
+        "//": "武器装备",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "//": "武器装备cbm",
+                    "not": {
+                        "u_has_bionics": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "//": "武器装备cbm名字",
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
+            }
+        ]
+    },
+    {
+        "//": "武器装备",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "//": "武器装备cbm",
+                    "not": {
+                        "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "//": "武器装备cbm名字",
+                "u_consume_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
+            }
+        ]
+    },
+    {
+        "//": "武器装备",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "//": "武器装备cbm",
+                    "not": {
+                        "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "//": "武器装备cbm名字",
+                "u_consume_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
+            }
+        ]
+    },
+    {
+        "//": "武器装备",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount",
+        "condition": {
+            "and": [
+                {
+                    "//": "武器装备cbm",
+                    "not": {
+                        "u_has_bionics": "bio_533mm_Quintuple_Torpedo_Mount"
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "//": "武器装备cbm名字",
+                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount"
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
+            }
+        ]
+    }
+]

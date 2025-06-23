@@ -1,0 +1,54 @@
+[
+  {
+    "type": "material",
+    "id": "Mystic Steel",
+    "name": "神秘钢",
+    "density": 8,
+    "specific_heat_liquid": 0.82,
+    "specific_heat_solid": 0.45,
+    "latent_heat": 273,
+    "conductive": true,
+    "soft": true,
+    "chip_resist": 20,
+    "repaired_with": "steel_chunk",
+    "dmg_adj": [
+      "marked",
+      "dented",
+      "smashed",
+      "shattered"
+    ],
+    "bash_dmg_verb": "dented",
+    "cut_dmg_verb": "scratched",
+    "burn_products": [
+      [
+        "scrap",
+        0.5
+      ]
+    ],
+    "resist": {
+      "bash": 6,
+      "cut": 6,
+      "acid": 7,
+      "heat": 3,
+      "bullet": 3
+    },
+    "repair_difficulty": 4
+  },
+  {
+    "type": "material",
+    "id": "petroleum",
+    "name": "压缩石油",
+    "density": 0.9,
+    "copy-from": "hydrocarbons",
+    "fuel_data": {
+      "energy": "100000 kJ",
+      "explosion_data": {
+        "chance_hot": 2,
+        "chance_cold": 5,
+        "factor": 1,
+        "fiery": true,
+        "size_factor": 0.1
+      }
+    }
+  }
+]

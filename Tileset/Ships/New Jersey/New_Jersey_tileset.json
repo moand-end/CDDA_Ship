@@ -1,0 +1,68 @@
+[
+    {
+        "type": "mod_tileset",
+        "compatibility": [
+            "Chibi_Ultica",
+            "UltimateCataclysm",
+            "MshockXottoplus",
+            "UNDEAD_PEOPLE",
+            "UNDEAD_PEOPLE_BASE",
+            "UNDEAD_PEOPLE_LEGACY",
+            "UlticaShell",
+            "MshockXottoplus12",
+            "MSX++DEAD_PEOPLE",
+            "MXplus12_for_cosmetics"
+        ],
+        "tiles-new": [
+            {
+                "file": "Tileset/ships/New Jersey/New_Jersey.png",
+                "sprite_width": 34,
+                "sprite_height": 34,
+                "sprite_offset_x": -1,
+                "sprite_offset_y": -2,
+                "tiles": [
+                    {
+                        "id": "New_Jersey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_New_Jersey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Cos_NewJersey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_Cos_NewJersey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "New_Jersey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_New_Jersey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "New_Jersey_cos",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_New_Jersey_cos",
+                        "fg": 2,
+                        "rotates": false
+                    }
+                ]
+            }
+        ]
+    }
+]

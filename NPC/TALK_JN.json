@@ -1,0 +1,58 @@
+[
+    {
+        "id": [
+            "TALK_FRIEND",
+            "TALK_FRIEND_JN"
+        ],
+        "type": "talk_topic",
+        "dynamic_line": {
+            "math": [
+                "n_has_JN >= 1"
+            ],
+            "yes": "指挥官？",
+            "no": {
+                "is_by_radio": "*pshhhttt* 我正在读给你听，老板，完毕。",
+                "no": {
+                    "has_reason": {
+                        "use_reason": true
+                    },
+                    "no": "朋友，怎么了？"
+                }
+            }
+        },
+        "responses": [
+            {
+                "text": "走吧。",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "id": "TALK_LF",
+        "type": "talk_topic",
+        "dynamic_line": "本森级驱逐舰拉菲听候您的吩咐……\n指挥官，这个耳朵不是真的，请不要再盯着看了……",
+        "responses": [
+            {
+                "text": "很高兴见到你，拉菲",
+                "effect": [
+                    "follow",
+                    {
+                        "npc_first_topic": "TALK_FRIEND_JN"
+                    },
+                    {
+                        "math": [
+                            "n_has_JN",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ],
+                "opinion": {
+                    "trust": 10,
+                    "value": 10
+                },
+                "topic": "TALK_DONE"
+            }
+        ]
+    }
+]

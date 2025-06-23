@@ -1,0 +1,129 @@
+[
+    {
+        "//": "物品心智魔方使用",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_1",
+        "effect": [
+            {
+                "u_message": "心智魔方发出耀眼的光芒，你感觉意识仿佛坠入了大海。",
+                "popup": true
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_Select_2"
+                ],
+                "names": [
+                    "继续"
+                ],
+                "hide_failing": true
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_2",
+        "effect": [
+            {
+                "u_message": "一道亮光出现在大海内，似乎与你很近，你下意识地接近它，而这让你感觉到身体似乎发生了某种变化。",
+                "popup": true
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_Select_3_1",
+                    "EOC_Ship_Select_3_2",
+                    "EOC_Ship_Select_3_3"
+                ],
+                "names": [
+                    "随机选择",
+                    "拉菲",
+                    "新泽西"
+                ],
+                "hide_failing": true
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_3_1",
+        "effect": [
+            {
+                "u_message": "而在感觉到变化之后，你的意识再一次陷入了沉睡。",
+                "popup": true
+            },
+            {
+                "math": [
+                    "u_Ship_Judgment",
+                    "=",
+                    "rand(1) + 1"
+                ]
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Ship_Judgment"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": {
+                            "run_eocs": [
+                                "EOC_Ship_Select_All_Laffey"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 2,
+                        "effect": {
+                            "run_eocs": [
+                                "EOC_Ship_Select_All_NewJersey"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "1 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_3_2",
+        "effect": [
+            {
+                "u_message": "而在感觉到变化之后，你的意识再一次陷入了沉睡。",
+                "popup": true
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_All_Laffey"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "1 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_3_3",
+        "effect": [
+            {
+                "u_message": "而在感觉到变化之后，你的意识再一次陷入了沉睡。",
+                "popup": true
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_All_NewJersey"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "1 h"
+            }
+        ]
+    }
+]

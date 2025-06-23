@@ -1,0 +1,1649 @@
+[
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_open_talk",
+        "dynamic_line": "你站在科研站前,准备进行研究。",
+        "responses": [
+            {
+                "text": "抽取科研项目",
+                "topic": "Scientific_research_talk",
+                "effect": [
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Scientific_research"
+                        ],
+                        "iterations": 10
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk",
+        "dynamic_line": "选择科研项目\n抽卡<u_val:Research_choices>\n387<u_val:Cube_Analysis_H_387_Ml>\n339<u_val:Cube_Analysis_H_339_Ml>\n207<u_val:Cube_Analysis_H_207_RF>\n085<u_val:Cube_Analysis_H_085_UL>\n622<u_val:Cube_Analysis_B_622_MI>\n636<u_val:Cube_Analysis_B_636_MI>\n654<u_val:Cube_Analysis_B_654_MI>\n682<u_val:Cube_Analysis_B_682_MI>\n",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_H_387_Ml",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "魔方解析H-387-Ml",
+                "topic": "Scientific_research_talk_H_387_Ml",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_H_339_Ml",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "魔方解析H-339-Ml",
+                "topic": "Scientific_research_talk_H_339_Ml",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_H_207_RF",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "魔方解析H-207-RF",
+                "topic": "Scientific_research_talk_H_207_RF",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_H_085_UL",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "魔方解析H-085-UL",
+                "topic": "Scientific_research_talk_H_085_UL",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_B_622_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "数据收集B-622-MI",
+                "topic": "Scientific_research_talk_B_622_MI",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_B_636_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "数据收集B-636-MI",
+                "topic": "Scientific_research_talk_B_636_MI",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_B_654_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "数据收集B-654-MI",
+                "topic": "Scientific_research_talk_B_654_MI",
+                "effect": []
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Cube_Analysis_B_682_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "数据收集B-682-MI",
+                "topic": "Scientific_research_talk_B_682_MI",
+                "effect": []
+            },
+            {
+                "text": "刷新",
+                "topic": "Scientific_research_talk",
+                "effect": [
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Scientific_research_refresh"
+                        ],
+                        "iterations": 1
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Scientific_research"
+                        ],
+                        "iterations": 100
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_open_talk_now",
+        "dynamic_line": "是否继续研究？",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_387_Ml",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_H_387_Ml_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_339_Ml",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_H_339_Ml_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_207_RF",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_H_207_RF_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_085_UL",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_H_085_UL_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_B_622_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_B_622_MI_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_B_636_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_B_636_MI_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_B_654_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_B_654_MI_begin"
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_B_682_MI",
+                        "==",
+                        "1"
+                    ]
+                },
+                "text": "继续研究",
+                "topic": "Scientific_research_talk_B_682_MI_begin"
+            },
+            {
+                "text": "返回",
+                "topic": "Scientific_research_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_387_Ml",
+        "dynamic_line": "虽然至今仍未有成功的记录。但是对于心智魔方的构造研究，最简单并且粗暴的方法，就是将心智魔方分解解析。\n\n所需材料:心智魔法x3\n研究成果:心智单元Ⅰx10",
+        "responses": [
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 3
+                    }
+                },
+                "text": "魔方解析H_387_Ml",
+                "topic": "Scientific_research_talk_H_387_Ml_begin",
+                "effect": [
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 3
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_H_387_Ml",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "not": {
+                        "u_has_items": {
+                            "item": "Ship_Cubes_Item",
+                            "count": 3
+                        }
+                    }
+                },
+                "text": "材料不足……",
+                "topic": "Scientific_research_open_talk"
+            },
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 3
+                    }
+                },
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_339_Ml",
+        "dynamic_line": "虽然至今仍未有成功的记录。但是对于心智魔方的构造研究，最简单并且粗暴的方法，就是将心智魔方分解解析。\n\n所需材料:心智魔法x6\n研究成果:心智单元Ⅰx20",
+        "responses": [
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 6
+                    }
+                },
+                "text": "魔方解析H_339_Ml",
+                "topic": "Scientific_research_talk_H_339_Ml_begin",
+                "effect": [
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 6
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_H_339_Ml",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "not": {
+                        "u_has_items": {
+                            "item": "Ship_Cubes_Item",
+                            "count": 6
+                        }
+                    }
+                },
+                "text": "材料不足……",
+                "topic": "Scientific_research_open_talk"
+            },
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 6
+                    }
+                },
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_207_RF",
+        "dynamic_line": "虽然至今仍未有成功的记录。但是对于心智魔方的构造研究，最简单并且粗暴的方法，就是将心智魔方分解解析。\n\n所需材料:心智魔法x10\n研究成果:心智单元Ⅰx40",
+        "responses": [
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 10
+                    }
+                },
+                "text": "魔方解析H_207_RF",
+                "topic": "Scientific_research_talk_H_207_RF_begin",
+                "effect": [
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 10
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_H_207_RF",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "not": {
+                        "u_has_items": {
+                            "item": "Ship_Cubes_Item",
+                            "count": 10
+                        }
+                    }
+                },
+                "text": "材料不足……",
+                "topic": "Scientific_research_open_talk"
+            },
+            {
+                "condition": {
+                    "u_has_items": {
+                        "item": "Ship_Cubes_Item",
+                        "count": 10
+                    }
+                },
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_085_UL",
+        "dynamic_line": "被军部实验室列为最高机密的项目，其结果对人类，乃至整个生态圈，都能产生巨大的影响。\n\n所需材料:心智魔法x3\n物资x8\n研究成果:心智单元Ix15",
+        "responses": [
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 8
+                            }
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Ship_Cubes_Item",
+                                "count": 3
+                            }
+                        }
+                    ]
+                },
+                "text": "魔方解析H-085-UL",
+                "topic": "Scientific_research_talk_H_085_UL_begin",
+                "effect": [
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 3
+                    },
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 8
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_H_085_UL",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "not": {
+                                "u_has_items": {
+                                    "item": "Supplies",
+                                    "count": 8
+                                }
+                            }
+                        },
+                        {
+                            "not": {
+                                "u_has_items": {
+                                    "item": "Ship_Cubes_Item",
+                                    "count": 3
+                                }
+                            }
+                        }
+                    ]
+                },
+                "text": "材料不足……",
+                "topic": "Scientific_research_open_talk"
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 8
+                            }
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Ship_Cubes_Item",
+                                "count": 3
+                            }
+                        }
+                    ]
+                },
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_622_MI",
+        "dynamic_line": "工程师们在对心智魔方的研究过程中，提出了大量天马行空般的设想。该科研项目致力于通过实战的手段，收集各种实验数据以验证实验设想。\n\n所需:打败10只塞壬量产型(不然无法进行科研)\n研究成果:物资x5、心智魔法x1",
+        "responses": [
+            {
+                "text": "数据收集B_622_MI",
+                "topic": "Scientific_research_talk_B_622_MI_begin",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_B_622_MI",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_636_MI",
+        "dynamic_line": "工程师们在对心智魔方的研究过程中，提出了大量天马行空般的设想。该科研项目致力于通过实战的手段，收集各种实验数据以验证实验设想。\n\n所需:打败10只轻巡「Knight」II型(不然无法进行科研)\n研究成果:物资x10、心智魔法x1",
+        "responses": [
+            {
+                "text": "数据收集B_636_MI",
+                "topic": "Scientific_research_talk_B_636_MI_begin",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_B_636_MI",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_654_MI",
+        "dynamic_line": "工程师们在对心智魔方的研究过程中，提出了大量天马行空般的设想。该科研项目致力于通过实战的手段，收集各种实验数据以验证实验设想。\n\n所需:打败1只净化者(不然无法进行科研)\n研究成果:物资x20、心智魔法x2",
+        "responses": [
+            {
+                "text": "数据收集B_654_MI",
+                "topic": "Scientific_research_talk_B_654_MI_begin",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_B_654_MI",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_682_MI",
+        "dynamic_line": "在这个陌生的世界，那些奇异生物是值得研究的。该科研项目致力于通过实战的手段，收集各种实验数据以验证实验设想。\n\n所需:打败100只任意怪物(不然无法进行科研)\n研究成果:物资x10,舰娘经验x200",
+        "responses": [
+            {
+                "text": "数据收集B_682_MI",
+                "topic": "Scientific_research_talk_B_682_MI_begin",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Study_selection_B_682_MI",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "返回",
+                "topic": "Scientific_research_open_talk"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_387_Ml_begin",
+        "dynamic_line": "你将材料放入,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>",
+        "responses": [
+            {
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_H_387_Ml"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_339_Ml_begin",
+        "dynamic_line": "你将材料放入,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>",
+        "responses": [
+            {
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_H_339_Ml_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_H_339_Ml_Point",
+                                "==",
+                                "2"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_H_339_Ml"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_339_Ml_Point",
+                        "==",
+                        "0"
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_H_339_Ml"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_207_RF_begin",
+        "dynamic_line": "你将材料放入,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>",
+        "responses": [
+            {
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_H_207_RF_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_H_207_RF_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_H_207_RF"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_207_RF_Point",
+                        "<=",
+                        "2"
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_H_207_RF_Point",
+                            "+=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_H_207_RF_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_H_207_RF"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_207_RF_Point",
+                        "<=",
+                        "1"
+                    ]
+                },
+                "text": "研究(三小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_H_207_RF_Point",
+                            "+=",
+                            "3"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "3 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_H_207_RF_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_H_207_RF"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "math": [
+                        "u_Study_selection_H_207_RF_Point",
+                        "==",
+                        "0"
+                    ]
+                },
+                "text": "研究(四小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "4 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_H_207_RF"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_H_085_UL_begin",
+        "dynamic_line": "你将材料放入,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>",
+        "responses": [
+            {
+                "text": "研究(半小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "30 m"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_H_085_UL"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_622_MI_begin",
+        "dynamic_line": "你将打败塞壬后收集到的数据传输到研究站里,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>\n\n收集的信息:<u_val:Scientific_kill_sairen>/10",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Scientific_kill_sairen",
+                        ">=",
+                        "10"
+                    ]
+                },
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_622_MI_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_622_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "<=",
+                                "2"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_sairen",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_622_MI_Point",
+                            "+=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_622_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "<=",
+                                "1"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_sairen",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(三小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_622_MI_Point",
+                            "+=",
+                            "3"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "3 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_622_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_622_MI_Point",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_sairen",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(四小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "4 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_B_622_MI"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_636_MI_begin",
+        "dynamic_line": "你将打败塞壬后收集到的数据传输到研究站里,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>\n\n收集的信息:<u_val:Scientific_kill_Knight>/10",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Scientific_kill_Knight",
+                        ">=",
+                        "10"
+                    ]
+                },
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_636_MI_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_636_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "<=",
+                                "2"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Knight",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_636_MI_Point",
+                            "+=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_636_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "<=",
+                                "1"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Knight",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(三小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_636_MI_Point",
+                            "+=",
+                            "3"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "3 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_636_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_636_MI_Point",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Knight",
+                                ">=",
+                                "10"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(四小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "4 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_B_636_MI"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_654_MI_begin",
+        "dynamic_line": "你将打败净化者后收集到的数据传输到研究站里,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>\n\n收集的信息:<u_val:Scientific_kill_Purity>/1",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Scientific_kill_Purity",
+                        ">=",
+                        "1"
+                    ]
+                },
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_654_MI_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_654_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "<=",
+                                "2"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Purity",
+                                ">=",
+                                "1"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_654_MI_Point",
+                            "+=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_654_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "<=",
+                                "1"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Purity",
+                                ">=",
+                                "1"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(三小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_654_MI_Point",
+                            "+=",
+                            "3"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "3 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_654_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_654_MI_Point",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_Purity",
+                                ">=",
+                                "1"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(四小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "4 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_B_654_MI"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "Scientific_research_talk_B_682_MI_begin",
+        "dynamic_line": "你将收集到的数据传输到研究站里,同时准备研究。\n\n<color_red>注意!开始研究就无法结束,请在安全地带进行!</color>\n\n收集的信息:<u_val:Scientific_kill_Purity>/1",
+        "responses": [
+            {
+                "condition": {
+                    "math": [
+                        "u_Scientific_kill_monster",
+                        ">=",
+                        "100"
+                    ]
+                },
+                "text": "研究(一小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_682_MI_Point",
+                            "+=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "1 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_682_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "<=",
+                                "2"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_monster",
+                                ">=",
+                                "100"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(两小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_682_MI_Point",
+                            "+=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "2 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_682_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "<=",
+                                "1"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_monster",
+                                ">=",
+                                "100"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(三小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Study_selection_B_682_MI_Point",
+                            "+=",
+                            "3"
+                        ]
+                    },
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "3 h"
+                    },
+                    {
+                        "if": {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "eoc_complete_B_682_MI"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "condition": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Study_selection_B_682_MI_Point",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Scientific_kill_monster",
+                                ">=",
+                                "100"
+                            ]
+                        }
+                    ]
+                },
+                "text": "研究(四小时)",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "u_assign_activity": "ACT_SHIP_Research",
+                        "duration": "4 h"
+                    },
+                    {
+                        "run_eocs": [
+                            "eoc_complete_B_682_MI"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "关闭",
+                "topic": "TALK_DONE"
+            }
+        ]
+    }
+]

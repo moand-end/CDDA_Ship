@@ -1,0 +1,57 @@
+[
+    {
+        "type": "npc_class",
+        "id": "NPC_JN_LF",
+        "name": "Laffey",
+        "job_description": "Laffey",
+        "bonus_str": {
+            "rng": [
+                3,
+                3
+            ]
+        },
+        "bonus_dex": {
+            "rng": [
+                3,
+                3
+            ]
+        },
+        "bonus_int": {
+            "rng": [
+                3,
+                3
+            ]
+        },
+        "bonus_per": {
+            "rng": [
+                3,
+                3
+            ]
+        },
+        "skills": [
+            {
+                "skill": "ALL",
+                "level": {
+                    "rng": [
+                        5,
+                        5
+                    ]
+                }
+            }
+        ],
+        "//": "NPC_JN_LF_worn,NPC_JN_LF_carry,NPC_JN_LF_weapon",
+        "worn_override": "EMPTY_GROUP",
+        "carry_override": "EMPTY_GROUP",
+        "weapon_override": "EMPTY_GROUP",
+        "traits": [
+            [
+                "npc_lf_mutation",
+                100
+            ],
+            [
+                "npc_Laffey_Ship_Equipment",
+                100
+            ]
+        ]
+    }
+]

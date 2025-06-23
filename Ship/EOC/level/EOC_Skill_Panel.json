@@ -1,0 +1,1230 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_Wargod_of_Solomon",
+                    "EOC_Ship_skill_Retrofit",
+                    "EOC_Ship_skill_All_Out_Assault",
+                    "EOC_Ship_skill_Dragon_s_Breath",
+                    "EOC_Ship_skill_Freedom_Through_Firepower",
+                    "EOC_Ship_skill_Big_J",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "所罗门的战神",
+                    "歼灭模式",
+                    "专属弹幕-拉菲",
+                    "吐息之焰",
+                    "领向自由的炮火",
+                    "Big J",
+                    "返回"
+                ],
+                "hide_failing": true,
+                "title": "这里是技能页面，你可以通过这里查看自己的技能。\n对于技能升级，可以试着阅读相关书籍以及多多触发获得经验。\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>",
+                "descriptions": [
+                    "所罗门的战神:\n自身属性提升炮击20.0%（40.0%）、机动属性提升50.0%（100.0%）",
+                    "歼灭模式:\n每20秒，有40.0%（70.0%）概率开启歼灭模式，速度提升200%，持续10秒，同时发射强力弹幕",
+                    "专属弹幕-拉菲:\n主炮每进行15次攻击,触发专属弹幕-拉菲I",
+                    "吐息之焰:\n自身主炮开火时，有50.0%（100.0%）概率触发一轮特殊弹幕(威力依据技能等级)，战斗开始后每10秒炮击一次触发一次",
+                    "领向自由的炮火:\n自身装备的主炮散布范围降低0.5（5）点，战斗开始后20秒发动一轮支援弹幕Lv.1（Lv.10）(弹幕威力依据技能等级)",
+                    "Big J:\n战斗开始时提升自身炮击5.0%（15.0%）、装填1.0%（10.0%）受到的伤害降低5%。",
+                    "返回"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_debug",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_skill"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_Wargod_of_Solomon",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_T1_book_Wargod_of_Solomon",
+                    "EOC_Ship_skill_T2_book_Wargod_of_Solomon",
+                    "EOC_Ship_skill_T3_book_Wargod_of_Solomon",
+                    "EOC_Ship_skill_T4_book_Wargod_of_Solomon",
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "使用技能书T1",
+                    "使用技能书T2",
+                    "使用技能书T3",
+                    "使用技能书T4",
+                    "返回"
+                ],
+                "title": "所罗门的战神\n自身属性提升炮击20.0%（40.0%）、机动属性提升50.0%（100.0%）\n等级:<u_val:Laffey_skill_Wargod_of_Solomon_level>(<u_val:Laffey_skill_Wargod_of_Solomon_EXP>/<u_val:Laffey_skill_Wargod_of_Solomon_EXP_need>)\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>\n技能书T4:<u_val:Ship_skill_book_T4>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T1_book_Wargod_of_Solomon",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T1",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "+=",
+                    "150"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "2 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T2_book_Wargod_of_Solomon",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T2",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "+=",
+                    "450"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "4 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T3_book_Wargod_of_Solomon",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T3",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "+=",
+                    "1200"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "8 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T4_book_Wargod_of_Solomon",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T4",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "+=",
+                    "3000"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "12 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_Retrofit",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_T1_book_Retrofit",
+                    "EOC_Ship_skill_T2_book_Retrofit",
+                    "EOC_Ship_skill_T3_book_Retrofit",
+                    "EOC_Ship_skill_T4_book_Retrofit",
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "使用技能书T1",
+                    "使用技能书T2",
+                    "使用技能书T3",
+                    "使用技能书T4",
+                    "返回"
+                ],
+                "title": "歼灭模式:\n每20秒，有40.0%（70.0%）概率开启歼灭模式，速度提升200%，持续10秒，同时发射强力弹幕\n等级:<u_val:Laffey_skill_Retrofit_level>(<u_val:Laffey_skill_Retrofit_EXP>/<u_val:Laffey_skill_Retrofit_EXP_need>)\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>\n技能书T4:<u_val:Ship_skill_book_T4>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T1_book_Retrofit",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T1",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "+=",
+                    "150"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "2 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T2_book_Retrofit",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T2",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "+=",
+                    "450"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "4 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T3_book_Retrofit",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T3",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "+=",
+                    "1200"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "8 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T4_book_Retrofit",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T4",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "+=",
+                    "3000"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "12 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_All_Out_Assault",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "返回"
+                ],
+                "title": "专属弹幕-拉菲:\n主炮每进行15次攻击,触发专属弹幕-拉菲I\n等级:<u_val:Laffey_skill_All_Out_Assault_level>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_Dragon_s_Breath",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "New_Jersey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_T1_book_Dragon_s_Breath",
+                    "EOC_Ship_skill_T2_book_Dragon_s_Breath",
+                    "EOC_Ship_skill_T3_book_Dragon_s_Breath",
+                    "EOC_Ship_skill_T4_book_Dragon_s_Breath",
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "使用技能书T1",
+                    "使用技能书T2",
+                    "使用技能书T3",
+                    "使用技能书T4",
+                    "返回"
+                ],
+                "title": "吐息之焰:\n自身主炮开火时，有50.0%（100.0%）概率触发一轮特殊弹幕(威力依据技能等级)，战斗开始后每10秒炮击一次触发一次\n等级:<u_val:u_NewJersey_skill_Dragon_s_Breath_level>(<u_val:NewJersey_skill_Dragon_s_Breath_EXP>/<u_val:NewJersey_skill_Dragon_s_Breath_EXP_need>)\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>\n技能书T4:<u_val:Ship_skill_book_T4>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T1_book_Dragon_s_Breath",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T1",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                    "+=",
+                    "150"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "2 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T2_book_Dragon_s_Breath",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T2",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                    "+=",
+                    "450"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "4 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T3_book_Dragon_s_Breath",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T3",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                    "+=",
+                    "1200"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "8 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T4_book_Dragon_s_Breath",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_u_NewJersey_skill_Dragon_s_Breath_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T4",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                    "+=",
+                    "3000"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "12 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_Freedom_Through_Firepower",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "New_Jersey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_T1_book_Freedom_Through_Firepower",
+                    "EOC_Ship_skill_T2_book_Freedom_Through_Firepower",
+                    "EOC_Ship_skill_T3_book_Freedom_Through_Firepower",
+                    "EOC_Ship_skill_T4_book_Freedom_Through_Firepower",
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "使用技能书T1",
+                    "使用技能书T2",
+                    "使用技能书T3",
+                    "使用技能书T4",
+                    "返回"
+                ],
+                "title": "领向自由的炮火:\n自身装备的主炮散布范围降低0.5（5）点，战斗开始后20秒发动一轮支援弹幕Lv.1（Lv.10）(弹幕威力依据技能等级)\n等级:<u_val:NewJersey_skill_Freedom_Through_Firepower_level>(<u_val:NewJersey_skill_Freedom_Through_Firepower_EXP>/<u_val:NewJersey_skill_Freedom_Through_Firepower_EXP_need>)\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>\n技能书T4:<u_val:Ship_skill_book_T4>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T1_book_Freedom_Through_Firepower",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T1",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                    "+=",
+                    "150"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "2 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T2_book_Freedom_Through_Firepower",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T2",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                    "+=",
+                    "450"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "4 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T3_book_Freedom_Through_Firepower",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T3",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                    "+=",
+                    "1200"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "8 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T4_book_Freedom_Through_Firepower",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T4",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                    "+=",
+                    "3000"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "12 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_Big_J",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "New_Jersey"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_skill_T1_book_Big_J",
+                    "EOC_Ship_skill_T2_book_Big_J",
+                    "EOC_Ship_skill_T3_book_Big_J",
+                    "EOC_Ship_skill_T4_book_Big_J",
+                    "EOC_Ship_skill"
+                ],
+                "names": [
+                    "使用技能书T1",
+                    "使用技能书T2",
+                    "使用技能书T3",
+                    "使用技能书T4",
+                    "返回"
+                ],
+                "title": "Big J:\n战斗开始时提升自身炮击5.0%（15.0%）、装填1.0%（10.0%）受到的伤害降低5%。\n等级:<u_val:NewJersey_skill_Big_J_level>(<u_val:NewJersey_skill_Big_J_EXP>/<u_val:NewJersey_skill_Big_J_EXP_need>)\n技能书T1:<u_val:Ship_skill_book_T1>\n技能书T2:<u_val:Ship_skill_book_T2>\n技能书T3:<u_val:Ship_skill_book_T3>\n技能书T4:<u_val:Ship_skill_book_T4>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T1_book_Big_J",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T1",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP_need",
+                    "+=",
+                    "150"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "2 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T2_book_Big_J",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T2",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP_need",
+                    "+=",
+                    "450"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "4 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T3_book_Big_J",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T3",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP_need",
+                    "+=",
+                    "1200"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "8 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_skill_T4_book_Big_J",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_NewJersey_skill_Big_J_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ship_skill_book_T4",
+                        ">=",
+                        "1"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP_need",
+                    "+=",
+                    "3000"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_Skills_Training",
+                "duration": "12 h"
+            }
+        ]
+    }
+]

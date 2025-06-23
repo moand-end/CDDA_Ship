@@ -1,0 +1,174 @@
+[
+    {
+        "type": "SPELL",
+        "id": "Dragon_s_Breath",
+        "name": "吐息之焰",
+        "description": "吐息之焰",
+        "flags": [
+            "SILENT",
+            "WONDER",
+            "RANDOM_TARGET"
+        ],
+        "valid_targets": [
+            "ground"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "damage_type": "stab",
+        "min_damage": 5,
+        "max_damage": 5,
+        "min_range": 1,
+        "max_range": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "extra_effects": [
+            {
+                "id": "Dragon_s_Breath_1"
+            }
+        ]
+    },
+    {
+        "id": "Dragon_s_Breath_1",
+        "type": "SPELL",
+        "name": {
+            "str": "瞄准"
+        },
+        "description": " ",
+        "valid_targets": [
+            "hostile"
+        ],
+        "flags": [
+            "SILENT",
+            "RANDOM_TARGET"
+        ],
+        "shape": "blast",
+        "min_range": 40,
+        "max_range": 40,
+        "min_damage": 0,
+        "max_damage": 0,
+        "min_aoe": 0,
+        "max_aoe": 0,
+        "extra_effects": [
+            {
+                "id": "Dragon_s_Breath_Danmaku"
+            }
+        ],
+        "effect": "attack",
+        "damage_type": "bash"
+    },
+    {
+        "id": "Dragon_s_Breath_Danmaku",
+        "type": "SPELL",
+        "name": "吐息之焰_弹幕",
+        "description": "吐息之焰_弹幕",
+        "valid_targets": [
+            "ground",
+            "hostile"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "min_range": 1,
+        "max_range": 1,
+        "min_damage": {
+            "math": [
+                "50 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) "
+            ]
+        },
+        "max_damage": {
+            "math": [
+                "50 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) "
+            ]
+        },
+        "min_aoe": 2,
+        "max_aoe": 2,
+        "min_duration": 0,
+        "max_duration": 0,
+        "damage_type": "stab"
+    },
+    {
+        "type": "SPELL",
+        "id": "Freedom_Through_Firepower",
+        "name": "领向自由的炮火",
+        "description": "领向自由的炮火",
+        "flags": [
+            "SILENT",
+            "WONDER",
+            "RANDOM_TARGET"
+        ],
+        "valid_targets": [
+            "ground"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "damage_type": "stab",
+        "min_damage": 5,
+        "max_damage": 5,
+        "min_range": 1,
+        "max_range": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "extra_effects": [
+            {
+                "id": "Freedom_Through_Firepower_1"
+            }
+        ]
+    },
+    {
+        "id": "Freedom_Through_Firepower_1",
+        "type": "SPELL",
+        "name": {
+            "str": "瞄准"
+        },
+        "description": " ",
+        "valid_targets": [
+            "hostile"
+        ],
+        "flags": [
+            "SILENT",
+            "RANDOM_TARGET"
+        ],
+        "shape": "blast",
+        "min_range": 40,
+        "max_range": 40,
+        "min_damage": 0,
+        "max_damage": 0,
+        "min_aoe": 0,
+        "max_aoe": 0,
+        "extra_effects": [
+            {
+                "id": "Freedom_Through_Firepower_Danmaku"
+            }
+        ],
+        "effect": "attack",
+        "damage_type": "bash"
+    },
+    {
+        "id": "Freedom_Through_Firepower_Danmaku",
+        "type": "SPELL",
+        "name": "领向自由的炮火_弹幕",
+        "description": "领向自由的炮火_弹幕",
+        "valid_targets": [
+            "ground",
+            "hostile"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "min_range": 1,
+        "max_range": 1,
+        "min_damage": {
+            "math": [
+                "25 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 ) "
+            ]
+        },
+        "max_damage": {
+            "math": [
+                "25 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 ) "
+            ]
+        },
+        "min_aoe": 2,
+        "max_aoe": 2,
+        "min_duration": 0,
+        "max_duration": 0,
+        "damage_type": "stab"
+    }
+]

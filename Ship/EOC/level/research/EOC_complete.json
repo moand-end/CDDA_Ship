@@ -1,0 +1,303 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_General",
+        "effect": [
+            {
+                "math": [
+                    "u_Research_choices",
+                    "=",
+                    "5"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "u_message": "研究完成！",
+                "type": "good"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_H_387_Ml",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_387_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "+=",
+                    "10"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_H_339_Ml",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_339_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_339_Ml_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "+=",
+                    "20"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_H_207_RF",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_207_RF",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_207_RF_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "+=",
+                    "40"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_H_085_UL",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_085_UL",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "+=",
+                    "15"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_B_622_MI",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_622_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_622_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_sairen",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "u_spawn_item": "Supplies",
+                "count": 5
+            },
+            {
+                "u_spawn_item": "Ship_Cubes_Item",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_B_636_MI",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_636_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_636_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_Knight",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "u_spawn_item": "Supplies",
+                "count": 10
+            },
+            {
+                "u_spawn_item": "Ship_Cubes_Item",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_B_654_MI",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_654_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_654_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_Purity",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "u_spawn_item": "Supplies",
+                "count": 20
+            },
+            {
+                "u_spawn_item": "Ship_Cubes_Item",
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_complete_B_682_MI",
+        "effect": [
+            {
+                "run_eocs": [
+                    "eoc_complete_General"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_682_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_682_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_monster",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "200"
+                ]
+            },
+            {
+                "u_spawn_item": "Supplies",
+                "count": 10
+            }
+        ]
+    }
+]

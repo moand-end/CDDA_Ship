@@ -1,0 +1,76 @@
+[
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_Laffey_skill_Wargod_of_Solomon",
+        "name": [
+            "所罗门的战神"
+        ],
+        "desc": [
+            "自身属性提升炮击20.0%（40.0%）、机动属性提升50.0%（100.0%）"
+        ],
+        "apply_message": "",
+        "remove_message": "所罗门的战神技能效果结束。",
+        "rating": "good",
+        "max_duration": "10 s",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "RANGED_DAMAGE",
+                        "multiply": {
+                            "math": [
+                                "0.2+ (u_Laffey_skill_Wargod_of_Solomon_level - 1 ) *0.02"
+                            ]
+                        }
+                    },
+                    {
+                        "value": "SPEED",
+                        "multiply": {
+                            "math": [
+                                "0.5+ (u_Laffey_skill_Wargod_of_Solomon_level - 1 ) *0.05"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_Laffey_skill_Retrofit",
+        "name": [
+            "歼灭模式"
+        ],
+        "desc": [
+            "每20秒，有40.0%（70.0%）概率开启歼灭模式，速度提升200%，持续10秒，同时发射强力弹幕"
+        ],
+        "apply_message": "",
+        "remove_message": "歼灭模式技能效果结束。",
+        "rating": "good",
+        "max_duration": "10 s",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "SPEED",
+                        "multiply": 2
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_Laffey_skill_Retrofit_CD",
+        "name": [
+            "歼灭模式冷却"
+        ],
+        "desc": [
+            "技能冷却"
+        ],
+        "apply_message": "",
+        "remove_message": "所罗门的战神冷却完毕。",
+        "rating": "good",
+        "max_duration": "20 s"
+    }
+]

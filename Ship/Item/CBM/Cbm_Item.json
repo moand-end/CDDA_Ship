@@ -1,0 +1,171 @@
+[
+    {
+        "//": "舰娘心智魔方CBM",
+        "id": "bio_Ship_Cubes",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "symbol": ";",
+        "color": "light_cyan",
+        "name": {
+            "str": "心智魔方"
+        },
+        "description": "心智魔方，又名“失智魔方”，“宇宙魔方”(误)。特殊的材料，主要用于制作舰船的龙骨，舰娘就诞生于心智魔方。",
+        "price": "10000000 USD",
+        "price_postapoc": "10000000 USD",
+        "material": [
+            "Mystic Steel"
+        ],
+        "flags": [
+            "TRADER_AVOID",
+            "CBM"
+        ]
+    },
+    {
+        "//": "舰娘油发电器CBM",
+        "id": "bio_Ship_Petroleum_generator",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "category": "bionics",
+        "name": {
+            "str": "石油发电器"
+        },
+        "description": "舰娘储存以及燃烧石油的装置，这是必要的。",
+        "material": [
+            "steel",
+            "plastic"
+        ],
+        "symbol": ":",
+        "color": "yellow",
+        "price": "8000 USD",
+        "flags": [
+            "TRADER_AVOID",
+            "CBM"
+        ],
+        "looks_like": "bio_int_enhancer",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_damage_control",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "损害管制CBM"
+        },
+        "description": "通过召唤一堆小黄鸡来为你修复破损的舰装。",
+        "price": "8000 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_General_Electric_Type_Geared_Steam_Turbine",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "通用电气型齿轮蒸汽涡轮机CBM"
+        },
+        "description": "启动它就能够为你带来强大的动力。",
+        "price": "8000 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Mk_12_Fire_Control_Radar",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "Mk 12火控雷达CBM"
+        },
+        "description": "打开雷达，它能够为你感知到更多的事物，同时处理事情也变得轻松起来了。",
+        "price": "8000 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Thruster",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "推进器CBM"
+        },
+        "description": "推进器能够让你的机动大幅度提升，这很有用。",
+        "price": "8000 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Ship_Nuclear_energy_device",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "舰娘核能装置CBM"
+        },
+        "description": "舰娘专用的核能装置，为舰娘提供日常所需的能量消耗，但这这里似乎并没有可以更换的设备，不过没关系，这能够用很久了。",
+        "price": "8000 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Power_Storage",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str_sp": "舰娘储能模块CBM"
+        },
+        "looks_like": "bio_power_storage_mkII",
+        "description": "作为舰娘能量储存的模块,能够为期储存1wkj的能源,但这个似乎并不可能出现在这里。",
+        "price": "10000 USD",
+        "price_postapoc": "10 USD",
+        "weight": "50 g",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Single_127mm_Main_Gun",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "127mm口径单装炮CBM"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_533mm_Quintuple_Torpedo_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "533mm口径鱼雷发射器舰装CBM"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Twin_40mm_Bofors_AA_Gun_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "双联40mm博福斯对空机炮CBM"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "双联装127mm高平两用炮Mk12"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "四联40mm博福斯对空机炮舰装"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    }
+]

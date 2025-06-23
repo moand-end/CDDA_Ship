@@ -1,0 +1,121 @@
+[
+    {
+        "//": "舰娘变异",
+        "type": "mutation",
+        "id": "Battleship_Armor",
+        "name": {
+            "str": "战列舰装甲"
+        },
+        "points": 1,
+        "description": "你的舰装周围浮现了一圈装甲，能自动抵挡攻击，攻击抗性+50。",
+        "category": [
+            "Ship_Battleship"
+        ],
+        "armor": [
+            {
+                "parts": [
+                    "torso",
+                    "head",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "leg_l",
+                    "leg_r",
+                    "foot_l",
+                    "foot_r",
+                    "mouth",
+                    "eyes"
+                ],
+                "bash": 50,
+                "cut": 50,
+                "stab": 50,
+                "bullet": 50,
+                "heat": 50,
+                "acid": 50
+            }
+        ]
+    },
+    {
+        "//": "舰娘变异",
+        "type": "mutation",
+        "id": "Battleship_Hull",
+        "name": {
+            "str": "战列舰体"
+        },
+        "points": 1,
+        "description": "舰娘的本体，也是舰娘力量的源泉。",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "STRENGTH",
+                        "add": 15
+                    },
+                    {
+                        "value": "STRENGTH",
+                        "add": 15
+                    },
+                    {
+                        "value": "DEXTERITY",
+                        "add": 15
+                    },
+                    {
+                        "value": "PERCEPTION",
+                        "add": 15
+                    },
+                    {
+                        "value": "INTELLIGENCE",
+                        "add": 15
+                    },
+                    {
+                        "value": "MAX_HP",
+                        "add": 500
+                    },
+                    {
+                        "value": "MAX_HP",
+                        "multiply": 5
+                    },
+                    {
+                        "value": "STEALTH_MODIFIER",
+                        "add": 50
+                    },
+                    {
+                        "value": "FOOTSTEP_NOISE",
+                        "add": -0.8
+                    },
+                    {
+                        "value": "SCENT_MASK",
+                        "multiply": -0.8
+                    },
+                    {
+                        "value": "SKILL_RUST_RESIST",
+                        "multiply": -1
+                    },
+                    {
+                        "value": "BIONIC_MANA_PENALTY",
+                        "multiply": -1
+                    }
+                ]
+            }
+        ],
+        "category": [
+            "Ship_Battleship"
+        ]
+    },
+    {
+        "//": "舰娘变异新泽西",
+        "type": "mutation",
+        "id": "New_Jersey",
+        "name": {
+            "str": "新泽西"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "新泽西的皮肤。",
+        "vanity": true,
+        "category": [
+            "Ship_Battleship"
+        ]
+    }
+]

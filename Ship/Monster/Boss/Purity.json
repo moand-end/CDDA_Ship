@@ -1,0 +1,279 @@
+[
+    {
+        "id": "Purity",
+        "type": "MONSTER",
+        "name": {
+            "str": "净化者"
+        },
+        "description": "不同于之前的量产型，她拥有自主意识以及沟通的能力，能够召唤塞壬协助战斗，是一个难缠的家伙。",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "SIREN"
+        ],
+        "diff": 100,
+        "volume": "500 L",
+        "weight": "100 kg",
+        "hp": 5000,
+        "symbol": "P",
+        "regenerates": 10,
+        "speed": 150,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "color": "light_cyan",
+        "morale": 100,
+        "luminance": 10,
+        "attack_cost": 80,
+        "aggression": 100,
+        "death_drops": "death_Purity_drop",
+        "melee_skill": 10,
+        "dodge": 10,
+        "melee_dice": 10,
+        "melee_dice_sides": 10,
+        "melee_damage": [
+            {
+                "damage_type": "bash",
+                "amount": 50
+            }
+        ],
+        "grab_strength": 20,
+        "armor": {
+            "bash": 20,
+            "cut": 20,
+            "bullet": 20,
+            "stab": 20,
+            "acid": 20,
+            "electric": 20,
+            "heat": 20
+        },
+        "weakpoints": [
+            {
+                "name": "脸",
+                "armor_mult": {
+                    "physical": 0.1
+                },
+                "coverage": 10
+            },
+            {
+                "name": "手臂",
+                "armor_mult": {
+                    "physical": 0.5
+                },
+                "coverage": 25
+            },
+            {
+                "name": "躯体",
+                "armor_mult": {
+                    "physical": 0.8
+                },
+                "coverage": 50
+            }
+        ],
+        "death_function": {
+            "corpse_type": "NO_CORPSE",
+            "message": "你打败了 %s !"
+        },
+        "flags": [
+            "ACIDPROOF",
+            "BIOLOGICALPROOF",
+            "FIREPROOF",
+            "FIREY",
+            "GRABS",
+            "NO_BREATHE",
+            "NO_FUNG_DMG",
+            "SEES",
+            "HEARS",
+            "PRIORITIZE_TARGETS"
+        ],
+        "special_attacks": [
+            {
+                "type": "spell",
+                "spell_data": {
+                    "id": "siren_spawn_spell",
+                    "hit_self": true
+                },
+                "cooldown": 15,
+                "allow_no_target": true,
+                "monster_message": "净化者召唤了塞壬支援。"
+            },
+            {
+                "type": "gun",
+                "gun_type": "Purity_laser",
+                "cooldown": 25,
+                "fake_str": 20,
+                "fake_dex": 20,
+                "fake_int": 20,
+                "fake_per": 20,
+                "fake_skills": [
+                    [
+                        "gun",
+                        5
+                    ],
+                    [
+                        "pistol",
+                        5
+                    ]
+                ],
+                "ranges": [
+                    [
+                        1,
+                        30,
+                        "DEFAULT"
+                    ]
+                ],
+                "move_cost": 150,
+                "require_targeting_player": true,
+                "require_targeting_npc": true,
+                "require_targeting_monster": true,
+                "targeting_cost": 100,
+                "targeting_sound": "已被锁定!",
+                "laser_lock": true,
+                "targeting_volume": 20,
+                "description": "净化者发射了激光！"
+            }
+        ]
+    },
+    {
+        "id": "Purity_1",
+        "type": "MONSTER",
+        "name": {
+            "str": "净化者"
+        },
+        "description": "不同于之前的量产型，她拥有自主意识以及沟通的能力，能够召唤塞壬协助战斗，是一个难缠的家伙。",
+        "default_faction": "Siren",
+        "bodytype": "ROBOT",
+        "species": [
+            "SIREN"
+        ],
+        "diff": 100,
+        "volume": "500 L",
+        "weight": "100 kg",
+        "hp": 5000,
+        "symbol": "P",
+        "regenerates": 10,
+        "speed": 150,
+        "material": [
+            "steel"
+        ],
+        "phase": "NULL",
+        "color": "light_cyan",
+        "aggro_character": false,
+        "morale": 100,
+        "luminance": 10,
+        "attack_cost": 80,
+        "death_drops": "death_Purity_drop",
+        "aggression": -15,
+        "melee_skill": 10,
+        "dodge": 10,
+        "melee_dice": 10,
+        "melee_dice_sides": 10,
+        "melee_damage": [
+            {
+                "damage_type": "bash",
+                "amount": 75
+            }
+        ],
+        "grab_strength": 20,
+        "armor": {
+            "bash": 20,
+            "cut": 20,
+            "bullet": 20,
+            "stab": 20,
+            "acid": 20,
+            "electric": 20,
+            "heat": 20
+        },
+        "weakpoints": [
+            {
+                "name": "脸",
+                "armor_mult": {
+                    "physical": 0.1
+                },
+                "coverage": 10
+            },
+            {
+                "name": "手臂",
+                "armor_mult": {
+                    "physical": 0.5
+                },
+                "coverage": 25
+            },
+            {
+                "name": "躯体",
+                "armor_mult": {
+                    "physical": 0.8
+                },
+                "coverage": 50
+            }
+        ],
+        "death_function": {
+            "corpse_type": "NO_CORPSE",
+            "message": "%s被打败了!"
+        },
+        "petfood": {
+            "food": [
+                "JNFOOD"
+            ],
+            "feed": "%s似乎并不像之前那样了,它现在看起来很友好。",
+            "pet": "当你跟%s玩耍的时候,她很高兴。"
+        },
+        "flags": [
+            "ACIDPROOF",
+            "BIOLOGICALPROOF",
+            "FIREPROOF",
+            "FIREY",
+            "GRABS",
+            "NO_BREATHE",
+            "NO_FUNG_DMG",
+            "SEES",
+            "HEARS",
+            "PRIORITIZE_TARGETS",
+            "CANPLAY",
+            "CAN_BE_CULLED",
+            "GROUP_MORALE",
+            "KEENNOSE",
+            "SMELLS",
+            "WARM",
+            "EATS"
+        ],
+        "special_attacks": [
+            {
+                "type": "gun",
+                "gun_type": "Purity_laser",
+                "cooldown": 10,
+                "fake_str": 20,
+                "fake_dex": 20,
+                "fake_int": 20,
+                "fake_per": 20,
+                "fake_skills": [
+                    [
+                        "gun",
+                        7
+                    ],
+                    [
+                        "pistol",
+                        7
+                    ]
+                ],
+                "ranges": [
+                    [
+                        0,
+                        50,
+                        "DEFAULT"
+                    ]
+                ],
+                "move_cost": 100,
+                "require_targeting_player": false,
+                "require_targeting_npc": false,
+                "require_targeting_monster": false,
+                "targeting_cost": 50,
+                "targeting_sound": "已被锁定!",
+                "laser_lock": false,
+                "targeting_volume": 20,
+                "description": "净化者发射了激光！"
+            }
+        ]
+    }
+]

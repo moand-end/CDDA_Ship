@@ -1,0 +1,138 @@
+[
+  {
+    "id": "Twin_40mm_Bofors_AA_Gun_Mount",
+    "type": "GUN",
+    "name": {
+      "str": "双联40mm博福斯对空机炮舰装"
+    },
+    "description": "双联40mm博福斯对空机炮舰装T1",
+    "weight": "100 g",
+    "volume": "50 ml",
+    "price": "100000 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "good"
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "melee_damage": {
+      "bash": 100,
+      "stab": 0,
+      "cut": 0
+    },
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "ammo": [
+      "40mm"
+    ],
+    "range": 120,
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "2500 ml",
+    "flags": [
+      "NEVER_JAMS",
+      "NO_DROP",
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USES_BIONIC_POWER",
+      "BIONIC_GUN"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "40mm_Bofors_anti_aircraft_gun_magazine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装"
+    },
+    "description": "双联40mm博福斯对空机炮舰装T1",
+    "weight": "100 g",
+    "volume": "50 ml",
+    "price": "100000 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "good"
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "melee_damage": {
+      "bash": 100,
+      "stab": 0,
+      "cut": 0
+    },
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "ammo": [
+      "40mm"
+    ],
+    "range": 120,
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "2500 ml",
+    "flags": [
+      "NEVER_JAMS",
+      "NO_DROP",
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USES_BIONIC_POWER",
+      "BIONIC_GUN"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "40mm_Bofors_anti_aircraft_gun_magazine"
+        ]
+      }
+    ]
+  }
+]

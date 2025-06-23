@@ -1,0 +1,24 @@
+[
+  {
+    "//": "变异阈值",
+    "type": "mutation_category",
+    "id": "Ship_Destroyer",
+    "name": "驱逐舰",
+    "threshold_mut": "Destroyer",
+    "mutagen_message": "你感觉你的身体开始转变了",
+    "memorial_message": "你梦到了一艘熟悉的舰船。",
+    "base_removal_chance": 100,
+    "base_removal_cost_mul": 3
+  },
+  {
+    "//": "变异阈值",
+    "type": "mutation_category",
+    "id": "Ship_Battleship",
+    "name": "战列舰",
+    "threshold_mut": "Battleship",
+    "mutagen_message": "你感觉你的身体开始转变了",
+    "memorial_message": "你梦到了一艘熟悉的舰船。",
+    "base_removal_chance": 100,
+    "base_removal_cost_mul": 3
+  }
+]

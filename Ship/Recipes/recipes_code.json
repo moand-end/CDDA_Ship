@@ -1,0 +1,296 @@
+[
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Ship_Cubes_Item",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    5
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    5
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Ship_Storage_Space",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    5
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    5
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "radar_Detection",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    1
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    1
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Ship_relieve_pain",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    5
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    5
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "damage_control",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    5
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    5
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Lure_device",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    5
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    5
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Lure_device_Purity",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "Lure_device",
+                    1
+                ]
+            ],
+            [
+                [
+                    "petroleum",
+                    10
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    10
+                ]
+            ]
+        ]
+    },
+    {
+        "type": "recipe",
+        "activity_level": "LIGHT_EXERCISE",
+        "result": "Siren_Blocker",
+        "result_mult": 1,
+        "category": "CC_舰娘",
+        "subcategory": "CSC_舰娘_核心",
+        "skill_used": "fabrication",
+        "difficulty": 1,
+        "time": "1 m",
+        "reversible": true,
+        "autolearn": true,
+        "flags": [
+            "BLIND_EASY"
+        ],
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "petroleum",
+                    10
+                ]
+            ],
+            [
+                [
+                    "Supplies",
+                    10
+                ]
+            ]
+        ]
+    }
+]

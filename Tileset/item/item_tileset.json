@@ -1,0 +1,63 @@
+[
+    {
+        "type": "mod_tileset",
+        "compatibility": [
+            "Chibi_Ultica",
+            "UltimateCataclysm",
+            "MshockXottoplus",
+            "UNDEAD_PEOPLE",
+            "UNDEAD_PEOPLE_BASE",
+            "UNDEAD_PEOPLE_LEGACY",
+            "UlticaShell",
+            "MshockXottoplus12",
+            "MSX++DEAD_PEOPLE",
+            "MXplus12_for_cosmetics"
+        ],
+        "tiles-new": [
+            {
+                "file": "Tileset/item/item.png",
+                "tiles": [
+                    {
+                        "id": "Ship_Cubes",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Ship_Cubes_Item",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Ship_Storage_Space",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "petroleum",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "wuzi",
+                        "fg": 3,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Purity_head",
+                        "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Purity_head",
+                        "fg": 5,
+                        "rotates": false
+                    }
+                ],
+                "sprite_width": 32,
+                "sprite_height": 32,
+                "sprite_offset_x": 0,
+                "sprite_offset_y": 0
+            }
+        ]
+    }
+]

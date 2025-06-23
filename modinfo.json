@@ -1,0 +1,20 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "jianniang_zhizuo",
+    "name": "<color_blue>舰娘(施工中)</color>",
+    "authors": [
+      "达摩克里斯之胡萝卜",
+      "无名的猫（援助）",
+      "莫安定"
+    ],
+    "maintainers": [
+      "莫安定"
+    ],
+    "description": "大灾变下的舰娘。",
+    "category": "content",
+    "dependencies": [
+      "dda"
+    ]
+  }
+]

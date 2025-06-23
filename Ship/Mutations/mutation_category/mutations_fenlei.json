@@ -1,0 +1,32 @@
+[
+    {
+        "type": "mutation",
+        "id": "Destroyer",
+        "name": {
+            "str": "驱逐舰娘"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "你现在是一只驱逐舰娘了",
+        "purifiable": false,
+        "threshold": true,
+        "category": [
+            "Ship_Destroyer"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "Battleship",
+        "name": {
+            "str": "战列舰娘"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "你现在是一只战列舰娘了",
+        "purifiable": false,
+        "threshold": true,
+        "category": [
+            "Ship_Battleship"
+        ]
+    }
+]

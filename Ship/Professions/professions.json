@@ -1,0 +1,139 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "Ship_Storage_Space_group",
+    "entries": [
+      {
+        "item": "Ship_Storage_Space",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "Supplies_Ship_group",
+    "entries": [
+      {
+        "item": "petroleum",
+        "count": 10
+      },
+      {
+        "item": "Supplies",
+        "count": 10
+      }
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "lafei",
+    "name": {
+      "male": "舰...男人？",
+      "female": "舰娘拉菲"
+    },
+    "description": "我是备受期待的本森级驱逐舰拉菲，在三次所罗门海战有着极为活跃的表现，战舰？那是什么？",
+    "points": 8,
+    "CBMs": [
+      "bio_Ship_Cubes",
+      "bio_damage_control",
+      "bio_General_Electric_Type_Geared_Steam_Turbine",
+      "bio_Mk_12_Fire_Control_Radar",
+      "bio_Thruster",
+      "bio_Power_Storage",
+      "bio_Twin_40mm_Bofors_AA_Gun_Mount",
+      "bio_Single_127mm_Main_Gun",
+      "bio_533mm_Quintuple_Torpedo_Mount",
+      "bio_Ship_Nuclear_energy_device",
+      "bio_Ship_Petroleum_generator"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "Laffey_shirt",
+          "Laffey_cloth",
+          "wine_cabernet",
+          "Ship_relieve_pain",
+          "damage_control",
+          "Laffey_skirt",
+          "Laffey_stockings",
+          "Laffey_Ship_Equipment"
+        ],
+        "entries": [
+          {
+            "item": "Ship_Storage_Space",
+            "contents-group": "Supplies_Ship_group"
+          }
+        ]
+      },
+      "male": [
+        "briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "traits": [
+      "Destroyer",
+      "BEAUTIFUL4",
+      "Destroyer_Armor",
+      "Destroyer_Hull",
+      "Ship_Laffey"
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "xinzexi",
+    "name": {
+      "male": "舰...男人？",
+      "female": "舰娘新泽西"
+    },
+    "description": "你原本是即将踏入战场的新手，但不知道是什么将你带到了这片陌生的地方。",
+    "points": 8,
+    "CBMs": [
+      "bio_Ship_Cubes",
+      "bio_damage_control",
+      "bio_General_Electric_Type_Geared_Steam_Turbine",
+      "bio_Mk_12_Fire_Control_Radar",
+      "bio_Thruster",
+      "bio_Power_Storage",
+      "bio_Quadruple_40mm_Bofors_AA_Gun_Mount",
+      "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+      "bio_Ship_Nuclear_energy_device",
+      "bio_Ship_Petroleum_generator"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "Ship_relieve_pain",
+          "damage_control"
+        ],
+        "entries": [
+          {
+            "item": "New_Jersey_Ship_Equipment",
+            "contents-group": "Ship_Storage_Space_group"
+          },
+          {
+            "item": "Ship_Storage_Space",
+            "contents-group": "Supplies_Ship_group"
+          }
+        ]
+      },
+      "male": [
+        "briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "traits": [
+      "Battleship",
+      "BEAUTIFUL4",
+      "Battleship_Armor",
+      "Battleship_Hull",
+      "New_Jersey"
+    ]
+  }
+]

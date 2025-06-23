@@ -1,0 +1,778 @@
+[
+    {
+        "//": "核心设定",
+        "type": "effect_on_condition",
+        "id": "EVENT_EOC_Initial_Settings_Core",
+        "eoc_type": "EVENT",
+        "required_event": "game_begin",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_AzurLane_Core_Initialize",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_AzurLane_Core_Initialize",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "//": "核心设定伏击点数",
+                "math": [
+                    "u_Ambush_Points",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "核心设定伏击等级",
+                "math": [
+                    "u_Ambush_Level",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "核心设定塞壬数量",
+                "math": [
+                    "u_Siren_Amount",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "核心设定塞壬活跃度",
+                "math": [
+                    "u_Siren_activity_level",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "核心设定闪避概率（此为显示的，不是计算的）",
+                "math": [
+                    "u_Evasion_probability",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "核心设定科技箱点数",
+                "math": [
+                    "u_Tech_Box_T1_Points",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "if": {
+                    "u_has_bionics": "bio_Ship_Cubes"
+                },
+                "then": [
+                    {
+                        "if": {
+                            "u_has_trait": "Ship_Laffey"
+                        },
+                        "then": [
+                            {
+                                "//": "核心设定舰娘判断",
+                                "math": [
+                                    "u_Ship_Judgment",
+                                    "=",
+                                    "1"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "if": {
+                            "u_has_trait": "New_Jersey"
+                        },
+                        "then": [
+                            {
+                                "math": [
+                                    "u_Ship_Judgment",
+                                    "=",
+                                    "2"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "math": [
+                            "u_Ship_Judgment",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "open_dialogue": {
+                    "topic": "talk_Initialize_Selection"
+                }
+            }
+        ]
+    },
+    {
+        "//": "boss设定",
+        "type": "effect_on_condition",
+        "id": "EVENT_EOC_Initial_Settings_Boss",
+        "eoc_type": "EVENT",
+        "required_event": "game_begin",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_AzurLane_Boss_Initialize",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_AzurLane_Boss_Initialize",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "//": "boss设定boss点数",
+                "math": [
+                    "u_Boss_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "boss设定boss最低点数",
+                "math": [
+                    "u_boss_Minimum_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "boss设定建造进度",
+                "math": [
+                    "u_Purity_Construct_Progress",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "boss设定建造第一次",
+                "math": [
+                    "u_Purity_Construct_first",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "等级设定",
+        "type": "effect_on_condition",
+        "id": "EVENT_EOC_Initial_Settings_Level",
+        "eoc_type": "EVENT",
+        "required_event": "game_begin",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_AzurLane_Level_Initialize",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_AzurLane_Level_Initialize",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "u_add_trait": "Ship_Panel"
+            },
+            {
+                "//": "等级设定舰娘等级",
+                "math": [
+                    "u_Ship_Level",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定舰娘等级经验",
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定舰娘等级所需经验",
+                "math": [
+                    "u_Ship_Level_Need_EXP",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "//": "等级设定舰娘阶段",
+                "math": [
+                    "u_Ship_Limit_Break",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定舰娘心智觉醒阶段",
+                "math": [
+                    "u_Ship_Cognitive_Awakening",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定数据包",
+                "math": [
+                    "u_Ship_EXP_Data_Packs",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定数据包获取机会",
+                "math": [
+                    "u_Ship_EXP_Data_Packs_Chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "等级设定心智单元",
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "研究设定",
+        "type": "effect_on_condition",
+        "id": "EVENT_EOC_Initial_Settings_Research",
+        "eoc_type": "EVENT",
+        "required_event": "game_begin",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_AzurLane_Research",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_AzurLane_Research",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "//": "研究设定是否正在研究",
+                "math": [
+                    "u_Study_selection",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "研究设定卡池空余数量",
+                "math": [
+                    "u_Research_choices",
+                    "=",
+                    "5"
+                ]
+            },
+            {
+                "//": "研究设定项目显示",
+                "math": [
+                    "u_Cube_Analysis_H_387_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_H_339_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_H_207_RF",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_H_085_UL",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_B_622_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_B_636_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_B_654_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Cube_Analysis_B_682_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "研究设定正在研究的项目",
+                "math": [
+                    "u_Study_selection_H_387_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_339_Ml",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "研究设定研究进度",
+                "math": [
+                    "u_Study_selection_H_339_Ml_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_207_RF",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_207_RF_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_H_085_UL",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_622_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_622_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_636_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_636_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_654_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_654_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_682_MI",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Study_selection_B_682_MI_Point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "研究设定击杀数量",
+                "math": [
+                    "u_Scientific_kill_sairen",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_Knight",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_Purity",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Scientific_kill_monster",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "技能设定",
+        "type": "effect_on_condition",
+        "id": "EVENT_EOC_Initial_Settings_Skill",
+        "eoc_type": "EVENT",
+        "required_event": "game_begin",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_AzurLane_Skill",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_AzurLane_Skill",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "//": "技能设定技能书获取几率",
+                "math": [
+                    "u_Ship_skill_book_Chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "技能设定技能书T1",
+                "math": [
+                    "u_Ship_skill_book_T1",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "技能设定技能书T2",
+                "math": [
+                    "u_Ship_skill_book_T2",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "技能设定技能书T3",
+                "math": [
+                    "u_Ship_skill_book_T3",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "//": "技能设定技能书T4",
+                "math": [
+                    "u_Ship_skill_book_T4",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定拉菲所罗门技能等级",
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲所罗门技能所需经验",
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_EXP_need",
+                            "=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲所罗门技能触发几率",
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_chance",
+                            "=",
+                            "0"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲所罗门技能经验",
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定拉菲专属弹幕技能等级",
+                        "math": [
+                            "u_Laffey_skill_All_Out_Assault_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲专属弹幕技能触发进度",
+                        "math": [
+                            "u_Laffey_skill_All_Out_Assault_point",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定拉菲歼灭模式技能等级",
+                        "math": [
+                            "u_Laffey_skill_Retrofit_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲歼灭模式技能等所需经验",
+                        "math": [
+                            "u_Laffey_skill_Retrofit_EXP_need",
+                            "=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲歼灭模式技能触发几率",
+                        "math": [
+                            "u_Laffey_skill_Retrofit_chance",
+                            "=",
+                            "0"
+                        ]
+                    },
+                    {
+                        "//": "技能设定拉菲歼灭模式技能经验",
+                        "math": [
+                            "u_Laffey_skill_Retrofit_EXP",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "New_Jersey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定新泽西吐息之焰技能等级",
+                        "math": [
+                            "u_NewJersey_skill_Dragon_s_Breath_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西吐息之焰技能所需经验",
+                        "math": [
+                            "u_NewJersey_skill_Dragon_s_Breath_EXP_need",
+                            "=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西吐息之焰技能触发几率",
+                        "math": [
+                            "u_NewJersey_skill_Dragon_s_Breath_chance",
+                            "=",
+                            "0"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西吐息之焰技能经验",
+                        "math": [
+                            "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "New_Jersey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定新泽西领向自由的炮火技能等级",
+                        "math": [
+                            "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西领向自由的炮火技能所需经验",
+                        "math": [
+                            "u_NewJersey_skill_Freedom_Through_Firepower_EXP_need",
+                            "=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西领向自由的炮火技能经验",
+                        "math": [
+                            "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "if": {
+                    "u_has_trait": "New_Jersey"
+                },
+                "then": [
+                    {
+                        "//": "技能设定新泽西Big J技能等级",
+                        "math": [
+                            "u_NewJersey_skill_Big_J_level",
+                            "=",
+                            "1"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西Big J技能所需经验",
+                        "math": [
+                            "u_NewJersey_skill_Big_J_EXP_need",
+                            "=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "//": "技能设定新泽西Big J技能经验",
+                        "math": [
+                            "u_NewJersey_skill_Big_J_EXP",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

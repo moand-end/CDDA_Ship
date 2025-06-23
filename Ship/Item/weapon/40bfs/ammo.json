@@ -1,0 +1,52 @@
+[
+  {
+    "id": "40mm",
+    "description": "你不应该看到这个。",
+    "type": "AMMO",
+    "name": {
+      "str": "40mm口径弹"
+    },
+    "weight": "1 g",
+    "volume": "5 ml",
+    "price": "2000 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 1,
+    "stack_size": 200,
+    "ammo_type": "40mm",
+    "range": 120,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 500
+    },
+    "recoil": 0,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "Bofors_40mm_normal_bullet",
+    "copy-from": "40mm",
+    "type": "AMMO",
+    "name": {
+      "str": "博福斯40mm普通弹（舰娘专用）"
+    },
+    "description": "一颗舰娘专用的40mm弹。",
+    "extend": {
+      "effects": [
+        "COOKOFF",
+        "NEVER_MISFIRES"
+      ]
+    },
+    "relative": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0,
+        "armor_penetration": 50
+      }
+    }
+  }
+]

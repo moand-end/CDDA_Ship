@@ -1,0 +1,427 @@
+[
+    {
+        "//": "拉菲的舰装",
+        "id": "Laffey_Ship_Equipment",
+        "type": "ARMOR",
+        "name": "拉菲舰装",
+        "description": "拉菲的舰装.（附带十个舰装空间）",
+        "weight": "2000 g",
+        "volume": "2 L",
+        "price": "100000 USD",
+        "price_postapoc": "10000 USD",
+        "symbol": "*",
+        "color": "light_red",
+        "material": [
+            "Mystic Steel"
+        ],
+        "material_thickness": 18,
+        "environmental_protection": 100,
+        "armor": [
+            {
+                "coverage": 100,
+                "encumbrance": 0,
+                "covers": [
+                    "leg_l",
+                    "leg_r",
+                    "torso",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "head",
+                    "foot_l",
+                    "foot_r",
+                    "mouth",
+                    "eyes"
+                ]
+            }
+        ],
+        "warmth": 0,
+        "relic_data": {
+            "passive_effects": [
+                {
+                    "has": "WORN",
+                    "condition": "ALWAYS",
+                    "values": [
+                        {
+                            "value": "CLIMATE_CONTROL_HEAT",
+                            "add": 10000
+                        },
+                        {
+                            "value": "CLIMATE_CONTROL_CHILL",
+                            "add": 10000
+                        }
+                    ]
+                }
+            ]
+        },
+        "pocket_data": [
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            }
+        ],
+        "flags": [
+            "BLOCK_WHILE_WORN",
+            "ELECTRIC_IMMUNE",
+            "FLOTATION",
+            "OVERSIZE",
+            "RAD_PROOF",
+            "RAINPROOF",
+            "WATCH",
+            "PARTIAL_DEAF",
+            "TARDIS",
+            "SEMITANGIBLE",
+            "PADDED",
+            "UNBREAKABLE"
+        ]
+    },
+    {
+        "//": "新泽西的舰装",
+        "id": "New_Jersey_Ship_Equipment",
+        "type": "ARMOR",
+        "name": "新泽西舰装",
+        "description": "新泽西的舰装，（附带十个舰装空间）",
+        "weight": "2000 g",
+        "volume": "2 L",
+        "price": "100000 USD",
+        "price_postapoc": "10000 USD",
+        "symbol": "*",
+        "color": "light_red",
+        "material": [
+            "Mystic Steel"
+        ],
+        "material_thickness": 20,
+        "environmental_protection": 100,
+        "armor": [
+            {
+                "coverage": 100,
+                "encumbrance": 0,
+                "covers": [
+                    "leg_l",
+                    "leg_r",
+                    "torso",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "head",
+                    "foot_l",
+                    "foot_r",
+                    "mouth",
+                    "eyes"
+                ]
+            }
+        ],
+        "warmth": 0,
+        "relic_data": {
+            "passive_effects": [
+                {
+                    "has": "WORN",
+                    "condition": "ALWAYS",
+                    "values": [
+                        {
+                            "value": "CLIMATE_CONTROL_HEAT",
+                            "add": 10000
+                        },
+                        {
+                            "value": "CLIMATE_CONTROL_CHILL",
+                            "add": 10000
+                        }
+                    ]
+                }
+            ]
+        },
+        "pocket_data": [
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            },
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "1 ml",
+                "max_contains_weight": "1 g",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.001,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            }
+        ],
+        "flags": [
+            "BLOCK_WHILE_WORN",
+            "ELECTRIC_IMMUNE",
+            "FLOTATION",
+            "OVERSIZE",
+            "RAD_PROOF",
+            "RAINPROOF",
+            "WATCH",
+            "PARTIAL_DEAF",
+            "TARDIS",
+            "SEMITANGIBLE",
+            "PADDED",
+            "UNBREAKABLE"
+        ]
+    },
+    {
+        "//": "舰娘存储空间",
+        "id": "Ship_Storage_Space",
+        "type": "ARMOR",
+        "name": {
+            "str": "舰娘空间"
+        },
+        "description": "这是舰娘装备里储存物品的地方，但现在它可以拿出来了，这是为了应对获取过多的物品导致的卡顿所致。（其实建议每个空间不要装太满，会导致严重卡顿的，每种类型拿一个空间装就行了）",
+        "weight": "1 g",
+        "volume": "1 ml",
+        "longest_side": "1 cm",
+        "price": "100000 USD",
+        "price_postapoc": "10000 USD",
+        "to_hit": 1,
+        "material": [
+            "Mystic Steel"
+        ],
+        "symbol": "*",
+        "color": "pink",
+        "pocket_data": [
+            {
+                "pocket_type": "CONTAINER",
+                "max_contains_volume": "50000 L",
+                "max_contains_weight": "50000 kg",
+                "moves": 10,
+                "watertight": true,
+                "rigid": true,
+                "max_item_length": "200 meter",
+                "spoil_multiplier": 0.0,
+                "weight_multiplier": 0.0,
+                "volume_multiplier": 0.0
+            }
+        ],
+        "flags": [
+            "TARDIS",
+            "AURA",
+            "PERSONAL"
+        ]
+    }
+]

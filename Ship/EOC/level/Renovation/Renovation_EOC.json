@@ -1,0 +1,13 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Renovation_tlak_topic",
+        "effect": [
+            {
+                "open_dialogue": {
+                    "topic": "Renovation_open_talk"
+                }
+            }
+        ]
+    }
+]

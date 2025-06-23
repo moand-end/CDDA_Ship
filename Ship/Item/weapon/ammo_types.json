@@ -1,0 +1,20 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "127mm",
+    "name": "127mm口径弹",
+    "default": "127mm_MK32_normal_bullet"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "40mm",
+    "name": "40mm口径弹口径弹",
+    "default": "Bofors_40mm_normal_bullet"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "533mm",
+    "name": "533mm鱼雷",
+    "default": "533mm_caliber_MK17_type_torpedo"
+  }
+]

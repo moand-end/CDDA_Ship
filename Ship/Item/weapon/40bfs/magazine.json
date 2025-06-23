@@ -1,0 +1,33 @@
+[
+  {
+    "id": "40mm_Bofors_anti_aircraft_gun_magazine",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "40mm博福斯对空机炮弹匣"
+    },
+    "description": "一个40mm博福斯对空机炮舰装的专用弹匣，连接到舰娘空间",
+    "weight": "60 g",
+    "volume": "80 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "40mm"
+    ],
+    "capacity": 1000,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40mm": 1000
+        }
+      }
+    ]
+  }
+]

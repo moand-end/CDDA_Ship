@@ -1,0 +1,103 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_reads_book_skill_Get",
+        "eoc_type": "EVENT",
+        "required_event": "reads_book",
+        "condition": {
+            "math": [
+                "u_Ship_Judgment",
+                "!=",
+                "0"
+            ]
+        },
+        "//": "读书获取经验书",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_skill_book_Chance",
+                    "=",
+                    "rand(100)"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Ship_skill_book_Chance",
+                        ">=",
+                        "95"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Ship_skill_book_T4",
+                            "+=",
+                            "1"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "math": [
+                                "u_Ship_skill_book_Chance",
+                                ">=",
+                                "80"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "math": [
+                                    "u_Ship_skill_book_T3",
+                                    "+=",
+                                    "1"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Ship_skill_book_Chance",
+                                        ">=",
+                                        "50"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "math": [
+                                            "u_Ship_skill_book_T2",
+                                            "+=",
+                                            "1"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "if": {
+                                            "math": [
+                                                "u_Ship_skill_book_Chance",
+                                                ">=",
+                                                "25"
+                                            ]
+                                        },
+                                        "then": [
+                                            {
+                                                "math": [
+                                                    "u_Ship_skill_book_T1",
+                                                    "+=",
+                                                    "1"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

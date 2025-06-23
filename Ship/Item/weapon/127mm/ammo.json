@@ -1,0 +1,68 @@
+[
+  {
+    "id": "127mm",
+    "description": "你不应该看到这个。",
+    "type": "AMMO",
+    "name": {
+      "str": "127mm口径弹"
+    },
+    "weight": "10 g",
+    "volume": "30 ml",
+    "price": "2000 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 1,
+    "stack_size": 200,
+    "ammo_type": "127mm",
+    "range": 160,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2000
+    },
+    "recoil": 0,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "127mm_MK32_normal_bullet",
+    "copy-from": "127mm",
+    "type": "AMMO",
+    "name": {
+      "str": "127mm MK32通常弹（舰娘专用）"
+    },
+    "description": "一颗舰娘专用的127mm MK32通常弹，然而实际上并没有127mm（舰娘的神奇魔法）",
+    "extend": {
+      "effects": [
+        "COOKOFF",
+        "127mm_power_effect"
+      ]
+    },
+    "relative": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1000,
+        "armor_penetration": 50
+      }
+    }
+  },
+  {
+    "id": "127mm_MK32_normal_bullet_blank_ammunition",
+    "copy-from": "127mm",
+    "type": "AMMO",
+    "name": {
+      "str": "127mm MK32空包弹（舰娘专用）"
+    },
+    "description": "你一定不想地形被炸烂吧？快试试这款吧！",
+    "relative": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1000,
+        "armor_penetration": 50
+      }
+    }
+  }
+]

@@ -1,0 +1,234 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Laffey_skill_Wargod_of_Solomon",
+        "eoc_type": "EVENT",
+        "required_event": "character_ranged_attacks_monster",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "Single_127mm_Main_Gun",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_chance",
+                    "=",
+                    "rand(100)"
+                ]
+            },
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Laffey_skill_Wargod_of_Solomon_chance",
+                                ">=",
+                                "90"
+                            ]
+                        },
+                        {
+                            "not": {
+                                "u_has_effect": "Effect_Ship_Laffey_skill_Wargod_of_Solomon"
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                            "+=",
+                            "rand(10)"
+                        ]
+                    },
+                    {
+                        "u_message": "所罗门的战神发动！",
+                        "type": "good"
+                    },
+                    {
+                        "u_add_effect": "Effect_Ship_Laffey_skill_Wargod_of_Solomon",
+                        "duration": "10 s"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Laffey_skill_All_Out_Assault",
+        "eoc_type": "EVENT",
+        "required_event": "character_ranged_attacks_monster",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "Single_127mm_Main_Gun",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Laffey_skill_All_Out_Assault_point",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Laffey_skill_All_Out_Assault_point",
+                        ">=",
+                        "15"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_All_Out_Assault_point",
+                            "-=",
+                            "15"
+                        ]
+                    },
+                    {
+                        "u_message": "专属弹幕发动！",
+                        "type": "good"
+                    },
+                    {
+                        "u_cast_spell": {
+                            "id": "All_Out_Assault"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Laffey_skill_Retrofit",
+        "eoc_type": "EVENT",
+        "required_event": "character_ranged_attacks_monster",
+        "condition": {
+            "and": [
+                {
+                    "u_has_trait": "Ship_Laffey"
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "Single_127mm_Main_Gun",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                {
+                                    "context_val": "weapon"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_chance",
+                    "=",
+                    "rand(100)"
+                ]
+            },
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Laffey_skill_Retrofit_chance",
+                                ">=",
+                                "60 - (u_Laffey_skill_Retrofit_level - 1) * 3 "
+                            ]
+                        },
+                        {
+                            "not": {
+                                "u_has_effect": "Effect_Ship_Laffey_skill_Retrofit_CD"
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Retrofit_EXP",
+                            "+=",
+                            "rand(10)"
+                        ]
+                    },
+                    {
+                        "u_message": "歼灭模式发动！",
+                        "type": "good"
+                    },
+                    {
+                        "u_cast_spell": {
+                            "id": "Danmaku"
+                        }
+                    },
+                    {
+                        "u_add_effect": "Effect_Ship_Laffey_skill_Retrofit",
+                        "duration": "10 s"
+                    },
+                    {
+                        "u_add_effect": "Effect_Ship_Laffey_skill_Retrofit_CD",
+                        "duration": "20 s"
+                    }
+                ]
+            }
+        ]
+    }
+]

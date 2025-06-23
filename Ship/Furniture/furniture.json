@@ -1,0 +1,105 @@
+[
+    {
+        "type": "furniture",
+        "id": "f_Scientific_research_station",
+        "name": "科研站",
+        "description": "用于科研的研究站，能够通过研究产出高级物资",
+        "symbol": "@",
+        "color": "white",
+        "move_cost_mod": -10,
+        "keg_capacity": "5 L",
+        "light_emitted": 15,
+        "required_str": 40,
+        "coverage": 10,
+        "deconstruct": {
+            "items": [
+                {
+                    "item": "Ship_Cubes_Item",
+                    "count": 10
+                }
+            ]
+        },
+        "bash": {
+            "str_min": 4,
+            "str_max": 8,
+            "sound": "crunch!",
+            "sound_fail": "whump.",
+            "items": [
+                {
+                    "item": "Ship_Cubes_Item",
+                    "count": 8
+                }
+            ]
+        },
+        "examine_action": {
+            "type": "effect_on_condition",
+            "effect_on_conditions": [
+                {
+                    "id": "EOC_JN_research",
+                    "effect": [
+                        {
+                            "if": {
+                                "math": [
+                                    "u_Study_selection",
+                                    "==",
+                                    "0"
+                                ]
+                            },
+                            "then": [
+                                {
+                                    "open_dialogue": {
+                                        "topic": "Scientific_research_open_talk"
+                                    }
+                                }
+                            ],
+                            "else": [
+                                {
+                                    "open_dialogue": {
+                                        "topic": "Scientific_research_open_talk_now"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "type": "construction",
+        "id": "constr_Scientific_research_station",
+        "group": "build_Scientific_research_station",
+        "category": "CONSTRUCT",
+        "required_skills": [
+            [
+                "fabrication",
+                5
+            ]
+        ],
+        "time": "60 m",
+        "tools": [
+            [
+                [
+                    "Ship_Cubes",
+                    -1
+                ]
+            ]
+        ],
+        "activity_level": "EXTRA_EXERCISE",
+        "components": [
+            [
+                [
+                    "Ship_Cubes_Item",
+                    10
+                ]
+            ]
+        ],
+        "pre_special": "check_empty",
+        "post_terrain": "f_Scientific_research_station"
+    },
+    {
+        "type": "construction_group",
+        "id": "build_Scientific_research_station",
+        "name": "建造科研站"
+    }
+]

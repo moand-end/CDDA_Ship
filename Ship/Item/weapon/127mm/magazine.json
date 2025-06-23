@@ -1,0 +1,33 @@
+[
+  {
+    "id": "127mm_caliber_magazine",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "127mm口径弹匣"
+    },
+    "description": "一个127mm口径的专用弹匣，连接到舰娘空间",
+    "weight": "60 g",
+    "volume": "75 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "127mm"
+    ],
+    "capacity": 100,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "127mm": 100
+        }
+      }
+    ]
+  }
+]

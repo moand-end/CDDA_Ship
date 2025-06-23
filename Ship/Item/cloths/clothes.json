@@ -1,0 +1,243 @@
+[
+    {
+        "id": "New_Jersey_cos",
+        "type": "ARMOR",
+        "name": "新泽西cos服",
+        "description": "新泽西cos服。",
+        "weight": "2000 g",
+        "volume": "2 L",
+        "price": "100 USD",
+        "price_postapoc": "10 USD",
+        "symbol": "*",
+        "color": "light_red",
+        "material": [
+            "cotton"
+        ],
+        "material_thickness": 2,
+        "environmental_protection": 2,
+        "armor": [
+            {
+                "coverage": 50,
+                "encumbrance": 5,
+                "covers": [
+                    "leg_l",
+                    "leg_r",
+                    "torso",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "head",
+                    "foot_l",
+                    "foot_r",
+                    "mouth",
+                    "eyes"
+                ]
+            }
+        ],
+        "warmth": 0,
+        "flags": [
+            "VARSIZE",
+            "PADDED"
+        ]
+    },
+    {
+        "id": "Laffey_shirt",
+        "type": "ARMOR",
+        "name": "拉菲的衬衫",
+        "description": "拉菲的衬衫",
+        "weight": "2000 g",
+        "volume": "2 L",
+        "price": "100 USD",
+        "price_postapoc": "10 USD",
+        "symbol": "*",
+        "color": "white",
+        "warmth": 5,
+        "material": [
+            "cotton"
+        ],
+        "material_thickness": 0.1,
+        "flags": [
+            "VARSIZE",
+            "SKINTIGHT",
+            "PADDED",
+            "UNBREAKABLE"
+        ],
+        "armor": [
+            {
+                "coverage": 90,
+                "covers": [
+                    "torso"
+                ]
+            },
+            {
+                "coverage": 100,
+                "covers": [
+                    "arm_l",
+                    "arm_r"
+                ],
+                "specifically_covers": [
+                    "arm_shoulder_l",
+                    "arm_shoulder_r"
+                ]
+            },
+            {
+                "coverage": 50,
+                "covers": [
+                    "arm_l",
+                    "arm_r"
+                ],
+                "specifically_covers": [
+                    "arm_upper_l",
+                    "arm_upper_r"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "Laffey_cloth",
+        "type": "ARMOR",
+        "name": {
+            "str": "拉菲的衣服"
+        },
+        "description": "拉菲的衣服",
+        "weight": "580 g",
+        "volume": "2250 ml",
+        "price": "25 USD",
+        "price_postapoc": "1 USD",
+        "material": [
+            "cotton"
+        ],
+        "symbol": "[",
+        "color": "white",
+        "armor": [
+            {
+                "covers": [
+                    "torso"
+                ],
+                "specifically_covers": [
+                    "torso_lower"
+                ],
+                "coverage": 95,
+                "encumbrance": 1
+            },
+            {
+                "covers": [
+                    "torso"
+                ],
+                "specifically_covers": [
+                    "torso_upper"
+                ],
+                "coverage": 85
+            },
+            {
+                "covers": [
+                    "arm_l",
+                    "arm_r"
+                ],
+                "coverage": 100
+            }
+        ],
+        "warmth": 15,
+        "material_thickness": 0.25,
+        "flags": [
+            "VARSIZE",
+            "POCKETS",
+            "OUTER",
+            "UNBREAKABLE"
+        ]
+    },
+    {
+        "id": "Laffey_skirt",
+        "type": "ARMOR",
+        "name": {
+            "str": "拉菲的裙子"
+        },
+        "description": "拉菲的裙子",
+        "weight": "115 g",
+        "volume": "250 ml",
+        "price": "30 USD",
+        "price_postapoc": "10 cent",
+        "material": [
+            "cotton"
+        ],
+        "symbol": "[",
+        "color": "pink",
+        "material_thickness": 0.5,
+        "flags": [
+            "VARSIZE",
+            "SKINTIGHT",
+            "UNBREAKABLE"
+        ],
+        "armor": [
+            {
+                "coverage": 80,
+                "covers": [
+                    "leg_l",
+                    "leg_r"
+                ],
+                "specifically_covers": [
+                    "leg_hip_l",
+                    "leg_hip_r"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "Laffey_stockings",
+        "type": "ARMOR",
+        "name": {
+            "str": "拉菲的丝袜"
+        },
+        "description": "拉菲的丝袜。",
+        "weight": "90 g",
+        "volume": "250 ml",
+        "price": "5 USD",
+        "price_postapoc": "2 USD 50 cent",
+        "material": [
+            "cotton"
+        ],
+        "symbol": "[",
+        "color": "white",
+        "warmth": 10,
+        "material_thickness": 0.1,
+        "flags": [
+            "VARSIZE",
+            "SKINTIGHT",
+            "UNBREAKABLE"
+        ],
+        "armor": [
+            {
+                "coverage": 100,
+                "covers": [
+                    "foot_l",
+                    "foot_r"
+                ]
+            },
+            {
+                "covers": [
+                    "leg_l",
+                    "leg_r"
+                ],
+                "specifically_covers": [
+                    "leg_lower_l",
+                    "leg_lower_r",
+                    "leg_knee_l",
+                    "leg_knee_r"
+                ],
+                "coverage": 100
+            },
+            {
+                "covers": [
+                    "leg_l",
+                    "leg_r"
+                ],
+                "specifically_covers": [
+                    "leg_upper_l",
+                    "leg_upper_r"
+                ],
+                "coverage": 60
+            }
+        ]
+    }
+]

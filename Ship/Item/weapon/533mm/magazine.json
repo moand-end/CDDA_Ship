@@ -1,0 +1,33 @@
+[
+  {
+    "id": "533mm_caliber_torpedo_ammunition_bay",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "533mm口径鱼雷的弹舱"
+    },
+    "description": "一个533mm口径鱼雷发射器舰装的专用弹仓，连接到舰娘空间",
+    "weight": "60 g",
+    "volume": "75 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "533mm"
+    ],
+    "capacity": 10,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "533mm": 10
+        }
+      }
+    ]
+  }
+]

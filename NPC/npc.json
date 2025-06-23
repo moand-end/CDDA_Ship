@@ -1,0 +1,27 @@
+[
+    {
+        "type": "npc",
+        "id": "JN_LF_NPC",
+        "//": "拉菲",
+        "name_unique": "拉菲",
+        "name_suffix": "舰娘",
+        "gender": "female",
+        "class": "NPC_JN_LF",
+        "attitude": 3,
+        "mission": 7,
+        "chat": "TALK_LF",
+        "faction": "no_faction",
+        "age": 16,
+        "height": 150,
+        "str": 40,
+        "dex": 40,
+        "int": 40,
+        "per": 40,
+        "personality": {
+            "aggression": -1,
+            "bravery": 4,
+            "collector": -3,
+            "altruism": 3
+        }
+    }
+]

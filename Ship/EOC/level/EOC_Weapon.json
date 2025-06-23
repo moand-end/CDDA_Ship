@@ -1,0 +1,133 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Weapon",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Disassembly_Single_127mm_Main_Gun",
+                    "EOC_Disassembly_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Disassembly_533mm_Quintuple_Torpedo_Mount",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "拆卸127mm口径单装炮舰装",
+                    "拆卸双联装127mm高平两用炮Mk12",
+                    "拆卸双联40mm博福斯对空机炮舰装",
+                    "拆卸四联40mm博福斯对空机炮舰装",
+                    "拆卸533mm口径鱼雷发射器舰装",
+                    "返回"
+                ],
+                "hide_failing": true,
+                "title": "这里可以拆卸掉武器，不过为了防止意外，最好关闭手持后再拆卸。"
+            }
+        ]
+    },
+    {
+        "//": "武器卸载",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Single_127mm_Main_Gun",
+        "condition": {
+            "and": [
+                {
+                    "u_has_bionics": "bio_Single_127mm_Main_Gun"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_bionic": "bio_Single_127mm_Main_Gun"
+            },
+            {
+                "u_spawn_item": "Item_Single_127mm_Main_Gun",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "//": "武器卸载",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "u_has_bionics": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+            },
+            {
+                "u_spawn_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "//": "武器卸载",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_bionic": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+            },
+            {
+                "u_spawn_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "//": "武器卸载",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+            },
+            {
+                "u_spawn_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                "count": 1
+            }
+        ]
+    },
+    {
+        "//": "武器卸载",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_533mm_Quintuple_Torpedo_Mount",
+        "condition": {
+            "and": [
+                {
+                    "u_has_bionics": "bio_533mm_Quintuple_Torpedo_Mount"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_lose_bionic": "bio_533mm_Quintuple_Torpedo_Mount"
+            },
+            {
+                "u_spawn_item": "Item_533mm_Quintuple_Torpedo_Mount",
+                "count": 1
+            }
+        ]
+    }
+]

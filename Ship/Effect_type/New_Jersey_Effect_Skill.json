@@ -1,0 +1,90 @@
+[
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_New_Jersey_skill_Dragon_s_Breath_CD",
+        "name": [
+            "吐息之焰冷却"
+        ],
+        "desc": [
+            "技能冷却"
+        ],
+        "apply_message": "",
+        "remove_message": "吐息之焰冷却完毕。",
+        "rating": "good",
+        "max_duration": "10 s"
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_New_Jersey_skill_Freedom_Through_Firepower",
+        "name": [
+            "领向自由的炮火"
+        ],
+        "desc": [
+            "领向自由的炮火"
+        ],
+        "apply_message": "",
+        "remove_message": "领向自由的炮火技能效果结束。",
+        "rating": "good",
+        "max_duration": "10 s",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "RANGED_DAMAGE",
+                        "add": {
+                            "math": [
+                                "-(0.5+ (u_NewJersey_skill_Freedom_Through_Firepower_level - 1 ) *0.5)"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_New_Jersey_skill_Freedom_Through_Firepower_CD",
+        "name": [
+            "领向自由的炮火冷却"
+        ],
+        "desc": [
+            "领向自由的炮火"
+        ],
+        "apply_message": "",
+        "remove_message": "领向自由的炮火冷却完毕。",
+        "rating": "good",
+        "max_duration": "20 s"
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_New_Jersey_skill_Big_J",
+        "name": [
+            "Big J"
+        ],
+        "desc": [
+            "Big J"
+        ],
+        "apply_message": "",
+        "remove_message": "Big J技能效果结束。",
+        "rating": "good",
+        "max_duration": "1 m",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "RANGED_DAMAGE",
+                        "multiply": {
+                            "math": [
+                                "0.05 + (u_NewJersey_skill_Big_J_level - 1 ) *0.01"
+                            ]
+                        }
+                    },
+                    {
+                        "value": "ARMOR_ALL",
+                        "multiply": -0.05
+                    }
+                ]
+            }
+        ]
+    }
+]

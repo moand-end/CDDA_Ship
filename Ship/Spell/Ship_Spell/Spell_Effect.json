@@ -1,0 +1,20 @@
+[
+    {
+        "id": "Ship_relieve_pain_Spell",
+        "type": "SPELL",
+        "name": "降低疼痛",
+        "description": "降低疼痛",
+        "valid_targets": [
+            "self"
+        ],
+        "min_damage": 1000,
+        "max_damage": 1000,
+        "effect": "recover_energy",
+        "effect_str": "PAIN",
+        "shape": "blast",
+        "difficulty": -50,
+        "flags": [
+            "PAIN_NORESIST"
+        ]
+    }
+]

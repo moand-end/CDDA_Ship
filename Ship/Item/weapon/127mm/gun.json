@@ -1,0 +1,141 @@
+[
+  {
+    "id": "Single_127mm_Main_Gun",
+    "type": "GUN",
+    "name": {
+      "str": "127mm口径单装炮舰装"
+    },
+    "description": "127mm口径单装炮舰装T1",
+    "weight": "100 g",
+    "volume": "30 ml",
+    "price": "100000 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "good"
+    },
+    "melee_damage": {
+      "bash": 100,
+      "stab": 0,
+      "cut": 0
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "127mm"
+    ],
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "250 ml",
+    "flags": [
+      "NEVER_JAMS",
+      "NO_DROP",
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USES_BIONIC_POWER",
+      "BIONIC_GUN"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "127mm_caliber_magazine"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+    "type": "GUN",
+    "name": {
+      "str": "双联装127mm高平两用炮Mk12"
+    },
+    "description": "双联装127mm高平两用炮Mk12T1",
+    "weight": "100 g",
+    "volume": "30 ml",
+    "price": "100000 USD",
+    "to_hit": {
+      "grip": "weapon",
+      "length": "long",
+      "surface": "every",
+      "balance": "good"
+    },
+    "melee_damage": {
+      "bash": 100,
+      "stab": 0,
+      "cut": 0
+    },
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        2
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "127mm"
+    ],
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "250 ml",
+    "flags": [
+      "NEVER_JAMS",
+      "NO_DROP",
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USES_BIONIC_POWER",
+      "BIONIC_GUN"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "127mm_caliber_magazine"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,135 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_kill_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "condition": {
+            "math": [
+                "u_Ship_Judgment",
+                "!=",
+                "0"
+            ]
+        },
+        "//": "只杀敌人涨经验",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_kill_sairen_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "杀塞壬涨经验",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Ship_Judgment",
+                        "!=",
+                        "0"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "sairen_pawn",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Knight",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Siren_Aircraft",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Siren_Filfusa_Aircraft",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Siren_Aircraft_R",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "10"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_kill_Purity_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "净化者的",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Ship_Judgment",
+                        "!=",
+                        "0"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "Purity",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "1000"
+                ]
+            }
+        ]
+    }
+]

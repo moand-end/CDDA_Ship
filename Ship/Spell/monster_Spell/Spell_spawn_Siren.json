@@ -1,0 +1,27 @@
+[
+    {
+        "id": "siren_spawn_spell",
+        "type": "SPELL",
+        "name": "塞壬生成",
+        "description": "塞壬生成",
+        "valid_targets": [
+            "self"
+        ],
+        "flags": [
+            "HOSTILE_SUMMON",
+            "NO_PROJECTILE",
+            "RANDOM_TARGET",
+            "SILENT",
+            "NO_HANDS",
+            "NO_LEGS",
+            "NO_EXPLOSION_SFX"
+        ],
+        "effect": "effect_on_condition",
+        "shape": "blast",
+        "effect_str": "EOC_Spawn_Level_2",
+        "base_casting_time": 100,
+        "max_level": 1,
+        "min_range": 10,
+        "min_aoe": 10
+    }
+]

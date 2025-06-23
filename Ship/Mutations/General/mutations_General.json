@@ -1,0 +1,170 @@
+[
+    {
+        "type": "mutation",
+        "id": "BEAUTIFUL4",
+        "name": {
+            "str": "极致容貌"
+        },
+        "points": 4,
+        "visibility": 10,
+        "ugliness": -10,
+        "description": "你有着惊人的美丽容貌，人们不禁被你的容貌所折服，将尽可能的取悦你。",
+        "cancels": [
+            "UGLY",
+            "PRETTY",
+            "DEFORMED",
+            "DEFORMED2",
+            "DEFORMED3"
+        ],
+        "category": [
+            "Ship_Destroyer",
+            "Ship_Battleship"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "Cos_NewJersey",
+        "name": {
+            "str": "新泽西"
+        },
+        "points": 0,
+        "ugliness": -1,
+        "starting_trait": true,
+        "description": "你拥有一副跟新泽西相似的身体和头发"
+    },
+    {
+        "type": "mutation",
+        "id": "Renovation",
+        "name": {
+            "str": "改造"
+        },
+        "points": 0,
+        "description": "通过近代化改造增强自身实力",
+        "active": true,
+        "activated_eocs": [
+            "EOC_Renovation_tlak_topic"
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "Photographic_memory",
+        "name": {
+            "str": "过目不忘"
+        },
+        "points": -10,
+        "description": "你能够永远不忘记所学到的知识,这很好",
+        "types": [
+            "MEMORY"
+        ],
+        "mixed_effect": true,
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "SKILL_RUST_RESIST",
+                        "multiply": -1
+                    }
+                ]
+            }
+        ],
+        "starting_trait": true,
+        "valid": false,
+        "cancels": [
+            "FORGETFUL",
+            "GOODMEMORY"
+        ]
+    },
+    {
+        "//": "等级设定舰娘面板",
+        "type": "mutation",
+        "id": "Ship_Panel",
+        "name": {
+            "str": "面板"
+        },
+        "points": 0,
+        "description": "你的信息面板。",
+        "active": true,
+        "activated_eocs": [
+            "EOC_Ship_U_Panel"
+        ],
+        "enchantments": [
+            {
+                "condition": "ALWAYS",
+                "values": [
+                    {
+                        "//": "全防护减伤",
+                        "value": "ARMOR_ALL",
+                        "multiply": {
+                            "math": [
+                                " -0.01 * ( ( u_Ship_Level / 6.25 ) +  ( u_Ship_Limit_Break * 5 ) + ( u_Ship_Cognitive_Awakening * 3 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "攻击速度",
+                        "value": "ATTACK_SPEED",
+                        "multiply": {
+                            "math": [
+                                " -0.01 * ( u_Ship_Limit_Break * 10 )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "学习经验量",
+                        "value": "LEARNING_FOCUS",
+                        "multiply": {
+                            "math": [
+                                " 0.01 * ( ( u_Ship_Level / 12.5 ) +  ( u_Ship_Limit_Break * 10 ) + ( u_Ship_Cognitive_Awakening * 10 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "学习速度",
+                        "value": "READING_SPEED_MULTIPLIER",
+                        "multiply": {
+                            "math": [
+                                " -0.01 * ( ( u_Ship_Level / 12.5 ) +  ( u_Ship_Limit_Break * 5 ) + ( u_Ship_Cognitive_Awakening * 5 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "近战耐力消耗",
+                        "value": "MELEE_STAMINA_CONSUMPTION",
+                        "multiply": {
+                            "math": [
+                                " -0.01 * ( ( u_Ship_Level / 25 ) + u_Ship_Limit_Break + ( u_Ship_Cognitive_Awakening * 2 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "近战伤害",
+                        "value": "MELEE_DAMAGE",
+                        "multiply": {
+                            "math": [
+                                " 0.01 * ( ( u_Ship_Level / 125 ) + ( u_Ship_Limit_Break * 3 ) + ( u_Ship_Cognitive_Awakening * 2 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "远战伤害",
+                        "value": "RANGED_DAMAGE",
+                        "multiply": {
+                            "math": [
+                                " 0.01 * ( ( u_Ship_Level / 12.5 ) + ( u_Ship_Limit_Break * 5 ) + ( u_Ship_Cognitive_Awakening * 5 ) )"
+                            ]
+                        }
+                    },
+                    {
+                        "//": "远战后坐力",
+                        "value": "RECOIL_MODIFIER",
+                        "multiply": {
+                            "math": [
+                                " 0.01 * ( ( u_Ship_Level / 12.5 ) + ( u_Ship_Limit_Break * 5 ) + ( u_Ship_Cognitive_Awakening * 5 ) )"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "//": "吸引塞壬",
+        "type": "effect_on_condition",
+        "id": "EOC_Lure",
+        "condition": {
+            "and": [
+                "u_is_outside"
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "你试图吸引塞壬出现"
+            },
+            {
+                "u_consume_item": "Lure_device",
+                "count": 1
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ambush_Spawn"
+                ]
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "或许你应该在空旷的地方使用它。"
+            }
+        ]
+    },
+    {
+        "//": "吸引净化者",
+        "type": "effect_on_condition",
+        "id": "EOC_Lure_Purity",
+        "condition": {
+            "and": [
+                "u_is_outside"
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "你试图吸引净化者出现"
+            },
+            {
+                "u_consume_item": "Lure_device_Purity",
+                "count": 1
+            },
+            {
+                "u_message": "<color_red>强敌登场了，小心！</color>"
+            },
+            {
+                "run_eocs": [
+                    "eoc_fuji_Purity_spawn"
+                ]
+            }
+        ],
+        "false_effect": [
+            {
+                "u_message": "或许你应该在空旷的地方使用它。"
+            }
+        ]
+    },
+    {
+        "//": "用于屏蔽塞壬生成，非必要建议不用，但在家强烈建议使用！",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Blocker",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_raid_Selection",
+                        "==",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "2"
+                        ]
+                    },
+                    {
+                        "u_message": "你打开了屏蔽器，现在塞壬将不会再袭击你了。"
+                    }
+                ],
+                "else": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "0"
+                        ]
+                    },
+                    {
+                        "u_message": "你关闭了屏蔽器，塞壬将会袭击你"
+                    }
+                ]
+            }
+        ]
+    }
+]

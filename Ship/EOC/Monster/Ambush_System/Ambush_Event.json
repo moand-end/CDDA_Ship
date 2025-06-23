@@ -1,0 +1,347 @@
+[
+    {
+        "//": "伏击事件触发",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Event",
+        "effect": [
+            {
+                "switch": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": {
+                            "//": "触发事件",
+                            "run_eocs": [
+                                "EOC_Ambush_judgement"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 2,
+                        "effect": {
+                            "//": "触发事件",
+                            "run_eocs": [
+                                "EOC_Ambush_judgement"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 3,
+                        "effect": {
+                            "//": "回避事件",
+                            "run_eocs": [
+                                "EOC_Ambush_Evade_judgement"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 4,
+                        "effect": {
+                            "//": "回避事件",
+                            "run_eocs": [
+                                "EOC_Ambush_Evade_judgement"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "是否触发袭击事件",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_judgement",
+        "effect": [
+            {
+                "math": [
+                    "u_Ambush_Points",
+                    "=",
+                    "rand(10)"
+                ]
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Ambush_Points",
+                                        ">=",
+                                        "8- u_Siren_activity_level "
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "//": "回避事件",
+                                        "run_eocs": [
+                                            "EOC_Ambush_Evade_judgement"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "天空上似乎划过几道痕迹，但转瞬即逝。"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 2,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Ambush_Points",
+                                        ">=",
+                                        "5- u_Siren_activity_level "
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "//": "回避事件",
+                                        "run_eocs": [
+                                            "EOC_Ambush_Evade_judgement"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "天空上传来呼啸的声音，只是没有注意到你。"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "回避事件",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Evade_judgement",
+        "effect": [
+            {
+                "u_message": "你听到一些不同寻常的声音。\n<color_red>它们似乎正在接近</color>",
+                "popup": true
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": {
+                            "//": "这只是为了显示躲避概率，无任何实际意义。",
+                            "math": [
+                                "u_Evasion_probability",
+                                "=",
+                                " (( 100 + u_Ship_Level ) / ( 20 + ( u_Siren_activity_level - 1 ) * 5 ))*10"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 2,
+                        "effect": {
+                            "math": [
+                                "u_Evasion_probability",
+                                "=",
+                                "( ( 100 + u_Ship_Level ) / ( 40 + ( u_Siren_activity_level - 1 ) * 10 ))*10"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 3,
+                        "effect": {
+                            "math": [
+                                "u_Evasion_probability",
+                                "=",
+                                " (( 100 + u_Ship_Level ) / ( 60 + ( u_Siren_activity_level - 1 ) * 15 ))*10"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 4,
+                        "effect": {
+                            "math": [
+                                "u_Evasion_probability",
+                                "=",
+                                "( ( 100 + u_Ship_Level ) / ( 90 + ( u_Siren_activity_level - 1 ) * 20 ))*10"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_Evade_Calculation",
+                    "EOC_Ambush_Spawn"
+                ],
+                "names": [
+                    "躲避",
+                    "直接迎击"
+                ],
+                "hide_failing": true,
+                "title": "是否躲避袭击？\n躲避概率:<u_val:Evasion_probability>%"
+            }
+        ]
+    },
+    {
+        "//": "闪避判断",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Evade_Calculation",
+        "effect": [
+            {
+                "math": [
+                    "u_Evasion_Calculation",
+                    "=",
+                    "u_Evasion_probability / 10"
+                ]
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Evasion_Calculation",
+                                        "<=",
+                                        "20 + ( u_Siren_activity_level - 1 ) * 5"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "u_message": "<color_red>它们来了</color>",
+                                        "popup": true
+                                    },
+                                    {
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "天空上似乎划过几道痕迹，但转瞬即逝。"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 2,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Evasion_Calculation",
+                                        "<=",
+                                        "40 + ( u_Siren_activity_level - 1 ) * 10"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "u_message": "<color_red>它们来了</color>",
+                                        "popup": true
+                                    },
+                                    {
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "天空上传来呼啸的声音，不过并没有注意到你。"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 3,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Evasion_Calculation",
+                                        "<=",
+                                        "60 + ( u_Siren_activity_level - 1 ) * 15"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "u_message": "<color_red>它们来了</color>",
+                                        "popup": true
+                                    },
+                                    {
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "所幸它们没有注意到你。"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 4,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Evasion_Calculation",
+                                        "<=",
+                                        "90 + ( u_Siren_activity_level - 1 ) * 20"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "u_message": "<color_red>它们来了</color>",
+                                        "popup": true
+                                    },
+                                    {
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "它们似乎没有在意你。"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

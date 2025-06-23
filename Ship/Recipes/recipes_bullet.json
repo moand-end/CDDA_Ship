@@ -1,0 +1,287 @@
+[
+  {
+    "type": "recipe_category",
+    "id": "CC_舰娘",
+    "recipe_subcategories": [
+      "CSC_ALL",
+      "CSC_舰娘_弹药",
+      "CSC_舰娘_核心",
+      "CSC_舰娘_额外",
+      "CSC_舰娘_驱逐舰",
+      "CSC_舰娘_战列舰"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "Bofors_40mm_normal_bullet",
+    "//": "子弹",
+    "result_mult": 500,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          2
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "127mm_MK32_normal_bullet",
+    "//": "子弹",
+    "result_mult": 50,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          2
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "127mm_MK32_normal_bullet_blank_ammunition",
+    "//": "子弹",
+    "result_mult": 50,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          2
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "533mm_caliber_MK17_type_torpedo",
+    "//": "子弹",
+    "result_mult": 5,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          2
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          2
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "40mm_Bofors_anti_aircraft_gun_magazine",
+    "//": "弹夹",
+    "result_mult": 1,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          1
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "127mm_caliber_magazine",
+    "//": "弹夹",
+    "result_mult": 1,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          1
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "533mm_caliber_torpedo_ammunition_bay",
+    "//": "弹夹",
+    "result_mult": 1,
+    "category": "CC_舰娘",
+    "subcategory": "CSC_舰娘_弹药",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "time": "1 m",
+    "reversible": true,
+    "autolearn": true,
+    "flags": [
+      "BLIND_EASY"
+    ],
+    "tools": [
+      [
+        [
+          "Ship_Cubes",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "petroleum",
+          1
+        ]
+      ],
+      [
+        [
+          "Supplies",
+          1
+        ]
+      ]
+    ]
+  }
+]

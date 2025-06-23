@@ -1,0 +1,317 @@
+[
+    {
+        "//": "物品心智魔方使用",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Ship_Judgment",
+                        "==",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "//": "舰娘心智魔方",
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 1
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Select_1"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "u_message": "你已经成为舰娘了，已经无法再使用了。"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "舰娘变异通用模板",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_Generic_Templates",
+        "effect": [
+            {
+                "u_add_trait": "BEAUTIFUL4"
+            },
+            {
+                "u_add_trait": "Ship_Panel"
+            },
+            {
+                "u_add_bionic": "bio_Ship_Cubes"
+            },
+            {
+                "u_add_bionic": "bio_damage_control"
+            },
+            {
+                "u_add_bionic": "bio_General_Electric_Type_Geared_Steam_Turbine"
+            },
+            {
+                "u_add_bionic": "bio_Mk_12_Fire_Control_Radar"
+            },
+            {
+                "u_add_bionic": "bio_Power_Storage"
+            },
+            {
+                "u_add_bionic": "bio_Thruster"
+            },
+            {
+                "u_add_bionic": "bio_Ship_Nuclear_energy_device"
+            },
+            {
+                "u_add_bionic": "bio_Ship_Petroleum_generator"
+            }
+        ]
+    },
+    {
+        "//": "拉菲变异",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_Laffey",
+        "effect": [
+            {
+                "u_add_trait": "Destroyer"
+            },
+            {
+                "u_add_trait": "Destroyer_Armor"
+            },
+            {
+                "u_add_trait": "Ship_Laffey"
+            },
+            {
+                "u_add_trait": "Destroyer_Hull"
+            }
+        ]
+    },
+    {
+        "//": "新泽西变异",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_NewJersey",
+        "effect": [
+            {
+                "u_add_trait": "Battleship"
+            },
+            {
+                "u_add_trait": "Battleship_Armor"
+            },
+            {
+                "u_add_trait": "New_Jersey"
+            },
+            {
+                "u_add_trait": "Battleship_Hull"
+            }
+        ]
+    },
+    {
+        "//": "拉菲技能",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_skill_Laffey",
+        "effect": [
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_All_Out_Assault_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_All_Out_Assault_point",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "新泽西技能",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_skill_NewJersey",
+        "effect": [
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Dragon_s_Breath_EXP",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Freedom_Through_Firepower_EXP",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_NewJersey_skill_Big_J_EXP",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "舰娘拉菲全部",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_All_Laffey",
+        "effect": [
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_Generic_Templates"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_Laffey"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_skill_Laffey"
+                ]
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun"
+            }
+        ]
+    },
+    {
+        "//": "舰娘新泽西全部",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_All_NewJersey",
+        "effect": [
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_Generic_Templates"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_NewJersey"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_skill_NewJersey"
+                ]
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+            },
+            {
+                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+            }
+        ]
+    }
+]

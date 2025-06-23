@@ -1,0 +1,115 @@
+[
+    {
+        "type": "mutation",
+        "id": "Destroyer_Armor",
+        "name": {
+            "str": "驱逐舰装甲"
+        },
+        "points": 1,
+        "description": "你的舰装周围浮现了一圈装甲，能自动抵挡攻击，攻击抗性+40。",
+        "category": [
+            "Ship_Destroyer"
+        ],
+        "armor": [
+            {
+                "parts": [
+                    "torso",
+                    "head",
+                    "arm_l",
+                    "arm_r",
+                    "hand_l",
+                    "hand_r",
+                    "leg_l",
+                    "leg_r",
+                    "foot_l",
+                    "foot_r",
+                    "mouth",
+                    "eyes"
+                ],
+                "bash": 45,
+                "cut": 45,
+                "stab": 45,
+                "bullet": 45,
+                "heat": 45,
+                "acid": 45
+            }
+        ]
+    },
+    {
+        "type": "mutation",
+        "id": "Destroyer_Hull",
+        "name": {
+            "str": "驱逐舰体"
+        },
+        "points": 1,
+        "description": "舰娘的本体，也是舰娘力量的源泉。",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "STRENGTH",
+                        "add": 10
+                    },
+                    {
+                        "value": "DEXTERITY",
+                        "add": 10
+                    },
+                    {
+                        "value": "PERCEPTION",
+                        "add": 10
+                    },
+                    {
+                        "value": "INTELLIGENCE",
+                        "add": 10
+                    },
+                    {
+                        "value": "MAX_HP",
+                        "add": 300
+                    },
+                    {
+                        "value": "MAX_HP",
+                        "multiply": 3
+                    },
+                    {
+                        "value": "STEALTH_MODIFIER",
+                        "add": 50
+                    },
+                    {
+                        "value": "FOOTSTEP_NOISE",
+                        "add": -0.8
+                    },
+                    {
+                        "value": "SCENT_MASK",
+                        "multiply": -0.8
+                    },
+                    {
+                        "value": "SKILL_RUST_RESIST",
+                        "multiply": -1
+                    },
+                    {
+                        "value": "BIONIC_MANA_PENALTY",
+                        "multiply": -1
+                    }
+                ]
+            }
+        ],
+        "category": [
+            "Ship_Destroyer"
+        ]
+    },
+    {
+        "//": "舰娘变异拉菲",
+        "type": "mutation",
+        "id": "Ship_Laffey",
+        "name": {
+            "str": "拉菲"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "拉菲皮肤（借鉴（大嘘）了VOICEROID的贴图。）。",
+        "vanity": true,
+        "category": [
+            "Ship_Destroyer"
+        ]
+    }
+]

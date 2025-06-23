@@ -1,0 +1,24 @@
+[
+    {
+        "type": "mutation",
+        "id": "npc_lf_mutation",
+        "name": {
+            "str": "拉菲"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "拉菲的形态",
+        "vanity": true
+    },
+    {
+        "type": "mutation",
+        "id": "npc_Laffey_Ship_Equipment",
+        "name": {
+            "str": "拉菲舰装"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "拉菲的舰装",
+        "vanity": true
+    }
+]

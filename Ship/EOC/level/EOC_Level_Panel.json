@@ -1,0 +1,515 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_U_Panel",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_level_EXP",
+                    "EOC_Ship_Limit_Break",
+                    "EOC_Ship_Cognitive_Awakeningt",
+                    "EOC_Ship_skill",
+                    "EOC_Ship_Weapon",
+                    "EOC_Ship_help",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "加经验",
+                    "进阶",
+                    "心智觉醒",
+                    "技能",
+                    "装备",
+                    "帮助",
+                    "算了"
+                ],
+                "hide_failing": true,
+                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<color_green><u_val:Ship_Level_EXP></color>/<u_val:Ship_Level_Need_EXP>)\n阶段:<u_val:Ship_Limit_Break>\n心智觉醒:<u_val:Ship_Cognitive_Awakening>\n经验数据包:<u_val:Ship_EXP_Data_Packs>\n心智单元:<u_val:Ship_Cognitive_Chips>\n活跃度:<color_red><u_val:Siren_activity_level></color>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_level_EXP",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_level_AP",
+                    "EOC_Ship_level_EXP_Use",
+                    "EOC_Ship_level_EXP_Use_MAX",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "升级",
+                    "使用经验书",
+                    "使用经验书（全部）",
+                    "返回"
+                ],
+                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<u_val:Ship_Level_EXP>/<u_val:Ship_Level_Need_EXP>)\n阶段:<u_val:Ship_Limit_Break>\n心智觉醒:<u_val:Ship_Cognitive_Awakening>\n经验数据包:<u_val:Ship_EXP_Data_Packs>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_level_EXP_Use",
+        "condition": {
+            "math": [
+                "u_Ship_EXP_Data_Packs",
+                ">",
+                "0"
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_EXP_Data_Packs",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "100"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_level_EXP"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_level_EXP_Use_MAX",
+        "condition": {
+            "math": [
+                "u_Ship_EXP_Data_Packs",
+                ">",
+                "0"
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "u_Ship_EXP_Data_Packs * 100"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_EXP_Data_Packs",
+                    "-=",
+                    "u_Ship_EXP_Data_Packs"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_level_EXP"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_level_EXP_debug",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_EXP_Data_Packs",
+                    "+=",
+                    "100"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_level_EXP"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_level_AP",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "<",
+                                "70"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Level_EXP",
+                                ">=",
+                                "u_Ship_Level_Need_EXP"
+                            ]
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_LEVER_AP_template"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "and": [
+                                {
+                                    "math": [
+                                        "u_Ship_Level",
+                                        ">=",
+                                        "70"
+                                    ]
+                                },
+                                {
+                                    "math": [
+                                        "u_Ship_Level",
+                                        "<",
+                                        "80"
+                                    ]
+                                },
+                                {
+                                    "math": [
+                                        "u_Ship_Limit_Break",
+                                        ">=",
+                                        "1"
+                                    ]
+                                },
+                                {
+                                    "math": [
+                                        "u_Ship_Level_EXP",
+                                        ">=",
+                                        "u_Ship_Level_Need_EXP"
+                                    ]
+                                }
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "EOC_LEVER_AP_template"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "if": {
+                                    "and": [
+                                        {
+                                            "math": [
+                                                "u_Ship_Level",
+                                                ">=",
+                                                "80"
+                                            ]
+                                        },
+                                        {
+                                            "math": [
+                                                "u_Ship_Level",
+                                                "<",
+                                                "90"
+                                            ]
+                                        },
+                                        {
+                                            "math": [
+                                                "u_Ship_Limit_Break",
+                                                ">=",
+                                                "2"
+                                            ]
+                                        },
+                                        {
+                                            "math": [
+                                                "u_Ship_Level_EXP",
+                                                ">=",
+                                                "u_Ship_Level_Need_EXP"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "run_eocs": [
+                                            "EOC_LEVER_AP_template"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "if": {
+                                            "and": [
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Level",
+                                                        ">=",
+                                                        "90"
+                                                    ]
+                                                },
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Level",
+                                                        "<",
+                                                        "100"
+                                                    ]
+                                                },
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Limit_Break",
+                                                        "==",
+                                                        "3"
+                                                    ]
+                                                },
+                                                {
+                                                    "math": [
+                                                        "u_Ship_Level_EXP",
+                                                        ">=",
+                                                        "u_Ship_Level_Need_EXP"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "then": [
+                                            {
+                                                "run_eocs": [
+                                                    "EOC_LEVER_AP_template"
+                                                ]
+                                            }
+                                        ],
+                                        "else": [
+                                            {
+                                                "if": {
+                                                    "and": [
+                                                        {
+                                                            "math": [
+                                                                "u_Ship_Level",
+                                                                ">=",
+                                                                "100"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "math": [
+                                                                "u_Ship_Level",
+                                                                "<",
+                                                                "105"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "math": [
+                                                                "u_Ship_Cognitive_Awakening",
+                                                                "==",
+                                                                "1"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "math": [
+                                                                "u_Ship_Level_EXP",
+                                                                ">=",
+                                                                "u_Ship_Level_Need_EXP"
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                "then": [
+                                                    {
+                                                        "run_eocs": [
+                                                            "EOC_LEVER_AP_template"
+                                                        ]
+                                                    }
+                                                ],
+                                                "else": [
+                                                    {
+                                                        "if": {
+                                                            "and": [
+                                                                {
+                                                                    "math": [
+                                                                        "u_Ship_Level",
+                                                                        ">=",
+                                                                        "105"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "math": [
+                                                                        "u_Ship_Level",
+                                                                        "<",
+                                                                        "110"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "math": [
+                                                                        "u_Ship_Cognitive_Awakening",
+                                                                        "==",
+                                                                        "2"
+                                                                    ]
+                                                                },
+                                                                {
+                                                                    "math": [
+                                                                        "u_Ship_Level_EXP",
+                                                                        ">=",
+                                                                        "u_Ship_Level_Need_EXP"
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        "then": [
+                                                            {
+                                                                "run_eocs": [
+                                                                    "EOC_LEVER_AP_template"
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "else": [
+                                                            {
+                                                                "if": {
+                                                                    "and": [
+                                                                        {
+                                                                            "math": [
+                                                                                "u_Ship_Level",
+                                                                                ">=",
+                                                                                "110"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "math": [
+                                                                                "u_Ship_Level",
+                                                                                "<",
+                                                                                "115"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "math": [
+                                                                                "u_Ship_Cognitive_Awakening",
+                                                                                "==",
+                                                                                "3"
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "math": [
+                                                                                "u_Ship_Level_EXP",
+                                                                                ">=",
+                                                                                "u_Ship_Level_Need_EXP"
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                },
+                                                                "then": [
+                                                                    {
+                                                                        "run_eocs": [
+                                                                            "EOC_LEVER_AP_template"
+                                                                        ]
+                                                                    }
+                                                                ],
+                                                                "else": [
+                                                                    {
+                                                                        "if": {
+                                                                            "and": [
+                                                                                {
+                                                                                    "math": [
+                                                                                        "u_Ship_Level",
+                                                                                        ">=",
+                                                                                        "115"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "math": [
+                                                                                        "u_Ship_Level",
+                                                                                        "<",
+                                                                                        "120"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "math": [
+                                                                                        "u_Ship_Cognitive_Awakening",
+                                                                                        "==",
+                                                                                        "4"
+                                                                                    ]
+                                                                                },
+                                                                                {
+                                                                                    "math": [
+                                                                                        "u_Ship_Level_EXP",
+                                                                                        ">=",
+                                                                                        "u_Ship_Level_Need_EXP"
+                                                                                    ]
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        "then": [
+                                                                            {
+                                                                                "run_eocs": [
+                                                                                    "EOC_LEVER_AP_template"
+                                                                                ]
+                                                                            }
+                                                                        ],
+                                                                        "else": [
+                                                                            {
+                                                                                "if": {
+                                                                                    "and": [
+                                                                                        {
+                                                                                            "math": [
+                                                                                                "u_Ship_Level",
+                                                                                                ">=",
+                                                                                                "120"
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "math": [
+                                                                                                "u_Ship_Level",
+                                                                                                "<",
+                                                                                                "125"
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "math": [
+                                                                                                "u_Ship_Cognitive_Awakening",
+                                                                                                "==",
+                                                                                                "5"
+                                                                                            ]
+                                                                                        },
+                                                                                        {
+                                                                                            "math": [
+                                                                                                "u_Ship_Level_EXP",
+                                                                                                ">=",
+                                                                                                "u_Ship_Level_Need_EXP"
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "then": [
+                                                                                    {
+                                                                                        "run_eocs": [
+                                                                                            "EOC_LEVER_AP_template"
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_level_EXP"
+                ]
+            }
+        ]
+    }
+]

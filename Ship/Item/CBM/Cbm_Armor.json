@@ -1,0 +1,65 @@
+[
+    {
+        "id": "Ship_Cubes",
+        "type": "TOOL_ARMOR",
+        "symbol": ";",
+        "color": "light_cyan",
+        "name": {
+            "str": "心智魔方"
+        },
+        "description": "这枚心智魔方是组成你的根源，你能够拿它做任何事，只要别破坏它就行。（当然，这也是不可能的）。",
+        "price": "10000000 USD",
+        "price_postapoc": "10000000 USD",
+        "material": [
+            "Mystic Steel"
+        ],
+        "weight": "1000 g",
+        "volume": "2 L",
+        "flags": [
+            "TRADER_AVOID",
+            "INTEGRATED",
+            "UNBREAKABLE",
+            "PERSONAL",
+            "ALLOWS_NATURAL_ATTACKS"
+        ]
+    },
+    {
+        "id": "Ship_Petroleum_generator",
+        "type": "TOOL_ARMOR",
+        "category": "container",
+        "name": {
+            "str": "石油储存罐"
+        },
+        "description": "舰娘储存石油的地方，也是燃烧发电的地方。",
+        "volume": "1 L",
+        "weight": "1 g",
+        "price": "10000000 USD",
+        "material": [
+            "Mystic Steel"
+        ],
+        "symbol": "(",
+        "color": "magenta",
+        "flags": [
+            "INTEGRATED",
+            "UNBREAKABLE",
+            "PERSONAL",
+            "NO_REPAIR",
+            "ALLOWS_NATURAL_ATTACKS",
+            "TARDIS",
+            "BIONIC_FUEL_SOURCE"
+        ],
+        "pocket_data": [
+            {
+                "pocket_type": "CONTAINER",
+                "watertight": true,
+                "rigid": true,
+                "max_contains_volume": "1 L",
+                "max_item_volume": "32 ml",
+                "max_contains_weight": "1 kg",
+                "material_restriction": [
+                    "petroleum"
+                ]
+            }
+        ]
+    }
+]

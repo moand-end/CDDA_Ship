@@ -1,0 +1,20 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_math_DEBUG",
+        "effect": [
+            {
+                "u_message": "查看塞壬密度:<u_val:Siren_Amount>"
+            },
+            {
+                "u_message": "查看塞壬boss点数:<u_val:Boss_Point>"
+            },
+            {
+                "u_message": "查看塞壬boss次数:<u_val:boss_Minimum_Point>"
+            },
+            {
+                "u_message": "活跃度:<u_val:Siren_activity_level>"
+            }
+        ]
+    }
+]

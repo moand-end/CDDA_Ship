@@ -1,0 +1,318 @@
+[
+    {
+        "//": "伏击开始",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Spawn",
+        "effect": [
+            {
+                "u_message": "它们马上就会到来，请做好准备！"
+            },
+            {
+                "run_eocs": [
+                    {
+                        "id": "EOC_Ambush_Spawn_1",
+                        "effect": [
+                            {
+                                "switch": {
+                                    "math": [
+                                        "u_Ambush_Level"
+                                    ]
+                                },
+                                "cases": [
+                                    {
+                                        "case": 1,
+                                        "effect": {
+                                            "run_eocs": "EOC_Spawn_Level_1",
+                                            "time_in_future": "3 m"
+                                        }
+                                    },
+                                    {
+                                        "case": 2,
+                                        "effect": {
+                                            "run_eocs": "EOC_Spawn_Level_2",
+                                            "time_in_future": "3 m"
+                                        }
+                                    },
+                                    {
+                                        "case": 3,
+                                        "effect": {
+                                            "run_eocs": [
+                                                "EOC_Spawn_Level_3",
+                                                "EOC_Ambush_boss_Event_judgement"
+                                            ],
+                                            "time_in_future": "3 m"
+                                        }
+                                    },
+                                    {
+                                        "case": 4,
+                                        "effect": {
+                                            "run_eocs": [
+                                                "EOC_Spawn_Level_4",
+                                                "EOC_Ambush_boss_Event_judgement"
+                                            ],
+                                            "time_in_future": "3 m"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "iterations": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                }
+            },
+            {
+                "math": [
+                    "u_Siren_activity_level",
+                    "-=",
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "伏击开始1",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_Level_1",
+        "effect": [
+            {
+                "u_spawn_monster": "sairen_pawn",
+                "real_count": [
+                    0,
+                    2
+                ],
+                "min_radius": [
+                    15,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    25
+                ],
+                "spawn_message": "塞壬袭击了你！"
+            },
+            {
+                "u_spawn_monster": "Knight",
+                "real_count": [
+                    0,
+                    1
+                ],
+                "min_radius": [
+                    15,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    25
+                ]
+            }
+        ]
+    },
+    {
+        "//": "伏击开始2",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_Level_2",
+        "effect": [
+            {
+                "u_spawn_monster": "sairen_pawn",
+                "real_count": [
+                    2,
+                    4
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    20
+                ],
+                "spawn_message": "塞壬袭击了你！"
+            },
+            {
+                "u_spawn_monster": "Knight",
+                "real_count": [
+                    1,
+                    2
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    20
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft",
+                "real_count": [
+                    0,
+                    1
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "//": "伏击开始3",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_Level_3",
+        "effect": [
+            {
+                "u_spawn_monster": "sairen_pawn",
+                "real_count": [
+                    4,
+                    5
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    15
+                ],
+                "spawn_message": "塞壬袭击了你！"
+            },
+            {
+                "u_spawn_monster": "Knight",
+                "real_count": [
+                    2,
+                    4
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    15
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft",
+                "real_count": [
+                    1,
+                    1
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft_R",
+                "real_count": [
+                    0,
+                    1
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            }
+        ]
+    },
+    {
+        "//": "伏击开始4",
+        "type": "effect_on_condition",
+        "id": "EOC_Spawn_Level_4",
+        "effect": [
+            {
+                "u_spawn_monster": "sairen_pawn",
+                "real_count": [
+                    5,
+                    6
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    15
+                ],
+                "spawn_message": "塞壬袭击了你！"
+            },
+            {
+                "u_spawn_monster": "Knight",
+                "real_count": [
+                    4,
+                    6
+                ],
+                "min_radius": [
+                    10,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    15
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft",
+                "real_count": [
+                    1,
+                    2
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Aircraft_R",
+                "real_count": [
+                    1,
+                    1
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            },
+            {
+                "u_spawn_monster": "Siren_Filfusa_Aircraft",
+                "real_count": [
+                    0,
+                    1
+                ],
+                "min_radius": [
+                    20,
+                    20
+                ],
+                "max_radius": [
+                    20,
+                    20
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,147 @@
+[
+    {
+        "//": "初始化选择",
+        "type": "talk_topic",
+        "id": "talk_Initialize_Selection",
+        "dynamic_line": "欢迎使用舰娘mod，不过在游玩前需要对塞壬袭击进行选择，这关系到游戏的难度，请允许我多说几句。",
+        "responses": [
+            {
+                "text": "默认（新版袭击模式）",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "普通@如何变成舰娘？",
+                "topic": "talk_Initialize_Selection_help"
+            },
+            {
+                "text": "自定义",
+                "topic": "talk_Initialize_Selection_1"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "talk_Initialize_Selection_help",
+        "dynamic_line": "普通@得先去闯一闯跨洋物流，在第三楼的医务室,或者更下面的小房间里找到心智魔方，就可以变身舰娘了\n\n",
+        "responses": [
+            {
+                "text": "返回",
+                "topic": "talk_Initialize_Selection"
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "talk_Initialize_Selection_1",
+        "dynamic_line": "袭击模式是为了取消塞壬自然生成而制作的，它会通过一些条件的判断来让塞壬以袭击的方式生成在舰娘@附近，而现在的模式分为两种。\n\n新版袭击模式：分为四个阶段，开始默认为第一阶段，但会随着时间逐步增高，生成的塞壬会更多，直到最高的第四阶段，<color_red>这个阶段的塞壬会无视@是否为舰娘的条件</color>，请不打算一开始游玩舰娘的玩家酌情选择！\n\n以前的袭击模式：之前版本所制作的袭击模式，只会以@是否为舰娘和露天作为判断，为局内转变舰娘的玩家做了充足的准备。\n\n注意：屏蔽器不能在旧的袭击模式使用。",
+        "responses": [
+            {
+                "text": "新版袭击模式",
+                "topic": "talk_Initialize_Selection_2",
+                "effect": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "以前的袭击模式",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "禁止袭击模式",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "2"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "talk_topic",
+        "id": "talk_Initialize_Selection_2",
+        "dynamic_line": "可以选择对应阶段，不想改变默认即可。",
+        "responses": [
+            {
+                "text": "第一阶段",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Siren_Amount",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "第二阶段",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Siren_Amount",
+                            "=",
+                            "300"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "第三阶段",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Siren_Amount",
+                            "=",
+                            "600"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "第四阶段",
+                "topic": "TALK_DONE",
+                "effect": [
+                    {
+                        "math": [
+                            "u_Siren_Amount",
+                            "=",
+                            "900"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

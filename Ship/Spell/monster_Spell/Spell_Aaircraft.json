@@ -1,0 +1,137 @@
+[
+    {
+        "id": "Spell_Aaircraft_Danmaku",
+        "type": "SPELL",
+        "name": "爆炸",
+        "description": "爆炸",
+        "valid_targets": [
+            "ground",
+            "self",
+            "hostile"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "min_range": 3,
+        "max_range": 3,
+        "min_damage": 200,
+        "max_damage": 200,
+        "min_aoe": 1,
+        "max_aoe": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "damage_type": "stab"
+    },
+    {
+        "id": "Missiles_spawn_spell",
+        "type": "SPELL",
+        "name": "导弹生成",
+        "description": "导弹生成",
+        "valid_targets": [
+            "ground"
+        ],
+        "flags": [
+            "HOSTILE_SUMMON",
+            "NO_PROJECTILE",
+            "RANDOM_TARGET",
+            "SILENT",
+            "NO_HANDS",
+            "NO_LEGS",
+            "NO_EXPLOSION_SFX",
+            "PERMANENT"
+        ],
+        "effect": "summon",
+        "shape": "blast",
+        "effect_str": "Siren_Aircraft_1",
+        "min_damage": 1,
+        "max_damage": 1,
+        "max_level": 1,
+        "min_range": 1,
+        "min_aoe": 1
+    },
+    {
+        "id": "Missiles_spawn_spell_R",
+        "type": "SPELL",
+        "name": "导弹生成",
+        "description": "导弹生成",
+        "valid_targets": [
+            "ground"
+        ],
+        "flags": [
+            "HOSTILE_SUMMON",
+            "NO_PROJECTILE",
+            "RANDOM_TARGET",
+            "SILENT",
+            "NO_HANDS",
+            "NO_LEGS",
+            "NO_EXPLOSION_SFX",
+            "PERMANENT"
+        ],
+        "effect": "summon",
+        "shape": "blast",
+        "effect_str": "Siren_Aircraft_1",
+        "min_damage": 2,
+        "max_damage": 2,
+        "max_level": 1,
+        "min_range": 1,
+        "min_aoe": 1
+    },
+    {
+        "id": "Missiles_spawn_spell_Filfusa_1",
+        "type": "SPELL",
+        "name": "导弹生成",
+        "description": "导弹生成",
+        "valid_targets": [
+            "ground"
+        ],
+        "flags": [
+            "HOSTILE_SUMMON",
+            "NO_PROJECTILE",
+            "RANDOM_TARGET",
+            "SILENT",
+            "NO_HANDS",
+            "NO_LEGS",
+            "NO_EXPLOSION_SFX",
+            "PERMANENT"
+        ],
+        "effect": "summon",
+        "shape": "blast",
+        "effect_str": "Siren_Aircraft_1",
+        "min_damage": 2,
+        "max_damage": 2,
+        "max_level": 1,
+        "min_range": 1,
+        "min_aoe": 1,
+        "extra_effects": [
+            {
+                "id": "Missiles_spawn_spell_Filfusa_2"
+            }
+        ]
+    },
+    {
+        "id": "Missiles_spawn_spell_Filfusa_2",
+        "type": "SPELL",
+        "name": "导弹生成",
+        "description": "导弹生成",
+        "valid_targets": [
+            "ground"
+        ],
+        "flags": [
+            "HOSTILE_SUMMON",
+            "NO_PROJECTILE",
+            "RANDOM_TARGET",
+            "SILENT",
+            "NO_HANDS",
+            "NO_LEGS",
+            "NO_EXPLOSION_SFX",
+            "PERMANENT"
+        ],
+        "effect": "summon",
+        "shape": "blast",
+        "effect_str": "Siren_Aircraft_1",
+        "min_damage": 2,
+        "max_damage": 2,
+        "max_level": 1,
+        "min_range": 1,
+        "min_aoe": 1
+    }
+]

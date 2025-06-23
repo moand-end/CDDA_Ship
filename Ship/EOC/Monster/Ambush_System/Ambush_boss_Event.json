@@ -1,0 +1,88 @@
+[
+    {
+        "//": "boss判断",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_boss_Event_judgement",
+        "effect": [
+            {
+                "math": [
+                    "u_Boss_Point",
+                    "+=",
+                    "round(rand(100)) + u_boss_Minimum_Point"
+                ]
+            },
+            {
+                "math": [
+                    "u_boss_Minimum_Point",
+                    "+=",
+                    "u_Ambush_Level - 2"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Boss_Point",
+                        ">=",
+                        "100"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Boss_Point",
+                            "-=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_boss_Minimum_Point",
+                            "=",
+                            "0"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Boss_Spawn"
+                        ]
+                    },
+                    {
+                        "u_message": "强敌登场了，小心！",
+                        "type": "bad"
+                    }
+                ],
+                "else": [
+                    {
+                        "math": [
+                            "u_Boss_Point",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Boss_Spawn",
+        "effect": [
+            {
+                "u_spawn_monster": "Purity",
+                "real_count": [
+                    1,
+                    1
+                ],
+                "min_radius": [
+                    15,
+                    15
+                ],
+                "max_radius": [
+                    15,
+                    15
+                ],
+                "spawn_message": "净化者出现了"
+            }
+        ]
+    }
+]

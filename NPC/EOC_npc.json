@@ -1,0 +1,36 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_npc_ceshi",
+        "effect": [
+            {
+                "u_message": "正在测试"
+            },
+            {
+                "u_spawn_npc": "JN_LF_NPC",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1,
+                "spawn_message": "拉菲",
+                "spawn_message_plural": "拉菲"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "eoc_npc_bio_hunter",
+        "effect": [
+            {
+                "u_message": "正在测试"
+            },
+            {
+                "u_spawn_npc": "bio_hunter",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1,
+                "spawn_message": "伊芙琳·蔷薇",
+                "spawn_message_plural": "伊芙琳·蔷薇"
+            }
+        ]
+    }
+]

@@ -1,0 +1,133 @@
+[
+    {
+        "//": "塞壬密度判断",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Amount_Increase_judgement",
+        "condition": {
+            "and": [
+                "u_is_outside",
+                {
+                    "math": [
+                        "u_raid_Selection",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "recurrence": [
+            "1 hours",
+            "3 hours"
+        ],
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Siren_activity_level",
+                        ">",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "if": {
+                            "math": [
+                                "u_Ship_Judgment",
+                                "!=",
+                                "0"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "EOC_Siren_Amount_Increase_Ship"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "run_eocs": [
+                                    "EOC_Siren_Amount_Increase_Human"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "u_message": "天空一片寂静……"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "塞壬活跃度增加",
+        "type": "effect_on_condition",
+        "id": "EOC_activity_level_Increase",
+        "eoc_type": "EVENT",
+        "required_event": "character_attempt_to_fall_asleep",
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_activity_level",
+                    "=",
+                    "rand(3)+1"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "舰娘塞壬数量增加",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Amount_Increase_Ship",
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_Amount",
+                    "+=",
+                    "rand(5)"
+                ]
+            },
+            {
+                "//": "这里还要写个抵抗事件",
+                "run_eocs": [
+                    "EOC_Ambush_Level_judgement",
+                    "EOC_Ambush_Event"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "非舰娘塞壬数量增加",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Amount_Increase_Human",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Siren_Amount",
+                        "<=",
+                        "200"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Siren_Amount",
+                            "+=",
+                            "rand(2)"
+                        ]
+                    }
+                ]
+            },
+            {
+                "//": "这里还要写个塞壬生成的事件",
+                "run_eocs": [
+                    "EOC_Ambush_Level_judgement",
+                    "EOC_Ambush_Event_judgement_Human"
+                ]
+            }
+        ]
+    }
+]

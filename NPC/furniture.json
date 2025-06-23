@@ -1,0 +1,56 @@
+[
+    {
+        "type": "construction",
+        "id": "constr_wall_metal",
+        "group": "build_metal_wall",
+        "//": "Step 2: finish wall",
+        "category": "CONSTRUCT",
+        "required_skills": [
+            [
+                "fabrication",
+                8
+            ]
+        ],
+        "time": "90 m",
+        "qualities": [
+            {
+                "id": "GLARE",
+                "level": 1
+            }
+        ],
+        "tools": [
+            [
+                [
+                    "oxy_torch",
+                    15
+                ],
+                [
+                    "welder",
+                    75
+                ],
+                [
+                    "welder_crude",
+                    100
+                ],
+                [
+                    "toolset",
+                    100
+                ]
+            ]
+        ],
+        "components": [
+            [
+                [
+                    "steel_plate",
+                    3
+                ],
+                [
+                    "steel_chunk",
+                    20
+                ]
+            ]
+        ],
+        "pre_terrain": "t_scrap_wall_halfway",
+        "post_terrain": "t_wall_metal"
+    }
+]

@@ -1,0 +1,417 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt",
+        "condition": {
+            "math": [
+                "u_Ship_Level",
+                ">=",
+                "100"
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_Cognitive_Awakeningt_Break_1",
+                    "EOC_Ship_Cognitive_Awakeningt_Break_2",
+                    "EOC_Ship_Cognitive_Awakeningt_Break_3",
+                    "EOC_Ship_Cognitive_Awakeningt_Break_4",
+                    "EOC_Ship_Cognitive_Awakeningt_Break_5",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "心智觉醒一阶段",
+                    "心智觉醒二阶段",
+                    "心智觉醒三阶段",
+                    "心智觉醒四阶段",
+                    "心智觉醒五阶段",
+                    "返回"
+                ],
+                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<color_green><u_val:Ship_Level_EXP></color>/<u_val:Ship_Level_Need_EXP>)\n心智觉醒:<u_val:Ship_Cognitive_Awakening>\n心智单元:<u_val:Ship_Cognitive_Chips>",
+                "descriptions": [
+                    "等级=100\n所需物品:\n物资:20\n心智单元:20",
+                    "等级=105\n所需物品:\n物资:40\n心智单元:40",
+                    "等级=110\n所需物品:\n物资:60\n心智单元:60",
+                    "等级=115\n所需物品:\n物资:80\n心智单元:80",
+                    "等级=120\n所需物品:\n物资:100\n心智单元:100",
+                    "返回"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_1",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "==",
+                                "100"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Awakening",
+                                "==",
+                                "0"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Chips",
+                                ">=",
+                                "20"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 20
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 20
+                    },
+                    {
+                        "math": [
+                            "u_Ship_Cognitive_Chips",
+                            "-=",
+                            "20"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Cognitive_Awakeningt_Break_end"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_2",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "==",
+                                "105"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Awakening",
+                                "==",
+                                "1"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Chips",
+                                ">=",
+                                "40"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 40
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 40
+                    },
+                    {
+                        "math": [
+                            "u_Ship_Cognitive_Chips",
+                            "-=",
+                            "40"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Cognitive_Awakeningt_Break_end"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_3",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "==",
+                                "110"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Awakening",
+                                "==",
+                                "2"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Chips",
+                                ">=",
+                                "60"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 60
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 60
+                    },
+                    {
+                        "math": [
+                            "u_Ship_Cognitive_Chips",
+                            "-=",
+                            "60"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Cognitive_Awakeningt_Break_end"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_4",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "==",
+                                "115"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Awakening",
+                                "==",
+                                "3"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Chips",
+                                ">=",
+                                "80"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 80
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 80
+                    },
+                    {
+                        "math": [
+                            "u_Ship_Cognitive_Chips",
+                            "-=",
+                            "80"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Cognitive_Awakeningt_Break_end"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_5",
+        "effect": [
+            {
+                "if": {
+                    "and": [
+                        {
+                            "math": [
+                                "u_Ship_Level",
+                                "==",
+                                "120"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Awakening",
+                                "==",
+                                "4"
+                            ]
+                        },
+                        {
+                            "math": [
+                                "u_Ship_Cognitive_Chips",
+                                ">=",
+                                "100"
+                            ]
+                        },
+                        {
+                            "u_has_items": {
+                                "item": "Supplies",
+                                "count": 100
+                            }
+                        }
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 100
+                    },
+                    {
+                        "math": [
+                            "u_Ship_Cognitive_Chips",
+                            "-=",
+                            "100"
+                        ]
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Ship_Cognitive_Awakeningt_Break_end"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eoc_selector": [
+                            "EOC_Ship_end"
+                        ],
+                        "names": [
+                            "材料不足"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_debug",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Cognitive_Chips",
+                    "+=",
+                    "100"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_JN_Cognitive_Awakening"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Cognitive_Awakeningt_Break_end",
+        "effect": [
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "10 m"
+            },
+            {
+                "math": [
+                    "u_Ship_Cognitive_Awakening",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "u_message": "你觉醒到了第<u_val:Ship_Cognitive_Awakening>阶段。",
+                "type": "good",
+                "popup": true
+            }
+        ]
+    }
+]

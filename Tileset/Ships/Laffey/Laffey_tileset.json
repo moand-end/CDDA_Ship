@@ -1,0 +1,138 @@
+[
+    {
+        "type": "mod_tileset",
+        "compatibility": [
+            "Chibi_Ultica",
+            "UltimateCataclysm",
+            "MshockXottoplus",
+            "UNDEAD_PEOPLE",
+            "UNDEAD_PEOPLE_BASE",
+            "UNDEAD_PEOPLE_LEGACY",
+            "UlticaShell",
+            "MshockXottoplus12",
+            "MSX++DEAD_PEOPLE",
+            "MXplus12_for_cosmetics"
+        ],
+        "tiles-new": [
+            {
+                "file": "Tileset/Ships/Laffey/Laffey.png",
+                "sprite_width": 32,
+                "sprite_height": 36,
+                "sprite_offset_x": 0,
+                "sprite_offset_y": -4,
+                "tiles": [
+                    {
+                        "id": "Ship_Laffey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_Ship_Laffey",
+                        "fg": 1,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Laffey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Laffey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Laffey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Laffey_Ship_Equipment",
+                        "fg": 2,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Laffey_cloth",
+                        "fg": 3,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Laffey_cloth",
+                        "fg": 3,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Laffey_cloth",
+                        "fg": 3,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Laffey_cloth",
+                        "fg": 3,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Laffey_shirt",
+                        "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Laffey_shirt",
+                        "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Laffey_shirt",
+                        "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Laffey_shirt",
+                        "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Laffey_skirt",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Laffey_skirt",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Laffey_skirt",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Laffey_skirt",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Laffey_stockings",
+                        "fg": 6,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Laffey_stockings",
+                        "fg": 6,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Laffey_stockings",
+                        "fg": 6,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Laffey_stockings",
+                        "fg": 6,
+                        "rotates": false
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,158 @@
+[
+    {
+        "//": "升级计算",
+        "type": "effect_on_condition",
+        "id": "EOC_level_skill_AP",
+        "recurrence": "1 s",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                        ">=",
+                        "u_Laffey_skill_Wargod_of_Solomon_EXP_need"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "您的技能(所罗门的战神)等级已提升。",
+                "type": "good"
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP",
+                    "-=",
+                    "u_Laffey_skill_Wargod_of_Solomon_EXP_need"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Wargod_of_Solomon_level",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Laffey_skill_Wargod_of_Solomon_level",
+                        ">=",
+                        "3"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_EXP_need",
+                            "=",
+                            "200*(u_Laffey_skill_Wargod_of_Solomon_level - 2) + u_Laffey_skill_Wargod_of_Solomon_EXP_need"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Wargod_of_Solomon_EXP_need",
+                            "=",
+                            "100 + u_Laffey_skill_Wargod_of_Solomon_EXP_need"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "升级计算",
+        "type": "effect_on_condition",
+        "id": "EOC_level_skill_AP_Retrofit",
+        "recurrence": "1 s",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "1"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        "<",
+                        "11"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_EXP",
+                        ">=",
+                        "u_Laffey_skill_Retrofit_EXP_need"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "您的技能(歼灭模式)等级已提升。",
+                "type": "good"
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_EXP",
+                    "-=",
+                    "u_Laffey_skill_Retrofit_EXP_need"
+                ]
+            },
+            {
+                "math": [
+                    "u_Laffey_skill_Retrofit_level",
+                    "+=",
+                    "1"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Laffey_skill_Retrofit_level",
+                        ">=",
+                        "3"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Retrofit_EXP_need",
+                            "=",
+                            "200*(u_Laffey_skill_Retrofit_level - 2) + u_Laffey_skill_Retrofit_EXP_need"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "math": [
+                            "u_Laffey_skill_Retrofit_EXP_need",
+                            "=",
+                            "100 + u_Laffey_skill_Retrofit_EXP_need"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

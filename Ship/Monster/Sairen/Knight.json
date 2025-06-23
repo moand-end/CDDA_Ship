@@ -1,0 +1,67 @@
+[
+  {
+    "id": "Knight",
+    "type": "MONSTER",
+    "name": {
+      "str": "轻巡「Knight」II型"
+    },
+    "description": "轻巡，Knight的II型，比起I型，它更具有危险性。",
+    "default_faction": "Siren",
+    "bodytype": "ROBOT",
+    "species": [
+      "ROBOT"
+    ],
+    "diff": 20,
+    "volume": "500 L",
+    "weight": "1000000 g",
+    "hp": 750,
+    "regenerates": 20,
+    "speed": 120,
+    "material": [
+      "steel"
+    ],
+    "phase": "NULL",
+    "symbol": "H",
+    "color": "light_cyan",
+    "aggression": 100,
+    "morale": 100,
+    "luminance": 10,
+    "death_drops": "death_Sairen_drop",
+    "special_attacks": [
+      [
+        "PARROT",
+        175
+      ],
+      {
+        "type": "gun",
+        "cooldown": 4,
+        "gun_type": "sairen_DD_Cannon",
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "pistol",
+            4
+          ]
+        ],
+        "ranges": [
+          [
+            0,
+            25,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "NO_BREATHE",
+      "FIREPROOF",
+      "ACIDPROOF",
+      "PRIORITIZE_TARGETS"
+    ]
+  }
+]

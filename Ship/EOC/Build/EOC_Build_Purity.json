@@ -1,0 +1,413 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_head_use_determine",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Purity_Construct_first",
+                        "==",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_Purity_head_use_Frist"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "run_eocs": [
+                            "EOC_Purity_head_use"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_head_use_Frist",
+        "effect": [
+            {
+                "u_message": "你将净化者的头拿在手中，琢磨着这有什么用，忽然间你想到了心智魔方 ",
+                "popup": true
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_1",
+                    "EOC_Purity_Construct_Progress_continue",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "开始建造",
+                    "继续建造",
+                    "算了"
+                ],
+                "hide_failing": true
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_head_use",
+        "effect": [
+            {
+                "u_message": "你拿起了净化者的头。",
+                "popup": true
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_0",
+                    "EOC_Purity_Construct_Progress_1",
+                    "EOC_Purity_Construct_Progress_continue",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "直接造！",
+                    "开始建造",
+                    "继续建造",
+                    "算了"
+                ],
+                "hide_failing": true
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_1",
+        "condition": {
+            "and": [
+                {
+                    "u_has_item": "Ship_Cubes_Item"
+                },
+                {
+                    "math": [
+                        "u_Purity_Construct_Progress",
+                        "==",
+                        "0"
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "假如使用心智魔方对它使用,会发生什么呢? ",
+                "popup": true
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_2"
+                ],
+                "names": [
+                    "使用一枚心智魔方"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_2",
+        "condition": {
+            "and": [
+                {
+                    "u_has_items": {
+                        "item": "Supplies",
+                        "count": 30
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_message": "投入了心智魔方,看着两者相互融合,但她并没有产生躯体,或许还需要一点物资帮助？(需30物资) ",
+                "popup": true
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Purity_Construct_Progress",
+                        "==",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Ship_Cubes_Item",
+                        "count": 1
+                    },
+                    {
+                        "math": [
+                            "u_Purity_Construct_Progress",
+                            "=",
+                            "1"
+                        ]
+                    }
+                ]
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_3",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "投入物资",
+                    "算了"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_3",
+        "effect": [
+            {
+                "u_message": "将物资投入其中后，三者融合发出了耀眼的光芒，你似乎能够看到净化者的躯体正在缓缓生成。",
+                "popup": true
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Purity_Construct_Progress",
+                        "==",
+                        "1"
+                    ]
+                },
+                "then": [
+                    {
+                        "u_consume_item": "Supplies",
+                        "count": 30
+                    },
+                    {
+                        "math": [
+                            "u_Purity_Construct_Progress",
+                            "=",
+                            "2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_4",
+                    "EOC_Purity_Construct_Progress_3_end",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "继续",
+                    "还是别让她重生了！(这会失去以往的所有使用的资源。)",
+                    "再想想"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_3_end",
+        "effect": [
+            {
+                "u_message": "你将还没有成型的净化者摧毁了。",
+                "type": "bad",
+                "popup": true
+            },
+            {
+                "math": [
+                    "u_Purity_Construct_Progress",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_4",
+        "effect": [
+            {
+                "u_message": "你一直待到了她身体成型，不过多时，跟以往别无二致的净化者便生成了。",
+                "popup": true
+            },
+            {
+                "u_consume_item": "Purity_head",
+                "count": 1
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_wait",
+                "duration": " 30 m"
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_end_1"
+                ],
+                "names": [
+                    "结束了"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_continue",
+        "condition": {
+            "math": [
+                "u_Purity_Construct_Progress",
+                ">",
+                "0"
+            ]
+        },
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Purity_Construct_Progress",
+                        "==",
+                        "1"
+                    ]
+                },
+                "then": [
+                    {
+                        "run_eocs": [
+                            "EOC_Purity_Construct_Progress_2"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "math": [
+                                "u_Purity_Construct_Progress",
+                                "==",
+                                "2"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "EOC_Purity_Construct_Progress_3"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_0",
+        "condition": {
+            "math": [
+                "u_Purity_Construct_Progress",
+                "==",
+                "0"
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_continue_0"
+                ],
+                "names": [
+                    "全部投入"
+                ],
+                "title": "你再一次拿着净化者的头，同时看着自己身上的资源\n\n所需资源:\n心智魔方x1\n物资x30\n净化者的头x1"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_continue_0",
+        "condition": {
+            "and": [
+                {
+                    "u_has_item": "Ship_Cubes_Item"
+                },
+                {
+                    "u_has_items": {
+                        "item": "Supplies",
+                        "count": 30
+                    }
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Ship_Cubes_Item",
+                "count": 1
+            },
+            {
+                "u_consume_item": "Supplies",
+                "count": 30
+            },
+            {
+                "u_consume_item": "Purity_head",
+                "count": 1
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_wait",
+                "duration": " 30 m"
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Purity_Construct_Progress_end_2"
+                ],
+                "names": [
+                    "结束了"
+                ],
+                "title": "你再一次拿着净化者的头，同时看着自己身上的资源\n\n所需资源:\n心智魔方x1\n物资x30\n净化者的头x1"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_end_1",
+        "effect": [
+            {
+                "run_eocs": "EOC_Purity_spawn",
+                "time_in_future": "30 m"
+            },
+            {
+                "math": [
+                    "u_Purity_Construct_Progress",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Purity_Construct_first",
+                    "=",
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_Construct_Progress_end_2",
+        "effect": [
+            {
+                "run_eocs": "EOC_Purity_spawn",
+                "time_in_future": "30 m"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Purity_spawn",
+        "effect": [
+            {
+                "u_message": "你召唤了净化者！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1
+            }
+        ]
+    }
+]

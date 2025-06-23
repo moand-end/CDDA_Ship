@@ -1,0 +1,426 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "Laffey_Full_body_pillow",
+    "name": {
+      "str": "拉菲等身抱枕"
+    },
+    "description": "一个比人还大的拉菲抱枕，抱着她睡一定很舒服吧！",
+    "category": "other",
+    "material": [
+      "cotton"
+    ],
+    "weight": "2000 g",
+    "volume": "40 L",
+    "longest_side": "155 cm",
+    "price": "600 USD",
+    "price_postapoc": "20 USD",
+    "symbol": "s",
+    "color": "white",
+    "flags": [
+      "SLEEP_AID"
+    ]
+  },
+  {
+    "id": "petroleum",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "石油"
+    },
+    "description": "黑漆漆的石油，液体黄金。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "petroleum"
+    ],
+    "symbol": "$",
+    "color": "yellow",
+    "use_action": {
+      "target": "petroleum_food",
+      "moves": 0,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "petroleum_food",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "石油"
+    },
+    "description": "石油，好喝！",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "spoils_in": 0,
+    "stim": 40,
+    "quench": 30,
+    "healthy": 1,
+    "calories": 500,
+    "fun": 5,
+    "symbol": "$",
+    "color": "yellow",
+    "use_action": [
+      "PETFOOD"
+    ],
+    "petfood": [
+      "JNFOOD"
+    ]
+  },
+  {
+    "id": "Supplies",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "物资"
+    },
+    "description": "各种物资的统称，用处巨大，哪里都需要用到它~",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "$",
+    "color": "yellow"
+  },
+  {
+    "id": "Lure_device",
+    "type": "TOOL",
+    "name": {
+      "str": "引诱装置"
+    },
+    "description": "通过特殊的方法吸引塞壬。",
+    "weight": "1 kg",
+    "volume": "1 L",
+    "price": "5000 USD",
+    "price_postapoc": "100 USD",
+    "material": [
+      "gold"
+    ],
+    "symbol": ",",
+    "color": "yellow",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "吸引",
+      "effect_on_conditions": [
+        "EOC_Lure"
+      ]
+    }
+  },
+  {
+    "id": "Lure_device_Purity",
+    "type": "TOOL",
+    "name": {
+      "str": "净化者引诱器"
+    },
+    "description": "通过特殊的方法吸引净化者。",
+    "weight": "1 kg",
+    "volume": "1 L",
+    "price": "5000 USD",
+    "price_postapoc": "100 USD",
+    "material": [
+      "gold"
+    ],
+    "symbol": ",",
+    "color": "yellow",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "吸引_净化者",
+      "effect_on_conditions": [
+        "EOC_Lure_Purity"
+      ]
+    }
+  },
+  {
+    "id": "Siren_Blocker",
+    "type": "TOOL",
+    "name": {
+      "str": "塞壬屏蔽器"
+    },
+    "description": "屏蔽塞壬的，使用后将不会再进行塞壬刷新，再次使用解除屏蔽！",
+    "weight": "1 kg",
+    "volume": "1 L",
+    "price": "5000 USD",
+    "price_postapoc": "100 USD",
+    "material": [
+      "gold"
+    ],
+    "symbol": ",",
+    "color": "yellow",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "屏蔽",
+      "effect_on_conditions": [
+        "EOC_Siren_Blocker"
+      ]
+    }
+  },
+  {
+    "id": "Ship_Cubes_Item",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "心智魔方"
+    },
+    "description": "心智魔方，是舰娘的根源，也是成为舰娘的关键。",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Ship_Select"
+      ]
+    }
+  },
+  {
+    "id": "radar_Detection",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "侦测雷达"
+    },
+    "description": "用于侦测塞壬的。",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_radar_Detection"
+      ]
+    }
+  },
+  {
+    "id": "Tech_Box_T1",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "科技箱"
+    },
+    "description": "一个神奇的箱子，自身散发着白色的光芒，打开能够获得里面放置的武器。",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Tech_Box_T1_Open"
+      ]
+    }
+  },
+  {
+    "id": "Purity_head",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str_sp": "净化者的头"
+    },
+    "description": "一颗由净化者掉落的头，或许我们可以做一些有趣的事情。",
+    "weight": "4000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Purity_head_use_determine"
+      ]
+    }
+  },
+  {
+    "id": "Item_Single_127mm_Main_Gun",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "127mm口径单装炮"
+    },
+    "description": "使用它，就能够装备上127mm口径单装炮。",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Equip_Single_127mm_Main_Gun"
+      ]
+    }
+  },
+  {
+    "id": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "双联装127mm高平两用炮Mk12"
+    },
+    "description": "使用它，就能够装备上双联装127mm高平两用炮Mk12",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+      ]
+    }
+  },
+  {
+    "id": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "双联40mm博福斯对空机炮"
+    },
+    "description": "使用它，就能够装备上双联40mm博福斯对空机炮",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount"
+      ]
+    }
+  },
+  {
+    "id": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "四联40mm博福斯对空机炮"
+    },
+    "description": "使用它，就能够装备上四联40mm博福斯对空机炮",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount"
+      ]
+    }
+  },
+  {
+    "id": "Item_533mm_Quintuple_Torpedo_Mount",
+    "type": "TOOL",
+    "name": {
+      "str_sp": "533mm口径鱼雷发射器舰装"
+    },
+    "description": "使用它，就能够装备上533mm口径鱼雷发射器舰装",
+    "weight": "1000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        "EOC_Equip_533mm_Quintuple_Torpedo_Mount"
+      ]
+    }
+  },
+  {
+    "id": "damage_control",
+    "type": "TOOL",
+    "name": {
+      "str": "小黄鸡"
+    },
+    "description": "通过召唤一堆小黄鸡来维修舰体，很好用！",
+    "flags": [
+      "TARDIS"
+    ],
+    "weight": "70 g",
+    "volume": "250 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 3
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "relic_data": {
+      "charge_info": {
+        "recharge_type": "periodic",
+        "time": "1 h",
+        "regenerate_ammo": true
+      }
+    },
+    "price_postapoc": "2500 USD",
+    "symbol": "!",
+    "color": "white",
+    "use_action": {
+      "type": "heal",
+      "limb_power": 100,
+      "head_power": 100,
+      "torso_power": 100,
+      "bandages_power": 10,
+      "bleed": 50,
+      "move_cost": 100,
+      "effects": [
+        {
+          "id": "damage_control_effect",
+          "duration": 1
+        }
+      ]
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "Ship_relieve_pain",
+    "name": {
+      "str": "舰娘止痛"
+    },
+    "category": "tools",
+    "description": "钢铁做成的身体，就要有钢铁的意志（每小时可以启动一次）",
+    "color": "brown",
+    "symbol": "/",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "DEF_DISARM"
+    ],
+    "melee_damage": {
+      "bash": 1
+    },
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 1
+        }
+      }
+    ],
+    "relic_data": {
+      "charge_info": {
+        "regenerate_ammo": true,
+        "recharge_type": "periodic",
+        "time": "1 h"
+      }
+    },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "Ship_relieve_pain_Spell",
+      "no_fail": true,
+      "level": 0
+    },
+    "flags": [
+      "NO_UNLOAD",
+      "NO_RELOAD"
+    ],
+    "price": "50 USD",
+    "price_postapoc": "10 USD"
+  }
+]

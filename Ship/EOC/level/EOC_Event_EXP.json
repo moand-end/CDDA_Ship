@@ -1,0 +1,50 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_reads_book",
+        "eoc_type": "EVENT",
+        "required_event": "reads_book",
+        "condition": {
+            "math": [
+                "u_Ship_Judgment",
+                "!=",
+                "0"
+            ]
+        },
+        "//": "读书获取经验书",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_EXP_Data_Packs_Chance",
+                    "+=",
+                    "rand(10)"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_Ship_EXP_Data_Packs_Chance",
+                        ">=",
+                        "10"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Ship_EXP_Data_Packs_Chance",
+                            "-=",
+                            "10"
+                        ]
+                    },
+                    {
+                        "math": [
+                            "u_Ship_EXP_Data_Packs",
+                            "+=",
+                            "1"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

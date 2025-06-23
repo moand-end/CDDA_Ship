@@ -1,0 +1,60 @@
+[
+    {
+        "type": "effect_type",
+        "id": "damage_control_effect",
+        "removes_effects": [
+            "fungus",
+            "flu",
+            "dermatik",
+            "bloodworms",
+            "paincysts",
+            "brainworms",
+            "tapeworm",
+            "bleed",
+            "hypovolemia",
+            "blind",
+            "poison",
+            "stung",
+            "badpoison",
+            "foodpoison",
+            "paralyzepoison",
+            "tetanus",
+            "infected",
+            "asthma",
+            "common_cold"
+        ],
+        "name": [
+            "小黄鸡维修"
+        ],
+        "desc": [
+            "小黄鸡为你修复了身体内部的问题"
+        ],
+        "vitamins": [
+            {
+                "vitamin": "blood",
+                "rate": [
+                    [
+                        25000,
+                        50000
+                    ]
+                ],
+                "tick": [
+                    "1 s"
+                ]
+            },
+            {
+                "vitamin": "redcells",
+                "rate": [
+                    [
+                        25000,
+                        50000
+                    ]
+                ],
+                "tick": [
+                    "1 s"
+                ]
+            }
+        ],
+        "max_intensity": 1
+    }
+]

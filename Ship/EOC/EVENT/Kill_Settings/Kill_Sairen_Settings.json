@@ -1,0 +1,50 @@
+[
+    {
+        "id": "avatar_kills_sairen",
+        "type": "event_transformation",
+        "event_type": "character_kills_monster",
+        "value_constraints": {
+            "victim_type": {
+                "equals": [
+                    "mtype_id",
+                    "sairen_pawn"
+                ]
+            }
+        },
+        "drop_fields": [
+            "victim_type"
+        ]
+    },
+    {
+        "id": "avatar_kills_Knight",
+        "type": "event_transformation",
+        "event_type": "character_kills_monster",
+        "value_constraints": {
+            "victim_type": {
+                "equals": [
+                    "mtype_id",
+                    "Knight"
+                ]
+            }
+        },
+        "drop_fields": [
+            "victim_type"
+        ]
+    },
+    {
+        "id": "avatar_kills_Purity",
+        "type": "event_transformation",
+        "event_type": "character_kills_monster",
+        "value_constraints": {
+            "victim_type": {
+                "equals": [
+                    "mtype_id",
+                    "Purity"
+                ]
+            }
+        },
+        "drop_fields": [
+            "victim_type"
+        ]
+    }
+]

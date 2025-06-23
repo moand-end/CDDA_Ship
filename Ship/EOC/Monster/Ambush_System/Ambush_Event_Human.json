@@ -1,0 +1,80 @@
+[
+    {
+        "//": "是否触发事件",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Event_judgement_Human",
+        "effect": [
+            {
+                "math": [
+                    "u_Ambush_Points",
+                    "=",
+                    "rand(100)"
+                ]
+            },
+            {
+                "switch": {
+                    "math": [
+                        "u_Ambush_Level"
+                    ]
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Ambush_Points",
+                                        "==",
+                                        "100"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "//": "伏击事件",
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn_Human"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "你似乎感觉到天空之上闪过些什么，但什么也没有看到。"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 2,
+                        "effect": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Ambush_Points",
+                                        ">=",
+                                        "90 "
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "//": "伏击事件",
+                                        "run_eocs": [
+                                            "EOC_Ambush_Spawn_Human"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "u_message": "有什么从天上呼啸而过，小心！",
+                                        "type": "bad"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

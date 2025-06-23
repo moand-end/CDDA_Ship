@@ -1,0 +1,53 @@
+[
+  {
+    "id": "533mm",
+    "description": "你不应该看到这个。",
+    "type": "AMMO",
+    "name": {
+      "str": "533mm鱼雷"
+    },
+    "weight": "200 g",
+    "volume": "60 ml",
+    "price": "100000 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 1,
+    "stack_size": 200,
+    "ammo_type": "533mm",
+    "range": 160,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 15000
+    },
+    "recoil": 0,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "533mm_caliber_MK17_type_torpedo",
+    "copy-from": "533mm",
+    "type": "AMMO",
+    "name": {
+      "str": "533mm口径MK17型鱼雷（舰娘专用）"
+    },
+    "description": "一颗舰娘专用的533mm口径Mk15型鱼雷。",
+    "extend": {
+      "effects": [
+        "COOKOFF",
+        "533mm_power_effect",
+        "TRAIL"
+      ]
+    },
+    "relative": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 5000,
+        "armor_penetration": 50
+      }
+    }
+  }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_kill_sairen_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "只杀塞壬",
+        "condition": {
+            "and": [
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "sairen_pawn",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        },
+                        {
+                            "compare_string": [
+                                "Knight",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_Amount",
+                    "-=",
+                    "1"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_kill_Purity_monster",
+        "eoc_type": "EVENT",
+        "required_event": "character_kills_monster",
+        "//": "净化者的",
+        "condition": {
+            "and": [
+                {
+                    "or": [
+                        {
+                            "compare_string": [
+                                "Purity",
+                                {
+                                    "context_val": "victim_type"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_Amount",
+                    "-=",
+                    "100"
+                ]
+            }
+        ]
+    }
+]

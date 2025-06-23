@@ -1,0 +1,108 @@
+[
+    {
+        "type": "SPELL",
+        "id": "All_Out_Assault",
+        "name": "专属弹幕",
+        "description": "专属弹幕",
+        "flags": [
+            "SILENT",
+            "WONDER",
+            "RANDOM_TARGET"
+        ],
+        "valid_targets": [
+            "ground"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "damage_type": "stab",
+        "min_damage": 5,
+        "max_damage": 5,
+        "min_range": 1,
+        "max_range": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "extra_effects": [
+            {
+                "id": "All_Out_Assault_1"
+            }
+        ]
+    },
+    {
+        "type": "SPELL",
+        "id": "Danmaku",
+        "name": "弹幕",
+        "description": "弹幕",
+        "flags": [
+            "SILENT",
+            "WONDER",
+            "RANDOM_TARGET"
+        ],
+        "valid_targets": [
+            "ground"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "damage_type": "stab",
+        "min_damage": 2,
+        "max_damage": 2,
+        "min_range": 1,
+        "max_range": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "extra_effects": [
+            {
+                "id": "All_Out_Assault_1"
+            }
+        ]
+    },
+    {
+        "id": "All_Out_Assault_1",
+        "type": "SPELL",
+        "name": {
+            "str": "瞄准"
+        },
+        "description": " ",
+        "valid_targets": [
+            "hostile"
+        ],
+        "flags": [
+            "SILENT",
+            "RANDOM_TARGET"
+        ],
+        "shape": "blast",
+        "min_range": 40,
+        "max_range": 40,
+        "min_damage": 0,
+        "max_damage": 0,
+        "min_aoe": 0,
+        "max_aoe": 0,
+        "extra_effects": [
+            {
+                "id": "All_Out_Assault_Danmaku"
+            }
+        ],
+        "effect": "attack",
+        "damage_type": "bash"
+    },
+    {
+        "id": "All_Out_Assault_Danmaku",
+        "type": "SPELL",
+        "name": "专属弹幕_弹幕",
+        "description": "专属弹幕_弹幕",
+        "valid_targets": [
+            "ground",
+            "hostile"
+        ],
+        "shape": "blast",
+        "effect": "attack",
+        "min_range": 1,
+        "max_range": 1,
+        "min_damage": 100,
+        "max_damage": 100,
+        "min_aoe": 1,
+        "max_aoe": 1,
+        "min_duration": 0,
+        "max_duration": 0,
+        "damage_type": "stab"
+    }
+]

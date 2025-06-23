@@ -1,0 +1,13 @@
+[
+    {
+        "type": "MONSTER_FACTION",
+        "name": "Siren"
+    },
+    {
+        "type": "SPECIES",
+        "id": "SIREN",
+        "description": "a Siren",
+        "footsteps": "mechanical whirring.",
+        "bleeds": "fd_mechanical_fluid"
+    }
+]

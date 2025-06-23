@@ -1,0 +1,13 @@
+[
+    {
+        "type": "talk_topic",
+        "id": "Renovation_open_talk",
+        "dynamic_line": "这里是改造界面，你可以通过一些物资改造自身，直至进现代化。",
+        "responses": [
+            {
+                "text": "算了",
+                "topic": "TALK_DONE"
+            }
+        ]
+    }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sairen_pawn",
+    "type": "MONSTER",
+    "name": {
+      "str": "塞壬量产型「Pawn」"
+    },
+    "description": "推测为塞壬制造出来的“棋子”。攻击力和防御力都较弱。",
+    "default_faction": "Siren",
+    "bodytype": "ROBOT",
+    "species": [
+      "ROBOT"
+    ],
+    "diff": 20,
+    "volume": "500 L",
+    "weight": "1000000 g",
+    "hp": 500,
+    "regenerates": 10,
+    "speed": 100,
+    "material": [
+      "steel"
+    ],
+    "phase": "NULL",
+    "symbol": "H",
+    "color": "light_cyan",
+    "aggression": 100,
+    "morale": 100,
+    "luminance": 10,
+    "death_drops": "death_Sairen_drop",
+    "special_attacks": [
+      [
+        "PARROT",
+        150
+      ],
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "gun_type": "sairen_DD_Cannon",
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "pistol",
+            3
+          ]
+        ],
+        "ranges": [
+          [
+            0,
+            25,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "NO_BREATHE",
+      "FIREPROOF",
+      "ACIDPROOF",
+      "PRIORITIZE_TARGETS"
+    ]
+  }
+]

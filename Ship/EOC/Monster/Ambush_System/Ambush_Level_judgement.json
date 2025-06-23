@@ -1,0 +1,87 @@
+[
+    {
+        "//": "伏击等级判断",
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Level_judgement",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Siren_Amount",
+                        ">",
+                        "600"
+                    ]
+                },
+                "then": [
+                    {
+                        "math": [
+                            "u_Ambush_Level",
+                            "=",
+                            "4"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "if": {
+                            "math": [
+                                "u_Siren_Amount",
+                                ">",
+                                "400"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "math": [
+                                    "u_Ambush_Level",
+                                    "=",
+                                    "3"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "if": {
+                                    "math": [
+                                        "u_Siren_Amount",
+                                        ">",
+                                        "200"
+                                    ]
+                                },
+                                "then": [
+                                    {
+                                        "math": [
+                                            "u_Ambush_Level",
+                                            "=",
+                                            "2"
+                                        ]
+                                    }
+                                ],
+                                "else": [
+                                    {
+                                        "if": {
+                                            "math": [
+                                                "u_Siren_Amount",
+                                                ">",
+                                                "100"
+                                            ]
+                                        },
+                                        "then": [
+                                            {
+                                                "math": [
+                                                    "u_Ambush_Level",
+                                                    "=",
+                                                    "1"
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

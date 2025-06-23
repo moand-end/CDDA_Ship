@@ -1,0 +1,18 @@
+[
+  {
+    "id": "127mm_power_effect",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 3000,
+      "distance_factor": 0.5
+    }
+  },
+  {
+    "id": "533mm_power_effect",
+    "type": "ammo_effect",
+    "explosion": {
+      "power": 20000,
+      "distance_factor": 0.5
+    }
+  }
+]

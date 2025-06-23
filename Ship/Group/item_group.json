@@ -1,0 +1,84 @@
+[
+  {
+    "type": "item_group",
+    "id": "lab_mutagen_ingredients",
+    "subtype": "collection",
+    "copy-from": "lab_mutagen_ingredients",
+    "extend": {
+      "items": [
+        {
+          "item": "Supplies",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "petroleum",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "Laffey_Full_body_pillow",
+          "prob": 5
+        },
+        {
+          "item": "Ship_Cubes_Item",
+          "prob": 75
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "lab_mutagen_ingredients_fridge",
+    "subtype": "collection",
+    "copy-from": "lab_mutagen_ingredients_fridge",
+    "extend": {
+      "items": [
+        {
+          "item": "Supplies",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "petroleum",
+          "count": [
+            0,
+            5
+          ],
+          "prob": 100
+        },
+        {
+          "item": "Laffey_Full_body_pillow",
+          "prob": 5
+        },
+        {
+          "item": "Ship_Cubes_Item",
+          "prob": 75
+        }
+      ]
+    }
+  },
+  {
+    "type": "item_group",
+    "id": "bed",
+    "subtype": "distribution",
+    "copy-from": "bed",
+    "extend": {
+      "entries": [
+        {
+          "item": "Laffey_Full_body_pillow",
+          "prob": 5
+        }
+      ]
+    }
+  }
+]

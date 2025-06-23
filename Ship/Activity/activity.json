@@ -1,0 +1,54 @@
+[
+    {
+        "id": "ACT_SHIP_SLEEP",
+        "type": "activity_type",
+        "activity_level": "NO_EXERCISE",
+        "verb": "你正在昏睡中……",
+        "based_on": "time",
+        "can_resume": false,
+        "refuel_fires": false,
+        "interruptable_with_kb": false,
+        "interruptable": false,
+        "auto_needs": false,
+        "multi_activity": false
+    },
+    {
+        "id": "ACT_SHIP_Research",
+        "type": "activity_type",
+        "activity_level": "LIGHT_EXERCISE",
+        "verb": "研究中……",
+        "based_on": "time",
+        "can_resume": false,
+        "refuel_fires": false,
+        "interruptable_with_kb": false,
+        "interruptable": false,
+        "auto_needs": false,
+        "multi_activity": false
+    },
+    {
+        "id": "ACT_SHIP_Skills_Training",
+        "type": "activity_type",
+        "activity_level": "LIGHT_EXERCISE",
+        "verb": "训练中……",
+        "based_on": "time",
+        "can_resume": false,
+        "refuel_fires": false,
+        "interruptable_with_kb": false,
+        "interruptable": false,
+        "auto_needs": false,
+        "multi_activity": false
+    },
+    {
+        "id": "ACT_SHIP_wait",
+        "type": "activity_type",
+        "activity_level": "LIGHT_EXERCISE",
+        "verb": "等待",
+        "based_on": "time",
+        "can_resume": false,
+        "refuel_fires": false,
+        "interruptable_with_kb": false,
+        "interruptable": false,
+        "auto_needs": false,
+        "multi_activity": false
+    }
+]
