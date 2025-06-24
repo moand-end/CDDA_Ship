@@ -1,9 +1,9 @@
 [
   {
-    "id": "Twin_40mm_Bofors_AA_Gun_Mount",
+    "id": "Twin_40mm_Bofors_AA_Gun_Mount_T1",
     "type": "GUN",
     "name": {
-      "str": "双联40mm博福斯对空机炮舰装"
+      "str": "双联40mm博福斯对空机炮舰装 T1"
     },
     "description": "双联40mm博福斯对空机炮舰装T1",
     "weight": "100 g",
@@ -68,10 +68,52 @@
     ]
   },
   {
-    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount",
+    "id": "Twin_40mm_Bofors_AA_Gun_Mount_T1_1",
+    "copy-from": "Twin_40mm_Bofors_AA_Gun_Mount_T1",
     "type": "GUN",
     "name": {
-      "str": "四联40mm博福斯对空机炮舰装"
+      "str": "双联40mm博福斯对空机炮舰装 T1+1"
+    },
+    "description": "双联40mm博福斯对空机炮舰装 T1+1",
+    "melee_damage": {
+      "bash": 105,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Twin_40mm_Bofors_AA_Gun_Mount_T1_2",
+    "copy-from": "Twin_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "双联40mm博福斯对空机炮舰装 T1+2"
+    },
+    "description": "双联40mm博福斯对空机炮舰装 T1+2",
+    "melee_damage": {
+      "bash": 110,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Twin_40mm_Bofors_AA_Gun_Mount_T1_3",
+    "copy-from": "Twin_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "双联40mm博福斯对空机炮舰装 T1+3"
+    },
+    "description": "双联40mm博福斯对空机炮舰装 T1+3",
+    "melee_damage": {
+      "bash": 115,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1"
     },
     "description": "双联40mm博福斯对空机炮舰装T1",
     "weight": "100 g",
@@ -134,5 +176,89 @@
         ]
       }
     ]
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_1",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+1"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+1",
+    "melee_damage": {
+      "bash": 105,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_2",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+2"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+2",
+    "melee_damage": {
+      "bash": 110,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_3",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+3"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+3",
+    "melee_damage": {
+      "bash": 115,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_4",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+4"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+4",
+    "melee_damage": {
+      "bash": 120,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_5",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+5"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+5",
+    "melee_damage": {
+      "bash": 125,
+      "stab": 0,
+      "cut": 0
+    }
+  },
+  {
+    "id": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1_6",
+    "copy-from": "Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+    "type": "GUN",
+    "name": {
+      "str": "四联40mm博福斯对空机炮舰装 T1+6"
+    },
+    "description": "四联40mm博福斯对空机炮舰装 T1+6",
+    "melee_damage": {
+      "bash": 130,
+      "stab": 0,
+      "cut": 0
+    }
   }
 ]

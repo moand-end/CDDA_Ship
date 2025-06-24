@@ -1,0 +1,24 @@
+[
+    {
+        "id": "bio_Twin_40mm_Bofors_AA_Gun_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "双联40mm博福斯对空机炮CBM"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    },
+    {
+        "id": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "copy-from": "bionic_general",
+        "type": "BIONIC_ITEM",
+        "name": {
+            "str": "四联40mm博福斯对空机炮舰装"
+        },
+        "description": "这是作为舰娘的基础的武器，但在这里能够解决近乎一切问题，但它不应该出现在这里的。",
+        "price": "2200 USD",
+        "difficulty": 10
+    }
+]

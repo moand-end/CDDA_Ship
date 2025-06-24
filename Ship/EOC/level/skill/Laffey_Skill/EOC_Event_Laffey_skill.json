@@ -13,7 +13,7 @@
                     "or": [
                         {
                             "compare_string": [
-                                "Single_127mm_Main_Gun",
+                                "Single_127mm_Main_Gun_T1",
                                 {
                                     "context_val": "weapon"
                                 }
@@ -21,7 +21,7 @@
                         },
                         {
                             "compare_string": [
-                                "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                "Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
                                 {
                                     "context_val": "weapon"
                                 }
