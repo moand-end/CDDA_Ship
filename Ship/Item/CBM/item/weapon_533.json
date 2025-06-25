@@ -4,7 +4,7 @@
         "copy-from": "bionic_general",
         "type": "BIONIC_ITEM",
         "name": {
-            "str": "533mm口径鱼雷发射器舰装CBM"
+            "str": "三联装533mm口径鱼雷发射器舰装CBM"
         },
         "description": "这是作为舰娘的基础武器。现在等级：0",
         "price": "2200 USD",
@@ -15,7 +15,7 @@
         "copy-from": "bionic_general",
         "type": "BIONIC_ITEM",
         "name": {
-            "str": "533mm口径鱼雷发射器舰装CBM"
+            "str": "三联装533mm口径鱼雷发射器舰装CBM"
         },
         "description": "这是作为舰娘的基础武器。 现在等级：1",
         "price": "2200 USD",
@@ -26,7 +26,7 @@
         "copy-from": "bionic_general",
         "type": "BIONIC_ITEM",
         "name": {
-            "str": "533mm口径鱼雷发射器舰装CBM"
+            "str": "三联装533mm口径鱼雷发射器舰装CBM"
         },
         "description": "这是作为舰娘的基础武器。 现在等级：2",
         "price": "2200 USD",
@@ -37,7 +37,7 @@
         "copy-from": "bionic_general",
         "type": "BIONIC_ITEM",
         "name": {
-            "str": "533mm口径鱼雷发射器舰装CBM"
+            "str": "三联装533mm口径鱼雷发射器舰装CBM"
         },
         "description": "这是作为舰娘的基础武器。 现在等级：3",
         "price": "2200 USD",

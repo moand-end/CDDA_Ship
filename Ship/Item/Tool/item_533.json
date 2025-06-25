@@ -1,0 +1,47 @@
+[
+    {
+        "id": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "三联装533mm口径鱼雷发射器舰装 T1"
+        },
+        "description": "三联装533mm口径鱼雷发射器舰装T1 当前等级:0",
+        "weight": "1000 g",
+        "volume": "2 L",
+        "symbol": ";",
+        "color": "light_cyan",
+        "use_action": {
+            "type": "effect_on_conditions",
+            "effect_on_conditions": [
+                "EOC_Equip_533mm_Quintuple_Torpedo_Mount"
+            ]
+        }
+    },
+    {
+        "id": "Item_533mm_Quintuple_Torpedo_Mount_T1_1",
+        "copy-from": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "三联装533mm口径鱼雷发射器舰装 T1 +1"
+        },
+        "description": "三联装533mm口径鱼雷发射器舰装T1 当前等级:1"
+    },
+    {
+        "id": "Item_533mm_Quintuple_Torpedo_Mount_T1_2",
+        "copy-from": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "三联装533mm口径鱼雷发射器舰装 T1 +2"
+        },
+        "description": "三联装533mm口径鱼雷发射器舰装T1 当前等级:2"
+    },
+    {
+        "id": "Item_533mm_Quintuple_Torpedo_Mount_T1_3",
+        "copy-from": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "三联装533mm口径鱼雷发射器舰装 T1 +3"
+        },
+        "description": "三联装533mm口径鱼雷发射器舰装T1 当前等级:3"
+    }
+]

@@ -91,7 +91,7 @@
                         "case": 1,
                         "effect": [
                             {
-                                "u_spawn_item": "Item_Single_127mm_Main_Gun",
+                                "u_spawn_item": "Item_Single_127mm_Main_Gun_T1",
                                 "count": 1
                             },
                             {
@@ -107,7 +107,7 @@
                         "case": 2,
                         "effect": [
                             {
-                                "u_spawn_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                                "u_spawn_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
                                 "count": 1
                             },
                             {
@@ -123,7 +123,7 @@
                         "case": 3,
                         "effect": [
                             {
-                                "u_spawn_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
+                                "u_spawn_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount_T1",
                                 "count": 1
                             },
                             {
@@ -139,7 +139,7 @@
                         "case": 4,
                         "effect": [
                             {
-                                "u_spawn_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                                "u_spawn_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
                                 "count": 1
                             },
                             {
@@ -155,7 +155,7 @@
                         "case": 5,
                         "effect": [
                             {
-                                "u_spawn_item": "Item_533mm_Quintuple_Torpedo_Mount",
+                                "u_spawn_item": "Item_533mm_Quintuple_Torpedo_Mount_T1",
                                 "count": 1
                             },
                             {
@@ -172,156 +172,6 @@
             {
                 "u_consume_item": "Tech_Box_T1",
                 "count": 1
-            }
-        ]
-    },
-    {
-        "//": "武器装备",
-        "type": "effect_on_condition",
-        "id": "EOC_Equip_Single_127mm_Main_Gun",
-        "condition": {
-            "and": [
-                {
-                    "//": "武器装备cbm",
-                    "not": {
-                        "u_has_bionics": "bio_Single_127mm_Main_Gun_T1"
-                    }
-                }
-            ]
-        },
-        "effect": [
-            {
-                "//": "武器装备cbm名字",
-                "u_consume_item": "Item_Single_127mm_Main_Gun",
-                "count": 1
-            },
-            {
-                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1"
-            }
-        ],
-        "false_effect": [
-            {
-                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
-            }
-        ]
-    },
-    {
-        "//": "武器装备",
-        "type": "effect_on_condition",
-        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
-        "condition": {
-            "and": [
-                {
-                    "//": "武器装备cbm",
-                    "not": {
-                        "u_has_bionics": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
-                    }
-                }
-            ]
-        },
-        "effect": [
-            {
-                "//": "武器装备cbm名字",
-                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
-                "count": 1
-            },
-            {
-                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
-            }
-        ],
-        "false_effect": [
-            {
-                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
-            }
-        ]
-    },
-    {
-        "//": "武器装备",
-        "type": "effect_on_condition",
-        "id": "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount",
-        "condition": {
-            "and": [
-                {
-                    "//": "武器装备cbm",
-                    "not": {
-                        "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1"
-                    }
-                }
-            ]
-        },
-        "effect": [
-            {
-                "//": "武器装备cbm名字",
-                "u_consume_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount",
-                "count": 1
-            },
-            {
-                "u_add_bionic": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1"
-            }
-        ],
-        "false_effect": [
-            {
-                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
-            }
-        ]
-    },
-    {
-        "//": "武器装备",
-        "type": "effect_on_condition",
-        "id": "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount",
-        "condition": {
-            "and": [
-                {
-                    "//": "武器装备cbm",
-                    "not": {
-                        "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
-                    }
-                }
-            ]
-        },
-        "effect": [
-            {
-                "//": "武器装备cbm名字",
-                "u_consume_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount",
-                "count": 1
-            },
-            {
-                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
-            }
-        ],
-        "false_effect": [
-            {
-                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
-            }
-        ]
-    },
-    {
-        "//": "武器装备",
-        "type": "effect_on_condition",
-        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount",
-        "condition": {
-            "and": [
-                {
-                    "//": "武器装备cbm",
-                    "not": {
-                        "u_has_bionics": "bio_533mm_Quintuple_Torpedo_Mount_T1"
-                    }
-                }
-            ]
-        },
-        "effect": [
-            {
-                "//": "武器装备cbm名字",
-                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount",
-                "count": 1
-            },
-            {
-                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1"
-            }
-        ],
-        "false_effect": [
-            {
-                "u_message": "你已经拥有这个装备了，已经无法再使用了。"
             }
         ]
     }

@@ -23,7 +23,7 @@
                     "算了"
                 ],
                 "hide_failing": true,
-                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<color_green><u_val:Ship_Level_EXP></color>/<u_val:Ship_Level_Need_EXP>)\n阶段:<u_val:Ship_Limit_Break>\n心智觉醒:<u_val:Ship_Cognitive_Awakening>\n经验数据包:<u_val:Ship_EXP_Data_Packs>\n心智单元:<u_val:Ship_Cognitive_Chips>\n活跃度:<color_red><u_val:Siren_activity_level></color>"
+                "title": "姓名：<u_name>\n等级:<u_val:Ship_Level>(<color_green><u_val:Ship_Level_EXP></color>/<u_val:Ship_Level_Need_EXP>)\n阶段:<u_val:Ship_Limit_Break>\n心智觉醒:<u_val:Ship_Cognitive_Awakening>\n经验数据包:<u_val:Ship_EXP_Data_Packs>\n心智单元:<u_val:Ship_Cognitive_Chips>\n活跃度:<color_red><u_val:Siren_activity_level></color>\n"
             }
         ]
     },

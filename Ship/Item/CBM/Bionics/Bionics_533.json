@@ -3,10 +3,10 @@
     "type": "bionic",
     "id": "bio_533mm_Quintuple_Torpedo_Mount_T1",
     "name": {
-      "str": "533mm口径鱼雷发射器舰装 T1"
+      "str": "三联装533mm口径鱼雷发射器舰装 T1"
     },
     "fake_weapon": "533mm_Quintuple_Torpedo_Mount_T1",
-    "description": "533mm口径鱼雷发射器 当前等级:0",
+    "description": "三联装533mm口径鱼雷发射器 当前等级:0",
     "occupied_bodyparts": [
       [
         "arm_l",
@@ -24,9 +24,9 @@
     "id": "bio_533mm_Quintuple_Torpedo_Mount_T1_1",
     "copy-from": "bio_533mm_Quintuple_Torpedo_Mount_T1",
     "name": {
-      "str": "533mm口径鱼雷发射器舰装 T1"
+      "str": "三联装533mm口径鱼雷发射器舰装 T1"
     },
-    "description": "533mm口径鱼雷发射器 当前等级 当前等级:1",
+    "description": "三联装533mm口径鱼雷发射器 当前等级 当前等级:1",
     "fake_weapon": "533mm_Quintuple_Torpedo_Mount_T1_1"
   },
   {
@@ -34,9 +34,9 @@
     "id": "bio_533mm_Quintuple_Torpedo_Mount_T1_2",
     "copy-from": "bio_533mm_Quintuple_Torpedo_Mount_T1",
     "name": {
-      "str": "533mm口径鱼雷发射器舰装 T1"
+      "str": "三联装533mm口径鱼雷发射器舰装 T1"
     },
-    "description": "533mm口径鱼雷发射器 当前等级 当前等级:2",
+    "description": "三联装533mm口径鱼雷发射器 当前等级 当前等级:2",
     "fake_weapon": "533mm_Quintuple_Torpedo_Mount_T1_2"
   },
   {
@@ -44,9 +44,9 @@
     "id": "bio_533mm_Quintuple_Torpedo_Mount_T1_3",
     "copy-from": "bio_533mm_Quintuple_Torpedo_Mount_T1",
     "name": {
-      "str": "533mm口径鱼雷发射器舰装 T1"
+      "str": "三联装533mm口径鱼雷发射器舰装 T1"
     },
-    "description": "533mm口径鱼雷发射器 当前等级 当前等级:3",
+    "description": "三联装533mm口径鱼雷发射器 当前等级 当前等级:3",
     "fake_weapon": "533mm_Quintuple_Torpedo_Mount_T1_3"
   }
 ]

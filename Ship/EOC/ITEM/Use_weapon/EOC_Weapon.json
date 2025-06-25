@@ -1,0 +1,38 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Weapon",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Equip_Single_127mm_Main_Gun",
+                    "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                    "EOC_Equip_533mm_Quintuple_Torpedo_Mount",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Disassembly_Single_127mm_Main_Gun",
+                    "EOC_Disassembly_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+                    "EOC_Disassembly_533mm_Quintuple_Torpedo_Mount",
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "装备双联40mm博福斯对空机炮舰装T1",
+                    "装备四联40mm博福斯对空机炮舰装T1",
+                    "装备127mm口径单装炮舰装T1",
+                    "装备双联装127mm高平两用炮Mk12 T1",
+                    "装备三联装533mm口径鱼雷发射器舰装T1",
+                    "拆卸双联40mm博福斯对空机炮舰装T1",
+                    "拆卸四联40mm博福斯对空机炮舰装T1",
+                    "拆卸127mm口径单装炮舰装T1",
+                    "拆卸双联装127mm高平两用炮Mk12 T1",
+                    "拆卸三联装533mm口径鱼雷发射器舰装T1",
+                    "返回"
+                ],
+                "hide_failing": true,
+                "title": "这里也可以进入装备以及拆卸界面，如果什么都没有，说明没有可操作的东西。"
+            }
+        ]
+    }
+]

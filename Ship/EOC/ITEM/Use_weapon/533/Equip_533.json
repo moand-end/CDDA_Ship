@@ -1,0 +1,194 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount_T1_0",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_533mm_Quintuple_Torpedo_Mount_T1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1"
+            },
+            {
+                "math": [
+                    "u_Equip_533mm_Quintuple_Torpedo_Mount",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_weapon",
+                    "+=",
+                    "5"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Torpedo + u_Ship_Stats_Torpedo_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount_T1_1",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1_1"
+            },
+            {
+                "math": [
+                    "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_weapon",
+                    "+=",
+                    "6"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Torpedo + u_Ship_Stats_Torpedo_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount_T1_2",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_2"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_2",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1_2"
+            },
+            {
+                "math": [
+                    "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_weapon",
+                    "+=",
+                    "7"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Torpedo + u_Ship_Stats_Torpedo_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_533mm_Quintuple_Torpedo_Mount_T1_3",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_3"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_533mm_Quintuple_Torpedo_Mount_T1_3",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1_3"
+            },
+            {
+                "math": [
+                    "u_Equip_533mm_Quintuple_Torpedo_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_weapon",
+                    "+=",
+                    "8"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Torpedo_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Torpedo + u_Ship_Stats_Torpedo_weapon  "
+                ]
+            }
+        ]
+    }
+]

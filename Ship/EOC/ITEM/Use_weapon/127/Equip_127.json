@@ -1,0 +1,628 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Single_127mm_Main_Gun_T1_0",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Single_127mm_Main_Gun_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Single_127mm_Main_Gun_T1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Single_127mm_Main_Gun_T1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1"
+            },
+            {
+                "math": [
+                    "u_Equip_Single_127mm_Main_Gun_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "5"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Single_127mm_Main_Gun_T1_1",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Single_127mm_Main_Gun_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Single_127mm_Main_Gun_T1_1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Single_127mm_Main_Gun_T1_1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1_1"
+            },
+            {
+                "math": [
+                    "u_Equip_Single_127mm_Main_Gun_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "6"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Single_127mm_Main_Gun_T1_2",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Single_127mm_Main_Gun_T1",
+                        "!=",
+                        "2"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Single_127mm_Main_Gun_T1_1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Single_127mm_Main_Gun_T1_2",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1_2"
+            },
+            {
+                "math": [
+                    "u_Equip_Single_127mm_Main_Gun_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "7"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Single_127mm_Main_Gun_T1_3",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Single_127mm_Main_Gun_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Single_127mm_Main_Gun_T1_3"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Single_127mm_Main_Gun_T1_3",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1_3"
+            },
+            {
+                "math": [
+                    "u_Equip_Single_127mm_Main_Gun_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "8"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_0",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "5"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "7"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_1",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_1"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_1",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_1"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "6"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "8"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_2",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_2"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_2",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_2"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "7"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "9"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_3",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_3"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_3",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_3"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "8"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "10"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_4",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_4"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_4",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_4"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "9"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "11"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_5",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_5"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_5",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_5"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "10"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "12"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_6",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_6"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_6",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1_6"
+            },
+            {
+                "math": [
+                    "u_Equip_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_weapon",
+                    "+=",
+                    "11"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_weapon",
+                    "+=",
+                    "13"
+                ]
+            },
+            {
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
+            }
+        ]
+    }
+]

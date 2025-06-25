@@ -1,0 +1,269 @@
+[
+    {
+        "//": "武器装备列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount_T1"
+                        },
+                        {
+                            "u_has_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount_T1_1"
+                        },
+                        {
+                            "u_has_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount_T1_2"
+                        },
+                        {
+                            "u_has_item": "Item_Twin_40mm_Bofors_AA_Gun_Mount_T1_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1_0",
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1_1",
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1_2",
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1_3",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "装备双联40mm博福斯对空机炮舰装T1",
+                    "装备双联40mm博福斯对空机炮舰装T1 +1",
+                    "装备双联40mm博福斯对空机炮舰装T1 +2",
+                    "装备双联40mm博福斯对空机炮舰装T1 +3",
+                    "拆卸",
+                    "算了"
+                ],
+                "title": "装备界面\n防空基础属性:<u_val:Ship_Stats_Base_Anti_air>\n防空性能属性:<u_val:Ship_Stats_property_Anti_air>\n防空成长属性:<u_val:Ship_Stats_Growth_Value_Anti_air>\n防空属性:<u_val:Ship_Stats_Anti_air>\n防空属性综合:<u_val:Ship_Stats_Anti_air_comprehensive>",
+                "descriptions": [
+                    "防空+5",
+                    "防空+6",
+                    "防空+7",
+                    "防空+8",
+                    "拆卸",
+                    "算了"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "武器拆卸列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Twin_40mm_Bofors_AA_Gun_Mount_T1",
+                        "==",
+                        "1"
+                    ]
+                },
+                {
+                    "not": "u_has_weapon"
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1_1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1_2"
+                        },
+                        {
+                            "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount_T1_0",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount_T1_1",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount_T1_2",
+                    "EOC_Disassembly_Twin_40mm_Bofors_AA_Gun_Mount_T1_3",
+                    "EOC_Equip_Twin_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "拆卸双联40mm博福斯对空机炮舰装T1",
+                    "拆卸双联40mm博福斯对空机炮舰装T1 +1",
+                    "拆卸双联40mm博福斯对空机炮舰装T1 +2",
+                    "拆卸双联40mm博福斯对空机炮舰装T1 +3",
+                    "返回装备",
+                    "算了"
+                ],
+                "title": "拆卸界面"
+            }
+        ]
+    },
+    {
+        "//": "武器装备列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_1"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_2"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_3"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_4"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_5"
+                        },
+                        {
+                            "u_has_item": "Item_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_6"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_0",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_1",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_2",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_3",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_4",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_5",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_6",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "装备四联40mm博福斯对空机炮舰装 T1",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +1",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +2",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +3",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +4",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +5",
+                    "装备四联40mm博福斯对空机炮舰装 T1 +6",
+                    "拆卸",
+                    "算了"
+                ],
+                "title": "装备界面\n防空基础属性:<u_val:Ship_Stats_Base_Anti_air>\n防空性能属性:<u_val:Ship_Stats_property_Anti_air>\n防空成长属性:<u_val:Ship_Stats_Growth_Value_Anti_air>\n防空属性:<u_val:Ship_Stats_Anti_air>\n防空属性综合:<u_val:Ship_Stats_Anti_air_comprehensive>",
+                "descriptions": [
+                    "防空+12",
+                    "防空+13",
+                    "防空+14",
+                    "防空+15",
+                    "防空+16",
+                    "防空+17",
+                    "防空+18",
+                    "拆卸",
+                    "算了"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "武器拆卸列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+                        "==",
+                        "1"
+                    ]
+                },
+                {
+                    "not": "u_has_weapon"
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_2"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_3"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_4"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_5"
+                        },
+                        {
+                            "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_6"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_0",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_1",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_2",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_3",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_4",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_5",
+                    "EOC_Disassembly_Quadruple_40mm_Bofors_AA_Gun_Mount_T1_6",
+                    "EOC_Equip_Quadruple_40mm_Bofors_AA_Gun_Mount",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "拆卸四联40mm博福斯对空机炮舰装 T1",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +1",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +2",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +3",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +4",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +5",
+                    "拆卸四联40mm博福斯对空机炮舰装 T1 +6",
+                    "返回装备",
+                    "算了"
+                ],
+                "title": "拆卸界面"
+            }
+        ]
+    }
+]
