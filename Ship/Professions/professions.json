@@ -41,9 +41,9 @@
       "bio_Mk_12_Fire_Control_Radar",
       "bio_Thruster",
       "bio_Power_Storage",
-      "bio_Twin_40mm_Bofors_AA_Gun_Mount",
-      "bio_Single_127mm_Main_Gun",
-      "bio_533mm_Quintuple_Torpedo_Mount",
+      "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1",
+      "bio_Single_127mm_Main_Gun_T1",
+      "bio_533mm_Quintuple_Torpedo_Mount_T1",
       "bio_Ship_Nuclear_energy_device",
       "bio_Ship_Petroleum_generator"
     ],
@@ -98,8 +98,8 @@
       "bio_Mk_12_Fire_Control_Radar",
       "bio_Thruster",
       "bio_Power_Storage",
-      "bio_Quadruple_40mm_Bofors_AA_Gun_Mount",
-      "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
+      "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1",
+      "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1",
       "bio_Ship_Nuclear_energy_device",
       "bio_Ship_Petroleum_generator"
     ],

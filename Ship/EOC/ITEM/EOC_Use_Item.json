@@ -1,6 +1,6 @@
 [
     {
-        "//": "物品雷达使用(需要更改！！！！！！！！！)",
+        "//": "物品雷达使用",
         "type": "effect_on_condition",
         "id": "EOC_radar_Detection",
         "effect": [
@@ -69,7 +69,7 @@
         ]
     },
     {
-        "//": "之后改为switch",
+        "//": "武器随机",
         "type": "effect_on_condition",
         "id": "EOC_Tech_Box_T1_Open",
         "effect": [
@@ -184,7 +184,7 @@
                 {
                     "//": "武器装备cbm",
                     "not": {
-                        "u_has_bionics": "bio_Single_127mm_Main_Gun"
+                        "u_has_bionics": "bio_Single_127mm_Main_Gun_T1"
                     }
                 }
             ]
@@ -196,7 +196,7 @@
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Single_127mm_Main_Gun"
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1"
             }
         ],
         "false_effect": [
@@ -214,7 +214,7 @@
                 {
                     "//": "武器装备cbm",
                     "not": {
-                        "u_has_bionics": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                        "u_has_bionics": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
                     }
                 }
             ]
@@ -226,7 +226,7 @@
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
             }
         ],
         "false_effect": [
@@ -244,7 +244,7 @@
                 {
                     "//": "武器装备cbm",
                     "not": {
-                        "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+                        "u_has_bionics": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1"
                     }
                 }
             ]
@@ -256,7 +256,7 @@
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Twin_40mm_Bofors_AA_Gun_Mount"
+                "u_add_bionic": "bio_Twin_40mm_Bofors_AA_Gun_Mount_T1"
             }
         ],
         "false_effect": [
@@ -274,7 +274,7 @@
                 {
                     "//": "武器装备cbm",
                     "not": {
-                        "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+                        "u_has_bionics": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
                     }
                 }
             ]
@@ -286,7 +286,7 @@
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
             }
         ],
         "false_effect": [
@@ -304,7 +304,7 @@
                 {
                     "//": "武器装备cbm",
                     "not": {
-                        "u_has_bionics": "bio_533mm_Quintuple_Torpedo_Mount"
+                        "u_has_bionics": "bio_533mm_Quintuple_Torpedo_Mount_T1"
                     }
                 }
             ]
@@ -316,7 +316,7 @@
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount"
+                "u_add_bionic": "bio_533mm_Quintuple_Torpedo_Mount_T1"
             }
         ],
         "false_effect": [

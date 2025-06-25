@@ -282,7 +282,7 @@
                 ]
             },
             {
-                "u_add_bionic": "bio_Single_127mm_Main_Gun"
+                "u_add_bionic": "bio_Single_127mm_Main_Gun_T1"
             }
         ]
     },
@@ -307,10 +307,10 @@
                 ]
             },
             {
-                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount"
+                "u_add_bionic": "bio_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount_T1"
             },
             {
-                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount"
+                "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
             }
         ]
     }
