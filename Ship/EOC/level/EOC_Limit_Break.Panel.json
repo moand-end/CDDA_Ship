@@ -231,9 +231,116 @@
                 ]
             },
             {
+                "run_eocs": [
+                    "EOC_Ship_Limit_Break_Stats"
+                ]
+            },
+            {
                 "u_message": "你突破到了第<u_val:Ship_Limit_Break>阶。",
                 "type": "good",
                 "popup": true
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Limit_Break_Stats",
+        "effect": [
+            {
+                "//": "炮击基础属性",
+                "math": [
+                    "u_Ship_Stats_Base_Firepower",
+                    "+=",
+                    "20 * u_Ship_Stats_property_Firepower * u_Ship_Limit_Break"
+                ]
+            },
+            {
+                "//": "炮击属性",
+                "math": [
+                    "u_Ship_Stats_Firepower",
+                    "=",
+                    "u_Ship_Stats_Base_Firepower + u_Ship_Stats_Growth_Value_Firepower  "
+                ]
+            },
+            {
+                "//": "炮击综合",
+                "math": [
+                    "u_Ship_Stats_Firepower_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Firepower + u_Ship_Stats_Firepower_weapon  "
+                ]
+            },
+            {
+                "//": "雷击基础属性",
+                "math": [
+                    "u_Ship_Stats_Base_Torpedo",
+                    "+=",
+                    "20 * u_Ship_Stats_property_Torpedo * u_Ship_Limit_Break"
+                ]
+            },
+            {
+                "//": "雷击属性",
+                "math": [
+                    "u_Ship_Stats_Torpedo",
+                    "=",
+                    "u_Ship_Stats_Base_Torpedo + u_Ship_Stats_Growth_Value_Torpedo  "
+                ]
+            },
+            {
+                "//": "雷击综合",
+                "math": [
+                    "u_Ship_Stats_Torpedo_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Torpedo + u_Ship_Stats_Torpedo_weapon  "
+                ]
+            },
+            {
+                "//": "航空基础属性",
+                "math": [
+                    "u_Ship_Stats_Base_Aviation",
+                    "+=",
+                    "20 * u_Ship_Stats_property_Aviation * u_Ship_Limit_Break"
+                ]
+            },
+            {
+                "//": "航空属性",
+                "math": [
+                    "u_Ship_Stats_Aviation",
+                    "=",
+                    "u_Ship_Stats_Base_Aviation + u_Ship_Stats_Growth_Value_Aviation  "
+                ]
+            },
+            {
+                "//": "航空综合",
+                "math": [
+                    "u_Ship_Stats_Aviation_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Aviation + u_Ship_Stats_Aviation_weapon "
+                ]
+            },
+            {
+                "//": "防空基础属性",
+                "math": [
+                    "u_Ship_Stats_Base_Anti_air",
+                    "+=",
+                    "20 * u_Ship_Stats_property_Anti_air * u_Ship_Limit_Break"
+                ]
+            },
+            {
+                "//": "防空属性",
+                "math": [
+                    "u_Ship_Stats_Anti_air",
+                    "=",
+                    "u_Ship_Stats_Base_Anti_air + u_Ship_Stats_Growth_Value_Anti_air  "
+                ]
+            },
+            {
+                "//": "防空综合",
+                "math": [
+                    "u_Ship_Stats_Anti_air_comprehensive",
+                    "=",
+                    "u_Ship_Stats_Anti_air + u_Ship_Stats_Anti_air_weapon  "
+                ]
             }
         ]
     }

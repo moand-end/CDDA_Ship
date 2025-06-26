@@ -48,6 +48,7 @@
                     "拆卸",
                     "算了"
                 ],
+                "hide_failing": true,
                 "title": "装备界面\n雷击基础属性:<u_val:Ship_Stats_Base_Torpedo>\n雷击性能属性:<u_val:Ship_Stats_property_Torpedo>\n雷击成长属性:<u_val:Ship_Stats_Growth_Value_Torpedo>\n雷击属性:<u_val:Ship_Stats_Torpedo>\n雷击属性综合:<u_val:Ship_Stats_Torpedo_comprehensive>",
                 "descriptions": [
                     "雷击+5",
@@ -112,6 +113,7 @@
                     "返回装备",
                     "算了"
                 ],
+                "hide_failing": true,
                 "title": "拆卸界面"
             }
         ]

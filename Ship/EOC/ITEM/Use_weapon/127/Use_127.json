@@ -48,6 +48,7 @@
                     "拆卸",
                     "算了"
                 ],
+                "hide_failing": true,
                 "title": "装备界面\n炮击基础属性:<u_val:Ship_Stats_Base_Firepower>\n炮击性能属性:<u_val:Ship_Stats_property_Firepower>\n炮击成长属性:<u_val:Ship_Stats_Growth_Value_Firepower>\n炮击属性:<u_val:Ship_Stats_Firepower>\n炮击属性综合:<u_val:Ship_Stats_Firepower_comprehensive>",
                 "descriptions": [
                     "炮击+5",
@@ -112,7 +113,8 @@
                     "返回装备",
                     "算了"
                 ],
-                "title": "拆卸界面"
+                "hide_failing": true,
+                "title": "拆卸界面\n炮击基础属性:<u_val:Ship_Stats_Base_Firepower>\n炮击性能属性:<u_val:Ship_Stats_property_Firepower>\n炮击成长属性:<u_val:Ship_Stats_Growth_Value_Firepower>\n炮击属性:<u_val:Ship_Stats_Firepower>\n炮击属性综合:<u_val:Ship_Stats_Firepower_comprehensive>"
             }
         ]
     },
@@ -180,6 +182,7 @@
                     "拆卸",
                     "算了"
                 ],
+                "hide_failing": true,
                 "title": "装备界面\n炮击基础属性:<u_val:Ship_Stats_Base_Firepower>\n炮击性能属性:<u_val:Ship_Stats_property_Firepower>\n炮击成长属性:<u_val:Ship_Stats_Growth_Value_Firepower>\n炮击属性:<u_val:Ship_Stats_Firepower>\n炮击属性综合:<u_val:Ship_Stats_Firepower_comprehensive>\n防空基础属性:<u_val:Ship_Stats_Base_Anti_air>\n防空性能属性:<u_val:Ship_Stats_property_Anti_air>\n防空成长属性:<u_val:Ship_Stats_Growth_Value_Anti_air>\n防空属性:<u_val:Ship_Stats_Anti_air>\n防空属性综合:<u_val:Ship_Stats_Anti_air_comprehensive>",
                 "descriptions": [
                     "炮击+5 防空+7",
@@ -262,7 +265,8 @@
                     "返回装备",
                     "算了"
                 ],
-                "title": "拆卸界面"
+                "hide_failing": true,
+                "title": "拆卸界面\n炮击基础属性:<u_val:Ship_Stats_Base_Firepower>\n炮击性能属性:<u_val:Ship_Stats_property_Firepower>\n炮击成长属性:<u_val:Ship_Stats_Growth_Value_Firepower>\n炮击属性:<u_val:Ship_Stats_Firepower>\n炮击属性综合:<u_val:Ship_Stats_Firepower_comprehensive>\n防空基础属性:<u_val:Ship_Stats_Base_Anti_air>\n防空性能属性:<u_val:Ship_Stats_property_Anti_air>\n防空成长属性:<u_val:Ship_Stats_Growth_Value_Anti_air>\n防空属性:<u_val:Ship_Stats_Anti_air>\n防空属性综合:<u_val:Ship_Stats_Anti_air_comprehensive>"
             }
         ]
     }

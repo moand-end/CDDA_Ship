@@ -15,6 +15,7 @@
                     "EOC_Disassembly_Single_127mm_Main_Gun",
                     "EOC_Disassembly_Twin_127mm_Mk12_Dual_Purpose_Gun_Mount",
                     "EOC_Disassembly_533mm_Quintuple_Torpedo_Mount",
+                    "EOC_Panel_Stats",
                     "EOC_Ship_U_Panel"
                 ],
                 "names": [
@@ -28,10 +29,27 @@
                     "拆卸127mm口径单装炮舰装T1",
                     "拆卸双联装127mm高平两用炮Mk12 T1",
                     "拆卸三联装533mm口径鱼雷发射器舰装T1",
+                    "属性面板",
                     "返回"
                 ],
                 "hide_failing": true,
                 "title": "这里也可以进入装备以及拆卸界面，如果什么都没有，说明没有可操作的东西。"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Panel_Stats",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "返回"
+                ],
+                "hide_failing": true,
+                "title": "姓名：<u_name>\n炮击基础属性:<u_val:Ship_Stats_Base_Firepower>\n炮击性能属性:<u_val:Ship_Stats_property_Firepower>\n炮击成长属性:<u_val:Ship_Stats_Growth_Value_Firepower>\n炮击属性:<u_val:Ship_Stats_Firepower>\n炮击属性综合:<u_val:Ship_Stats_Firepower_comprehensive>\n雷击基础属性:<u_val:Ship_Stats_Base_Torpedo>\n雷击性能属性:<u_val:Ship_Stats_property_Torpedo>\n雷击成长属性:<u_val:Ship_Stats_Growth_Value_Torpedo>\n雷击属性:<u_val:Ship_Stats_Torpedo>\n雷击属性综合:<u_val:Ship_Stats_Torpedo_comprehensive>\n航空基础属性:<u_val:Ship_Stats_Base_Aviation>\n航空性能属性:<u_val:Ship_Stats_property_Aviation>\n航空成长属性:<u_val:Ship_Stats_Growth_Value_Aviation>\n航空属性:<u_val:Ship_Stats_Aviation>\n航空属性综合:<u_val:Ship_Stats_Aviation_comprehensive>\n防空基础属性:<u_val:Ship_Stats_Base_Anti_air>\n防空性能属性:<u_val:Ship_Stats_property_Anti_air>\n防空成长属性:<u_val:Ship_Stats_Growth_Value_Anti_air>\n防空属性:<u_val:Ship_Stats_Anti_air>\n防空属性综合:<u_val:Ship_Stats_Anti_air_comprehensive>"
             }
         ]
     }
