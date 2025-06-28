@@ -79,7 +79,7 @@
         "id": "EOC_Spawn_High_altitude_bombing",
         "effect": [
             {
-                "u_spawn_monster": "Siren_Aircraft",
+                "u_spawn_monster": "Siren_Aircraft_special",
                 "open_air_allowed": true,
                 "real_count": {
                     "math": [

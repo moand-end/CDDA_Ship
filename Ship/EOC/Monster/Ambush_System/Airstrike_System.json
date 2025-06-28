@@ -32,7 +32,7 @@
                     "math": [
                         "u_Siren_activity_level",
                         ">",
-                        "0"
+                        "1"
                     ]
                 },
                 "then": [
@@ -44,17 +44,98 @@
                         ]
                     },
                     {
-                        "u_message": "天空传来整整呼啸声……\n<color_red>快跑！</color>",
-                        "popup": true
-                    },
-                    {
-                        "run_eocs": "EOC_Siren_Airstrike_judgement",
-                        "time_in_future": "3 m"
+                        "if": {
+                            "math": [
+                                "u_Ship_Judgment",
+                                "!=",
+                                "0"
+                            ]
+                        },
+                        "then": [
+                            {
+                                "run_eocs": [
+                                    "EOC_Siren_Airstrike_Shootdown_Decision_judgement"
+                                ]
+                            }
+                        ],
+                        "else": [
+                            {
+                                "u_message": "天空传来整整呼啸声……\n<color_red>快跑！</color>",
+                                "popup": true
+                            },
+                            {
+                                "run_eocs": "EOC_Siren_Airstrike_judgement",
+                                "time_in_future": "3 m"
+                            }
+                        ]
                     }
                 ],
                 "else": [
                     {
                         "u_message": "你下意识看了看天空，但什么也没有。"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "//": "空袭击落事件",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Airstrike_Shootdown_Decision_judgement",
+        "effect": [
+            {
+                "u_message": "你的雷达显示附近出现了很多红点\n<color_red>它们似乎正在接近！</color>",
+                "popup": true
+            },
+            {
+                "//": "这只是为了显示躲避概率，无任何实际意义。",
+                "math": [
+                    "u_Shootdown_probability",
+                    "=",
+                    "(u_Ship_Stats_Anti_air_comprehensive * ( 1+ ( u_Ship_Level /100 )  ) / (100 * (u_Ambush_Level - 1 ) +  50 * u_Siren_activity_level))*100"
+                ]
+            },
+            {
+                "run_eoc_selector": [
+                    "EOC_Siren_Airstrike_Shootdown_Decision_Calculation",
+                    "EOC_Siren_Airstrike_judgement"
+                ],
+                "names": [
+                    "反击",
+                    "直接迎击"
+                ],
+                "hide_failing": true,
+                "title": "是否直接击落这次袭击？\n击落概率:<u_val:Shootdown_probability>%"
+            }
+        ]
+    },
+    {
+        "//": "空袭击落判断",
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Airstrike_Shootdown_Decision_Calculation",
+        "effect": [
+            {
+                "if": {
+                    "math": [
+                        "u_Ship_Stats_Anti_air_comprehensive",
+                        "<=",
+                        "(100 * (u_Ambush_Level - 1 ) +  50 * u_Siren_activity_level)"
+                    ]
+                },
+                "then": [
+                    {
+                        "u_message": "做好准备！\n<color_red>它们来了！</color>",
+                        "popup": true
+                    },
+                    {
+                        "run_eocs": [
+                            "EOC_Siren_Airstrike_judgement"
+                        ]
+                    }
+                ],
+                "else": [
+                    {
+                        "u_message": "看着雷达的红点逐渐消失，你知道你赌对了。"
                     }
                 ]
             }
@@ -69,7 +150,7 @@
                 "math": [
                     "u_Airstrike_choose",
                     "=",
-                    "rand(1)"
+                    "rand(1)+1"
                 ]
             },
             {

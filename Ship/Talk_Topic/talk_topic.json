@@ -24,7 +24,16 @@
             },
             {
                 "text": "自定义",
-                "topic": "talk_Initialize_Selection_1"
+                "topic": "talk_Initialize_Selection_1",
+                "effect": [
+                    {
+                        "math": [
+                            "u_raid_Selection",
+                            "=",
+                            "0"
+                        ]
+                    }
+                ]
             }
         ]
     },

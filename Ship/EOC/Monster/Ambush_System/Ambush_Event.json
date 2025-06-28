@@ -151,7 +151,7 @@
                             "math": [
                                 "u_Evasion_probability",
                                 "=",
-                                " (( 100 + u_Ship_Level ) / ( 20 + ( u_Siren_activity_level - 1 ) * 5 ))*10"
+                                " ( ( 100 + u_Ship_Level ) / ( 20 + ( u_Siren_activity_level - 1 ) * 5 )  )*10"
                             ]
                         }
                     },
@@ -161,7 +161,7 @@
                             "math": [
                                 "u_Evasion_probability",
                                 "=",
-                                "( ( 100 + u_Ship_Level ) / ( 40 + ( u_Siren_activity_level - 1 ) * 10 ))*10"
+                                "( ( 100 + u_Ship_Level ) /  ( 40 + ( u_Siren_activity_level - 1 ) * 10 )  )*10"
                             ]
                         }
                     },
@@ -171,7 +171,7 @@
                             "math": [
                                 "u_Evasion_probability",
                                 "=",
-                                " (( 100 + u_Ship_Level ) / ( 60 + ( u_Siren_activity_level - 1 ) * 15 ))*10"
+                                " (  ( 100 + u_Ship_Level ) /( 60 + ( u_Siren_activity_level - 1 ) * 15 )  )*10"
                             ]
                         }
                     },
@@ -181,7 +181,7 @@
                             "math": [
                                 "u_Evasion_probability",
                                 "=",
-                                "( ( 100 + u_Ship_Level ) / ( 90 + ( u_Siren_activity_level - 1 ) * 20 ))*10"
+                                "( ( 100 + u_Ship_Level )   /    ( 90 + ( u_Siren_activity_level - 1 ) * 20 ))*10"
                             ]
                         }
                     }

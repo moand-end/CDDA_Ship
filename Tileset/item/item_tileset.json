@@ -46,11 +46,6 @@
                         "id": "Purity_head",
                         "fg": 4,
                         "rotates": false
-                    },
-                    {
-                        "id": "Purity_head",
-                        "fg": 5,
-                        "rotates": false
                     }
                 ],
                 "sprite_width": 32,
