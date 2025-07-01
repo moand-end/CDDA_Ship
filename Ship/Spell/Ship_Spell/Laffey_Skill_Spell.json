@@ -97,8 +97,16 @@
         "effect": "attack",
         "min_range": 1,
         "max_range": 1,
-        "min_damage": 100,
-        "max_damage": 100,
+        "min_damage": {
+            "math": [
+                "200 * ( 1 + u_Ship_Level/10) "
+            ]
+        },
+        "max_damage": {
+            "math": [
+                "200 * ( 1 + u_Ship_Level/10) "
+            ]
+        },
         "min_aoe": 1,
         "max_aoe": 1,
         "min_duration": 0,

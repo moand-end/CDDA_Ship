@@ -27,9 +27,9 @@
   },
   {
     "type": "profession",
-    "id": "lafei",
+    "id": "Laffey_profession",
     "name": {
-      "male": "舰...男人？",
+      "male": "拉菲",
       "female": "舰娘拉菲"
     },
     "description": "我是备受期待的本森级驱逐舰拉菲，在三次所罗门海战有着极为活跃的表现，战舰？那是什么？",
@@ -84,9 +84,9 @@
   },
   {
     "type": "profession",
-    "id": "xinzexi",
+    "id": "New_Jersey_profession",
     "name": {
-      "male": "舰...男人？",
+      "male": "新泽西",
       "female": "舰娘新泽西"
     },
     "description": "你原本是即将踏入战场的新手，但不知道是什么将你带到了这片陌生的地方。",
@@ -111,7 +111,7 @@
         ],
         "entries": [
           {
-            "item": "New_Jersey_Ship_Equipment",
+            "item": "Enterprise_Ship_Equipment",
             "contents-group": "Ship_Storage_Space_group"
           },
           {
@@ -134,6 +134,60 @@
       "Battleship_Armor",
       "Battleship_Hull",
       "New_Jersey"
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "Enterprise_profession",
+    "name": {
+      "male": "企业",
+      "female": "舰娘企业"
+    },
+    "description": "你原本是即将踏入战场的新手，但不知道是什么将你带到了这片陌生的地方。",
+    "points": 8,
+    "CBMs": [
+      "bio_Ship_Cubes",
+      "bio_damage_control",
+      "bio_General_Electric_Type_Geared_Steam_Turbine",
+      "bio_Mk_12_Fire_Control_Radar",
+      "bio_Thruster",
+      "bio_Power_Storage",
+      "bio_Ship_Nuclear_energy_device",
+      "bio_Ship_Petroleum_generator"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "Enterprise_Navy_cap",
+          "Enterprise_stockings_shoe",
+          "Ship_relieve_pain",
+          "damage_control"
+        ],
+        "entries": [
+          {
+            "item": "Enterprise_Ship_Equipment",
+            "contents-group": "Ship_Storage_Space_group"
+          },
+          {
+            "item": "Ship_Storage_Space",
+            "contents-group": "Supplies_Ship_group"
+          }
+        ]
+      },
+      "male": [
+        "briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
+    },
+    "traits": [
+      "AircraftCarrier",
+      "BEAUTIFUL4",
+      "AircraftCarrier_Armor",
+      "AircraftCarrier_Hull",
+      "Enterprise"
     ]
   }
 ]

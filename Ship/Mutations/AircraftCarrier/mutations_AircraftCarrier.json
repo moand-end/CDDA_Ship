@@ -1,14 +1,15 @@
 [
     {
+        "//": "舰娘变异",
         "type": "mutation",
-        "id": "Destroyer_Armor",
+        "id": "AircraftCarrier_Armor",
         "name": {
-            "str": "驱逐舰装甲"
+            "str": "航母装甲"
         },
         "points": 1,
-        "description": "你的舰装周围浮现了一圈装甲，能自动抵挡攻击，攻击抗性+40。",
+        "description": "你的舰装周围浮现了一圈装甲，能自动抵挡攻击，攻击抗性+75。",
         "category": [
-            "Ship_Destroyer"
+            "Ship_AircraftCarrier"
         ],
         "armor": [
             {
@@ -26,20 +27,21 @@
                     "mouth",
                     "eyes"
                 ],
-                "bash": 40,
-                "cut": 40,
-                "stab": 40,
-                "bullet": 40,
-                "heat": 40,
-                "acid": 40
+                "bash": 75,
+                "cut": 75,
+                "stab": 75,
+                "bullet": 75,
+                "heat": 75,
+                "acid": 75
             }
         ]
     },
     {
+        "//": "舰娘变异",
         "type": "mutation",
-        "id": "Destroyer_Hull",
+        "id": "AircraftCarrier_Hull",
         "name": {
-            "str": "驱逐舰体"
+            "str": "航母舰体"
         },
         "points": 1,
         "description": "舰娘的本体，也是舰娘力量的源泉。",
@@ -48,27 +50,31 @@
                 "values": [
                     {
                         "value": "STRENGTH",
-                        "add": 10
+                        "add": 20
+                    },
+                    {
+                        "value": "STRENGTH",
+                        "add": 20
                     },
                     {
                         "value": "DEXTERITY",
-                        "add": 10
+                        "add": 20
                     },
                     {
                         "value": "PERCEPTION",
-                        "add": 10
+                        "add": 20
                     },
                     {
                         "value": "INTELLIGENCE",
-                        "add": 10
+                        "add": 20
                     },
                     {
                         "value": "MAX_HP",
-                        "add": 300
+                        "add": 1000
                     },
                     {
                         "value": "MAX_HP",
-                        "multiply": 3
+                        "multiply": 6
                     },
                     {
                         "value": "STEALTH_MODIFIER",
@@ -94,22 +100,22 @@
             }
         ],
         "category": [
-            "Ship_Destroyer"
+            "Ship_AircraftCarrier"
         ]
     },
     {
-        "//": "舰娘变异拉菲",
+        "//": "舰娘变异企业",
         "type": "mutation",
-        "id": "Ship_Laffey",
+        "id": "Enterprise",
         "name": {
-            "str": "拉菲"
+            "str": "企业"
         },
         "points": 1,
         "ugliness": -10,
-        "description": "拉菲皮肤（借鉴（大嘘）了VOICEROID的贴图。）。",
+        "description": "企业的皮肤。",
         "vanity": true,
         "category": [
-            "Ship_Destroyer"
+            "Ship_AircraftCarrier"
         ]
     }
 ]

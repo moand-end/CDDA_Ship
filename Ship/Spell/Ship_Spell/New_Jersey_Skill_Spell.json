@@ -71,12 +71,12 @@
         "max_range": 1,
         "min_damage": {
             "math": [
-                "50 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) "
+                "200 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) * (1 + u_Ship_Level/20  ) "
             ]
         },
         "max_damage": {
             "math": [
-                "50 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) "
+                "200 * (u_u_NewJersey_skill_Dragon_s_Breath_level / 2.5 ) * (1 + u_Ship_Level/20  ) "
             ]
         },
         "min_aoe": 2,
@@ -157,12 +157,12 @@
         "max_range": 1,
         "min_damage": {
             "math": [
-                "25 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 ) "
+                "250 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 )  * (1 + u_Ship_Level/20  ) "
             ]
         },
         "max_damage": {
             "math": [
-                "25 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 ) "
+                "250 * (u_NewJersey_skill_Freedom_Through_Firepower_level / 2.5 ) * (1 + u_Ship_Level/20  ) "
             ]
         },
         "min_aoe": 2,

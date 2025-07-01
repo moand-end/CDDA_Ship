@@ -28,5 +28,20 @@
         "category": [
             "Ship_Battleship"
         ]
+    },
+    {
+        "type": "mutation",
+        "id": "AircraftCarrier",
+        "name": {
+            "str": "航母舰娘"
+        },
+        "points": 1,
+        "ugliness": -10,
+        "description": "你现在是一只航母娘了",
+        "purifiable": false,
+        "threshold": true,
+        "category": [
+            "Ship_AircraftCarrier"
+        ]
     }
 ]
