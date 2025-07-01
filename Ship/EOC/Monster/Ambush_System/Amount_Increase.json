@@ -23,7 +23,7 @@
             {
                 "if": {
                     "math": [
-                        "u_Siren_activity_level",
+                        "u_Siren_Activity_Level",
                         ">",
                         "0"
                     ]
@@ -70,7 +70,7 @@
         "effect": [
             {
                 "math": [
-                    "u_Siren_activity_level",
+                    "u_Siren_Activity_Level",
                     "=",
                     "rand(3)+1"
                 ]

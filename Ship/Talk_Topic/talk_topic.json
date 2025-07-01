@@ -109,6 +109,9 @@
                             "=",
                             "0"
                         ]
+                    },
+                    {
+                        "run_eocs": "EOC_Ambush_Level_judgement"
                     }
                 ]
             },
@@ -122,6 +125,9 @@
                             "=",
                             "300"
                         ]
+                    },
+                    {
+                        "run_eocs": "EOC_Ambush_Level_judgement"
                     }
                 ]
             },
@@ -135,6 +141,9 @@
                             "=",
                             "600"
                         ]
+                    },
+                    {
+                        "run_eocs": "EOC_Ambush_Level_judgement"
                     }
                 ]
             },
@@ -148,6 +157,9 @@
                             "=",
                             "900"
                         ]
+                    },
+                    {
+                        "run_eocs": "EOC_Ambush_Level_judgement"
                     }
                 ]
             }

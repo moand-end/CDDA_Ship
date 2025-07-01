@@ -3,10 +3,10 @@
 1:重写伏击内容，
  伏击更改:
  伏击将分为——
-  塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_activity_level）
+  塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_Activity_Level）
 
  伏击系统（Ambush_System）√
-   伏击将会在达到判定后触发，这基于塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_activity_level）。
+   伏击将会在达到判定后触发，这基于塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_Activity_Level）。
     伏击等级（u_Ambush_Level）
      伏击等级基于塞壬数量、塞壬活跃度，等增加伏击的概率。
      一阶段rand（10）>8-（塞壬活跃度-1），将会触发袭击
@@ -15,7 +15,7 @@
      
      伏击回避√
       在通过上面判断后触发袭击后，可以选择是否回避。
-      同样会基于塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_activity_level）。
+      同样会基于塞壬数量（u_Siren_Amount）、塞壬活跃度（u_Siren_Activity_Level）。
       一阶段躲闪概率为80%，即rand（100）+ 舰娘等级 >20+（（塞壬活跃度-1）*5）
       二阶段躲闪概率为60，即rand（100）+ 舰娘等级 >40+（（塞壬活跃度-1）*10）
       三阶段躲闪概率为40，即rand（100）+ 舰娘等级 >60+（（塞壬活跃度-1）*15）
@@ -34,32 +34,32 @@
    四阶段(>600)9~12塞壬，2~3飞机（普通、R型）0~1（菲尔）
    而非舰娘时只能够达到第二阶段（即最大=200）,且在极小概率会生成塞壬，同时限定在20日后才能够刷新。
  
-  塞壬活跃度（u_Siren_activity_level）√
+  塞壬活跃度（u_Siren_Activity_Level）√
    塞壬活跃度影响来的波数，以上为一波的数量，每一波间隔3分钟。
    塞壬活跃度依然分为四个阶段（1~4）
    每日睡觉后，会rand（3）+1，来奠定今日的活跃度，不过每次伏击都会-1活跃度，当活跃度为0时，本日将不会刷新伏击以及增长塞壬数量。
 
  空袭系统（Airstrike_System）
   塞壬阶段二时解锁（为人类不触发）      
-  当开启空袭时，处于户外的时候，每三小时rand（10），基于塞壬活跃度（u_Siren_activity_level）判断，基础判断为0，每一点塞壬活跃度+2的判断区间，最高为8。
+  当开启空袭时，处于户外的时候，每三小时rand（10），基于塞壬活跃度（u_Siren_Activity_Level）判断，基础判断为0，每一点塞壬活跃度+2的判断区间，最高为8。
   当触发空袭时，分为两种情况（飞机轰炸、高空轰炸）。
   飞机轰炸
-   会刷新飞机（三种随机），停留1分钟，同时，数量基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_activity_level）。
+   会刷新飞机（三种随机），停留1分钟，同时，数量基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_Activity_Level）。
    基础为4架飞机，每上升一阶段的伏击等级，+1飞机。
    基础一级活跃停留1分钟，每上升一级塞壬活跃度，+30秒
   高空轰炸
-   会持续刷新炸弹（特殊），每秒刷新1~3个，，持续30秒同时数量基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_activity_level）。
+   会持续刷新炸弹（特殊），每秒刷新1~3个，，持续30秒同时数量基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_Activity_Level）。
    基础1~3个，每上升一阶段伏击等级，最低和最高+1
    基础30秒，每上升一阶段塞壬活跃度，持续时间+10
   防空系统（Air_Defense_System）
-   会在空袭之间进行防空，会基于装备物品的防空数值（u_Air_Defense_Values）来进行比拼，同时数值变化也基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_activity_level）。
+   会在空袭之间进行防空，会基于装备物品的防空数值（u_Air_Defense_Values）来进行比拼，同时数值变化也基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_Activity_Level）。
    基础空袭点数为100，每上升一阶段的伏击等级，点数将会+100%（叠加）（100 * （伏击等级（u_Ambush_Level）-1））
    每上升一阶段塞壬活跃度，额外增加50
-   公式便为（100 * （伏击等级（u_Ambush_Level）-1））+ 50*塞壬活跃度（u_Siren_activity_level）
+   公式便为（100 * （伏击等级（u_Ambush_Level）-1））+ 50*塞壬活跃度（u_Siren_Activity_Level）
 
  boss系统（boss_System）
   当开启boss系统的时候，会开始每次袭击时试图刷新一个随机boss，概率+1%（每次累积）
-  不过也会基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_activity_level）
+  不过也会基于伏击等级（u_Ambush_Level）、塞壬活跃度（u_Siren_Activity_Level）
   当第四阶段的时候，概率会变为+2%（每次累积）
   而活跃度是额外增加量，那么公式会变为——rand（100）<1 *（伏击等级-2）* N(袭击次数) *（伏击等级-2）
 

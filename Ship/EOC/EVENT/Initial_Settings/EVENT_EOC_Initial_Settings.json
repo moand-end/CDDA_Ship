@@ -51,7 +51,7 @@
             {
                 "//": "核心设定塞壬活跃度",
                 "math": [
-                    "u_Siren_activity_level",
+                    "u_Siren_Activity_Level",
                     "=",
                     "rand(4)"
                 ]

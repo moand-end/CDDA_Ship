@@ -8,65 +8,43 @@
                 "u_message": "它们马上就会到来，请做好准备！"
             },
             {
-                "run_eocs": [
-                    {
-                        "id": "EOC_Ambush_Spawn_1",
-                        "effect": [
-                            {
-                                "switch": {
-                                    "math": [
-                                        "u_Ambush_Level"
-                                    ]
-                                },
-                                "cases": [
-                                    {
-                                        "case": 1,
-                                        "effect": {
-                                            "run_eocs": "EOC_Spawn_Level_1",
-                                            "time_in_future": "3 m"
-                                        }
-                                    },
-                                    {
-                                        "case": 2,
-                                        "effect": {
-                                            "run_eocs": "EOC_Spawn_Level_2",
-                                            "time_in_future": "3 m"
-                                        }
-                                    },
-                                    {
-                                        "case": 3,
-                                        "effect": {
-                                            "run_eocs": [
-                                                "EOC_Spawn_Level_3",
-                                                "EOC_Ambush_boss_Event_judgement"
-                                            ],
-                                            "time_in_future": "3 m"
-                                        }
-                                    },
-                                    {
-                                        "case": 4,
-                                        "effect": {
-                                            "run_eocs": [
-                                                "EOC_Spawn_Level_4",
-                                                "EOC_Ambush_boss_Event_judgement"
-                                            ],
-                                            "time_in_future": "3 m"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "iterations": {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "=",
+                    "u_Siren_Activity_Level"
+                ]
+            },
+            {
+                "switch": {
                     "math": [
                         "u_Ambush_Level"
                     ]
-                }
+                },
+                "cases": [
+                    {
+                        "case": 3,
+                        "effect": {
+                            "run_eocs": [
+                                "EOC_Ambush_boss_Event_judgement"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 4,
+                        "effect": {
+                            "run_eocs": [
+                                "EOC_Ambush_boss_Event_judgement"
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "u_message": "这次袭击有<u_val:Attack_Waves_count>波"
             },
             {
                 "math": [
-                    "u_Siren_activity_level",
+                    "u_Siren_Activity_Level",
                     "-=",
                     "1"
                 ]
@@ -74,9 +52,51 @@
         ]
     },
     {
+        "type": "effect_on_condition",
+        "id": "EOC_Ambush_Spawn_Waves_count",
+        "effect": {
+            "if": {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "==",
+                    "0"
+                ]
+            },
+            "then": [
+                {
+                    "u_message": "袭击结束了！"
+                }
+            ],
+            "else": [
+                {
+                    "u_message": "袭击还有<u_val:Attack_Waves_count>波"
+                }
+            ]
+        }
+    },
+    {
         "//": "伏击开始1",
         "type": "effect_on_condition",
         "id": "EOC_Spawn_Level_1",
+        "recurrence": "3 m ",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Attack_Waves_count",
+                        ">",
+                        "0"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ambush_Level",
+                        "==",
+                        "1"
+                    ]
+                }
+            ]
+        },
         "effect": [
             {
                 "u_spawn_monster": "sairen_pawn",
@@ -108,6 +128,16 @@
                     20,
                     25
                 ]
+            },
+            {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "run_eocs": "EOC_Ambush_Spawn_Waves_count"
             }
         ]
     },
@@ -115,6 +145,25 @@
         "//": "伏击开始2",
         "type": "effect_on_condition",
         "id": "EOC_Spawn_Level_2",
+        "recurrence": "3 m ",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Attack_Waves_count",
+                        ">",
+                        "0"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ambush_Level",
+                        "==",
+                        "2"
+                    ]
+                }
+            ]
+        },
         "effect": [
             {
                 "u_spawn_monster": "sairen_pawn",
@@ -161,6 +210,16 @@
                     20,
                     20
                 ]
+            },
+            {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "run_eocs": "EOC_Ambush_Spawn_Waves_count"
             }
         ]
     },
@@ -168,6 +227,25 @@
         "//": "伏击开始3",
         "type": "effect_on_condition",
         "id": "EOC_Spawn_Level_3",
+        "recurrence": "3 m ",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Attack_Waves_count",
+                        ">",
+                        "0"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ambush_Level",
+                        "==",
+                        "3"
+                    ]
+                }
+            ]
+        },
         "effect": [
             {
                 "u_spawn_monster": "sairen_pawn",
@@ -229,6 +307,16 @@
                     20,
                     20
                 ]
+            },
+            {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "run_eocs": "EOC_Ambush_Spawn_Waves_count"
             }
         ]
     },
@@ -236,6 +324,25 @@
         "//": "伏击开始4",
         "type": "effect_on_condition",
         "id": "EOC_Spawn_Level_4",
+        "recurrence": "3 m ",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Attack_Waves_count",
+                        ">",
+                        "0"
+                    ]
+                },
+                {
+                    "math": [
+                        "u_Ambush_Level",
+                        "==",
+                        "4"
+                    ]
+                }
+            ]
+        },
         "effect": [
             {
                 "u_spawn_monster": "sairen_pawn",
@@ -312,6 +419,16 @@
                     20,
                     20
                 ]
+            },
+            {
+                "math": [
+                    "u_Attack_Waves_count",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "run_eocs": "EOC_Ambush_Spawn_Waves_count"
             }
         ]
     }

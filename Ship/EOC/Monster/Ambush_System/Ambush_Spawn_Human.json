@@ -10,45 +10,31 @@
                 "type": "bad"
             },
             {
-                "run_eocs": [
-                    {
-                        "id": "EOC_Ambush_Spawn_Human_1",
-                        "effect": [
-                            {
-                                "switch": {
-                                    "math": [
-                                        "u_Ambush_Level"
-                                    ]
-                                },
-                                "cases": [
-                                    {
-                                        "case": 1,
-                                        "effect": {
-                                            "run_eocs": "EOC_Spawn_Level_Human_1",
-                                            "time_in_future": "3 m"
-                                        }
-                                    },
-                                    {
-                                        "case": 2,
-                                        "effect": {
-                                            "run_eocs": "EOC_Spawn_Level_Human_2",
-                                            "time_in_future": "3 m"
-                                        }
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ],
-                "iterations": {
+                "switch": {
                     "math": [
                         "u_Ambush_Level"
                     ]
-                }
+                },
+                "cases": [
+                    {
+                        "case": 1,
+                        "effect": {
+                            "run_eocs": "EOC_Spawn_Level_Human_1",
+                            "time_in_future": "3 m"
+                        }
+                    },
+                    {
+                        "case": 2,
+                        "effect": {
+                            "run_eocs": "EOC_Spawn_Level_Human_2",
+                            "time_in_future": "3 m"
+                        }
+                    }
+                ]
             },
             {
                 "math": [
-                    "u_Siren_activity_level",
+                    "u_Siren_Activity_Level",
                     "-=",
                     "1"
                 ]

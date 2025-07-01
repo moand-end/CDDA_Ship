@@ -9,7 +9,7 @@
                 "open_air_allowed": true,
                 "lifespan": {
                     "math": [
-                        "60 + 30 * u_Siren_activity_level"
+                        "60 + 30 * u_Siren_Activity_Level"
                     ]
                 },
                 "real_count": {
@@ -32,7 +32,7 @@
                 "open_air_allowed": true,
                 "lifespan": {
                     "math": [
-                        "60 + 30 * u_Siren_activity_level"
+                        "60 + 30 * u_Siren_Activity_Level"
                     ]
                 },
                 "real_count": {
@@ -54,7 +54,7 @@
                 "open_air_allowed": true,
                 "lifespan": {
                     "math": [
-                        "60 + 30 * u_Siren_activity_level"
+                        "60 + 30 * u_Siren_Activity_Level"
                     ]
                 },
                 "real_count": {
@@ -74,9 +74,17 @@
         ]
     },
     {
-        "//": "高空空袭",
+        "//": "高空空袭，条件为0时结束召唤",
         "type": "effect_on_condition",
         "id": "EOC_Spawn_High_altitude_bombing",
+        "recurrence": "1 s ",
+        "condition": {
+            "math": [
+                "u_High_altitude_bombing_count",
+                ">",
+                "0"
+            ]
+        },
         "effect": [
             {
                 "u_spawn_monster": "Siren_Aircraft_special",
@@ -94,7 +102,33 @@
                     0,
                     10
                 ],
-                "spawn_message": "空袭来了！"
+                "spawn_message": "小心导弹！"
+            },
+            {
+                "math": [
+                    "u_High_altitude_bombing_count",
+                    "-=",
+                    "1"
+                ]
+            },
+            {
+                "if": {
+                    "math": [
+                        "u_High_altitude_bombing_count",
+                        "==",
+                        "0"
+                    ]
+                },
+                "then": [
+                    {
+                        "u_message": "空袭结束了！"
+                    }
+                ],
+                "else": [
+                    {
+                        "u_message": "袭击还有<u_val:High_altitude_bombing_count>秒"
+                    }
+                ]
             }
         ]
     }

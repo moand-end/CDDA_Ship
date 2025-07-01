@@ -7,13 +7,80 @@
                 "u_message": "查看塞壬密度:<u_val:Siren_Amount>"
             },
             {
+                "u_message": "查看塞壬等级:<u_val:Ambush_Level>"
+            },
+            {
                 "u_message": "查看塞壬boss点数:<u_val:Boss_Point>"
             },
             {
                 "u_message": "查看塞壬boss次数:<u_val:boss_Minimum_Point>"
             },
             {
-                "u_message": "活跃度:<u_val:Siren_activity_level>"
+                "u_message": "活跃度:<u_val:Siren_Activity_Level>"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_math_DEBUG_S",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Siren_Amount_DEBUG",
+                    "EOC_Siren_Activity_Level_DEBUG",
+                    "EOC_Ship_Level_EXP_DEBUG",
+                    "EOC_Ambush_Evade_judgement",
+                    "EOC_Siren_Airstrike_judgement",
+                    "EOC_Ship_math_DEBUG"
+                ],
+                "names": [
+                    "加满伏击点？",
+                    "加满活跃度？",
+                    "大量经验？",
+                    "越过判断直接开始袭击？",
+                    "越过判断直接开始空袭？",
+                    "查看数据"
+                ],
+                "title": "DEBUG"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Amount_DEBUG",
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_Amount",
+                    "=",
+                    "1000"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Siren_Activity_Level_DEBUG",
+        "effect": [
+            {
+                "math": [
+                    "u_Siren_Activity_Level",
+                    "=",
+                    "4"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Level_EXP_DEBUG",
+        "effect": [
+            {
+                "math": [
+                    "u_Ship_Level_EXP",
+                    "+=",
+                    "9999999"
+                ]
             }
         ]
     }
