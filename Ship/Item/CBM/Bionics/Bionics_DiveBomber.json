@@ -1,0 +1,46 @@
+[
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_SBD_Dauntless_T1",
+        "name": {
+            "str": "SBD无畏T1"
+        },
+        "description": " SBD无畏 当前等级:0",
+        "occupied_bodyparts": [
+            [
+                "arm_l",
+                10
+            ]
+        ],
+        "flags": [
+            "NO_UNWIELD"
+        ]
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_SBD_Dauntless_T1_1",
+        "copy-from": "bio_Douglas_SBD_Dauntless_T1",
+        "name": {
+            "str": " SBD无畏T1+1"
+        },
+        "description": " SBD无畏 当前等级:1"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_SBD_Dauntless_T1_2",
+        "copy-from": "bio_Douglas_SBD_Dauntless_T1",
+        "name": {
+            "str": " SBD无畏T1+2"
+        },
+        "description": " SBD无畏 当前等级:2"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_SBD_Dauntless_T1_3",
+        "copy-from": "bio_Douglas_SBD_Dauntless_T1",
+        "name": {
+            "str": " SBD无畏T1+3"
+        },
+        "description": " SBD无畏 当前等级:3"
+    }
+]

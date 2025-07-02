@@ -1,0 +1,36 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Flight_deck_1",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Flight_deck",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "u_has_item": "Item_Flight_deck"
+                }
+            ]
+        },
+        "effect": [
+            {
+                "u_consume_item": "Item_Flight_deck",
+                "count": 1
+            },
+            {
+                "u_add_bionic": "bio_Flight_deck"
+            },
+            {
+                "math": [
+                    "u_Equip_Flight_deck",
+                    "=",
+                    "1"
+                ]
+            }
+        ]
+    }
+]

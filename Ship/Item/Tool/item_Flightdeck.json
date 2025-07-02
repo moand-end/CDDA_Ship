@@ -1,0 +1,20 @@
+[
+    {
+        "id": "Item_Flight_deck_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "飞行甲板 T1"
+        },
+        "description": "飞行甲板，用于飞机起飞。 ",
+        "weight": "1000 g",
+        "volume": "2 L",
+        "symbol": ";",
+        "color": "light_cyan",
+        "use_action": {
+            "type": "effect_on_conditions",
+            "effect_on_conditions": [
+                "EOC_Equip_Flight_deck"
+            ]
+        }
+    }
+]

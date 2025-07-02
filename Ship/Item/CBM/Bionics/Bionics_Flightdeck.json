@@ -1,0 +1,22 @@
+[
+    {
+        "type": "bionic",
+        "id": "bio_Flight_deck",
+        "name": {
+            "str": "飞行甲板"
+        },
+        "fake_weapon": "Flight_deck",
+        "description": "飞行甲板，用于飞机起飞。",
+        "occupied_bodyparts": [
+            [
+                "torso",
+                10
+            ]
+        ],
+        "flags": [
+            "BIONIC_TOGGLED",
+            "BIONIC_WEAPON",
+            "NO_UNWIELD"
+        ]
+    }
+]

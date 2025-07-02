@@ -153,7 +153,11 @@
       "bio_Thruster",
       "bio_Power_Storage",
       "bio_Ship_Nuclear_energy_device",
-      "bio_Ship_Petroleum_generator"
+      "bio_Ship_Petroleum_generator",
+      "bio_Grumman_F4F_Wildcat_T1",
+      "bio_Douglas_SBD_Dauntless_T1",
+      "bio_Douglas_TBD_Devastator_T1",
+      "bio_Flight_deck"
     ],
     "items": {
       "both": {

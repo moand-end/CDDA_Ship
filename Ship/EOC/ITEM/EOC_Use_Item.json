@@ -77,7 +77,7 @@
                 "math": [
                     "u_Tech_Box_T1_Points",
                     "=",
-                    "rand(4) + 1"
+                    "rand(8) + 1"
                 ]
             },
             {
@@ -156,6 +156,70 @@
                         "effect": [
                             {
                                 "u_spawn_item": "Item_533mm_Quintuple_Torpedo_Mount_T1",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 6,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Douglas_SBD_Dauntless_T1",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 7,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Grumman_F4F_Wildcat_T1",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 8,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Flight_deck_T1",
+                                "count": 1
+                            },
+                            {
+                                "math": [
+                                    "u_Tech_Box_T1_Points",
+                                    "=",
+                                    "0"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "case": 9,
+                        "effect": [
+                            {
+                                "u_spawn_item": "Item_Douglas_TBD_Devastator_T1",
                                 "count": 1
                             },
                             {

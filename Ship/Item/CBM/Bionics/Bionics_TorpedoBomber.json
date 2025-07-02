@@ -1,0 +1,46 @@
+[
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_TBD_Devastator_T1",
+        "name": {
+            "str": "TBD蹂躏者T1"
+        },
+        "description": "TBD蹂躏者 当前等级:0",
+        "occupied_bodyparts": [
+            [
+                "arm_l",
+                10
+            ]
+        ],
+        "flags": [
+            "NO_UNWIELD"
+        ]
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_TBD_Devastator_T1_1",
+        "copy-from": "bio_Douglas_TBD_Devastator_T1",
+        "name": {
+            "str": "TBD蹂躏者T1+1"
+        },
+        "description": "TBD蹂躏者 当前等级:1"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_TBD_Devastator_T1_2",
+        "copy-from": "bio_Douglas_TBD_Devastator_T1",
+        "name": {
+            "str": "TBD蹂躏者T1+2"
+        },
+        "description": "TBD蹂躏者 当前等级:2"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Douglas_TBD_Devastator_T1_3",
+        "copy-from": "bio_Douglas_TBD_Devastator_T1",
+        "name": {
+            "str": "TBD蹂躏者T1+3"
+        },
+        "description": "TBD蹂躏者 当前等级:3"
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "type": "bionic",
+        "id": "bio_Grumman_F4F_Wildcat_T1",
+        "name": {
+            "str": "F4F野猫T1"
+        },
+        "description": "F4F野猫 当前等级:0",
+        "occupied_bodyparts": [
+            [
+                "arm_l",
+                10
+            ]
+        ],
+        "flags": [
+            "NO_UNWIELD"
+        ]
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Grumman_F4F_Wildcat_T1_1",
+        "copy-from": "bio_Grumman_F4F_Wildcat_T1",
+        "name": {
+            "str": "F4F野猫T1+1"
+        },
+        "description": "F4F野猫 当前等级:1"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Grumman_F4F_Wildcat_T1_2",
+        "copy-from": "bio_Grumman_F4F_Wildcat_T1",
+        "name": {
+            "str": "F4F野猫T1+2"
+        },
+        "description": "F4F野猫 当前等级:2"
+    },
+    {
+        "type": "bionic",
+        "id": "bio_Grumman_F4F_Wildcat_T1_3",
+        "copy-from": "bio_Grumman_F4F_Wildcat_T1",
+        "name": {
+            "str": "F4F野猫T1+3"
+        },
+        "description": "F4F野猫 当前等级:3"
+    }
+]

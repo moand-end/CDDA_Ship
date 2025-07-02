@@ -1,0 +1,34 @@
+[
+    {
+        "id": "Flight_deck",
+        "type": "TOOL",
+        "name": {
+            "str": "飞行甲板"
+        },
+        "description": "飞行甲板，用于飞机起飞。",
+        "weight": "100 g",
+        "volume": "30 ml",
+        "price": "1000000 USD",
+        "to_hit": {
+            "grip": "weapon",
+            "length": "long",
+            "surface": "every",
+            "balance": "good"
+        },
+        "melee_damage": {
+            "bash": 100,
+            "stab": 0,
+            "cut": 0
+        },
+        "material": [
+            "steel"
+        ],
+        "symbol": "(",
+        "color": "brown",
+        "flags": [
+            "NO_DROP",
+            "UNBREAKABLE",
+            "TRADER_AVOID"
+        ]
+    }
+]

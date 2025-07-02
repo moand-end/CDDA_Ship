@@ -1,0 +1,121 @@
+[
+    {
+        "//": "武器装备列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Equip_Douglas_SBD_Dauntless",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
+                        "!=",
+                        "1"
+                    ]
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_item": "Item_Douglas_SBD_Dauntless_T1"
+                        },
+                        {
+                            "u_has_item": "Item_Douglas_SBD_Dauntless_T1_1"
+                        },
+                        {
+                            "u_has_item": "Item_Douglas_SBD_Dauntless_T1_2"
+                        },
+                        {
+                            "u_has_item": "Item_Douglas_SBD_Dauntless_T1_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Equip_Douglas_SBD_Dauntless_T1_0",
+                    "EOC_Equip_Douglas_SBD_Dauntless_T1_1",
+                    "EOC_Equip_Douglas_SBD_Dauntless_T1_2",
+                    "EOC_Equip_Douglas_SBD_Dauntless_T1_3",
+                    "EOC_Disassembly_Douglas_SBD_Dauntless",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "装备SBD无畏T1",
+                    "装备SBD无畏T1 +1",
+                    "装备SBD无畏T1 +2",
+                    "装备SBD无畏T1 +3",
+                    "拆卸",
+                    "算了"
+                ],
+                "hide_failing": true,
+                "title": "装备界面\n飞机数量:<u_val:Ship_DiveBomber_count>/<u_val:Ship_DiveBomber_count_max>",
+                "descriptions": [
+                    "飞机数量+3",
+                    "飞机数量+4",
+                    "飞机数量+5",
+                    "飞机数量+6",
+                    "拆卸",
+                    "算了"
+                ]
+            }
+        ]
+    },
+    {
+        "//": "武器拆卸列表40",
+        "type": "effect_on_condition",
+        "id": "EOC_Disassembly_Douglas_SBD_Dauntless",
+        "condition": {
+            "and": [
+                {
+                    "math": [
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
+                        "==",
+                        "1"
+                    ]
+                },
+                {
+                    "not": "u_has_weapon"
+                },
+                {
+                    "or": [
+                        {
+                            "u_has_bionics": "bio_Douglas_SBD_Dauntless_T1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Douglas_SBD_Dauntless_T1_1"
+                        },
+                        {
+                            "u_has_bionics": "bio_Douglas_SBD_Dauntless_T1_2"
+                        },
+                        {
+                            "u_has_bionics": "bio_Douglas_SBD_Dauntless_T1_3"
+                        }
+                    ]
+                }
+            ]
+        },
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Disassembly_Douglas_SBD_Dauntless_T1_0",
+                    "EOC_Disassembly_Douglas_SBD_Dauntless_T1_1",
+                    "EOC_Disassembly_Douglas_SBD_Dauntless_T1_2",
+                    "EOC_Disassembly_Douglas_SBD_Dauntless_T1_3",
+                    "EOC_Equip_Douglas_SBD_Dauntless",
+                    "EOC_Ship_end"
+                ],
+                "names": [
+                    "拆卸SBD无畏T1",
+                    "拆卸SBD无畏T1 +1",
+                    "拆卸SBD无畏T1 +2",
+                    "拆卸SBD无畏T1 +3",
+                    "返回装备",
+                    "算了"
+                ],
+                "hide_failing": true,
+                "title": "拆卸界面\n飞机数量:<u_val:Ship_DiveBomber_count>/<u_val:Ship_DiveBomber_count_max>"
+            }
+        ]
+    }
+]

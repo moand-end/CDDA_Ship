@@ -31,12 +31,14 @@
                 "run_eoc_selector": [
                     "EOC_Ship_Select_3_1",
                     "EOC_Ship_Select_3_2",
-                    "EOC_Ship_Select_3_3"
+                    "EOC_Ship_Select_3_3",
+                    "EOC_Ship_Select_3_4"
                 ],
                 "names": [
                     "随机选择",
                     "拉菲",
-                    "新泽西"
+                    "新泽西",
+                    "企业"
                 ],
                 "hide_failing": true
             }
@@ -54,7 +56,7 @@
                 "math": [
                     "u_Ship_Judgment",
                     "=",
-                    "rand(1) + 1"
+                    "rand(2) + 1"
                 ]
             },
             {
@@ -77,6 +79,14 @@
                         "effect": {
                             "run_eocs": [
                                 "EOC_Ship_Select_All_NewJersey"
+                            ]
+                        }
+                    },
+                    {
+                        "case": 3,
+                        "effect": {
+                            "run_eocs": [
+                                "EOC_Ship_Select_All_Enterprise"
                             ]
                         }
                     }
@@ -118,6 +128,25 @@
             {
                 "run_eocs": [
                     "EOC_Ship_Select_All_NewJersey"
+                ]
+            },
+            {
+                "u_assign_activity": "ACT_SHIP_SLEEP",
+                "duration": "1 h"
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_3_4",
+        "effect": [
+            {
+                "u_message": "而在感觉到变化之后，你的意识再一次陷入了沉睡。",
+                "popup": true
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_All_Enterprise"
                 ]
             },
             {

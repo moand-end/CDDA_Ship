@@ -108,6 +108,25 @@
         ]
     },
     {
+        "//": "企业变异",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_Enterprise",
+        "effect": [
+            {
+                "u_add_trait": "AircraftCarrier"
+            },
+            {
+                "u_add_trait": "AircraftCarrier_Armor"
+            },
+            {
+                "u_add_trait": "Enterprise"
+            },
+            {
+                "u_add_trait": "AircraftCarrier_Hull"
+            }
+        ]
+    },
+    {
         "//": "拉菲技能",
         "type": "effect_on_condition",
         "id": "EOC_Ship_Select_skill_Laffey",
@@ -262,6 +281,41 @@
         ]
     },
     {
+        "//": "企业技能，还没做！！！！！！！！",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_skill_Enterprise",
+        "effect": [
+            {
+                "math": [
+                    "u_Enterprise_skill_LuckyE_level",
+                    "=",
+                    "1"
+                ]
+            },
+            {
+                "math": [
+                    "u_Enterprise_skill_LuckyE_EXP_need",
+                    "=",
+                    "100"
+                ]
+            },
+            {
+                "math": [
+                    "u_Enterprise_skill_LuckyE_chance",
+                    "=",
+                    "0"
+                ]
+            },
+            {
+                "math": [
+                    "u_Enterprise_skill_LuckyE_EXP",
+                    "=",
+                    "0"
+                ]
+            }
+        ]
+    },
+    {
         "//": "舰娘拉菲全部",
         "type": "effect_on_condition",
         "id": "EOC_Ship_Select_All_Laffey",
@@ -311,6 +365,40 @@
             },
             {
                 "u_add_bionic": "bio_Quadruple_40mm_Bofors_AA_Gun_Mount_T1"
+            }
+        ]
+    },
+    {
+        "//": "舰娘企业全部",
+        "type": "effect_on_condition",
+        "id": "EOC_Ship_Select_All_Enterprise",
+        "effect": [
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_Generic_Templates"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_Enterprise"
+                ]
+            },
+            {
+                "run_eocs": [
+                    "EOC_Ship_Select_skill_Enterprise"
+                ]
+            },
+            {
+                "u_add_bionic": "bio_Grumman_F4F_Wildcat_T1"
+            },
+            {
+                "u_add_bionic": "bio_Douglas_SBD_Dauntless_T1"
+            },
+            {
+                "u_add_bionic": "bio_Douglas_TBD_Devastator_T1"
+            },
+            {
+                "u_add_bionic": "bio_Flight_deck"
             }
         ]
     }

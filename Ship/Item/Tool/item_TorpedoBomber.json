@@ -1,0 +1,47 @@
+[
+    {
+        "id": "Item_Douglas_TBD_Devastator_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "TBD蹂躏者 T1"
+        },
+        "description": "TBD蹂躏者 当前等级:0",
+        "weight": "1000 g",
+        "volume": "2 L",
+        "symbol": ";",
+        "color": "light_cyan",
+        "use_action": {
+            "type": "effect_on_conditions",
+            "effect_on_conditions": [
+                "EOC_Equip_Douglas_TBD_Devastator"
+            ]
+        }
+    },
+    {
+        "id": "Item_Douglas_TBD_Devastator_T1_1",
+        "copy-from": "Item_Douglas_TBD_Devastator_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "TBD蹂躏者 T1 +1"
+        },
+        "description": "TBD蹂躏者 当前等级:1"
+    },
+    {
+        "id": "Item_Douglas_TBD_Devastator_T1_2",
+        "copy-from": "Item_Douglas_TBD_Devastator_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "TBD蹂躏者 T1 +2"
+        },
+        "description": "TBD蹂躏者 当前等级:2"
+    },
+    {
+        "id": "Item_Douglas_TBD_Devastator_T1_3",
+        "copy-from": "Item_Douglas_TBD_Devastator_T1",
+        "type": "TOOL",
+        "name": {
+            "str_sp": "TBD蹂躏者 T1 +3"
+        },
+        "description": "TBD蹂躏者 当前等级:3"
+    }
+]
