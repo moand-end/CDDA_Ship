@@ -163,7 +163,8 @@
       "both": {
         "items": [
           "Enterprise_Navy_cap",
-          "Enterprise_stockings_shoe",
+          "Enterprise_stockings",
+          "Enterprise_shoe",
           "Ship_relieve_pain",
           "damage_control"
         ],

@@ -278,12 +278,12 @@
         ]
     },
     {
-        "id": "Enterprise_stockings_shoe",
+        "id": "Enterprise_stockings",
         "type": "ARMOR",
         "name": {
-            "str": "企业的黑丝连鞋"
+            "str": "企业的丝袜"
         },
-        "description": "丝袜和鞋子的联合体，至于为什么不分开存粹懒得（",
+        "description": "企业的丝袜",
         "weight": "90 g",
         "volume": "250 ml",
         "price": "5 USD",
@@ -297,9 +297,17 @@
         "material_thickness": 0.1,
         "flags": [
             "VARSIZE",
+            "SKINTIGHT",
             "UNBREAKABLE"
         ],
         "armor": [
+            {
+                "coverage": 100,
+                "covers": [
+                    "foot_l",
+                    "foot_r"
+                ]
+            },
             {
                 "covers": [
                     "leg_l",
@@ -323,13 +331,93 @@
                     "leg_upper_r"
                 ],
                 "coverage": 60
+            }
+        ]
+    },
+    {
+        "id": "Enterprise_shoe",
+        "type": "ARMOR",
+        "name": {
+            "str": "企业的长筒靴"
+        },
+        "description": "企业的长筒靴",
+        "weight": "90 g",
+        "volume": "250 ml",
+        "price": "5 USD",
+        "price_postapoc": "2 USD 50 cent",
+        "material": [
+            "leather"
+        ],
+        "symbol": "[",
+        "color": "white",
+        "warmth": 20,
+        "material_thickness": 2,
+        "environmental_protection": 2,
+        "flags": [
+            "VARSIZE",
+            "UNBREAKABLE",
+            "WATERPROOF"
+        ],
+        "armor": [
+            {
+                "covers": [
+                    "foot_l",
+                    "foot_r"
+                ],
+                "specifically_covers": [
+                    "foot_sole_r",
+                    "foot_sole_l"
+                ],
+                "material": [
+                    {
+                        "type": "leather",
+                        "covered_by_mat": 100,
+                        "thickness": 0.1
+                    },
+                    {
+                        "type": "rubber",
+                        "covered_by_mat": 100,
+                        "thickness": 4
+                    }
+                ],
+                "coverage": 100,
+                "encumbrance": 1
             },
             {
                 "covers": [
                     "foot_l",
                     "foot_r"
                 ],
+                "specifically_covers": [
+                    "foot_heel_r",
+                    "foot_heel_l",
+                    "foot_arch_r",
+                    "foot_arch_l",
+                    "foot_toes_r",
+                    "foot_toes_l",
+                    "foot_ankle_l",
+                    "foot_ankle_r"
+                ],
+                "material": [
+                    {
+                        "type": "leather",
+                        "covered_by_mat": 100,
+                        "thickness": 2
+                    }
+                ],
                 "coverage": 100
+            },
+            {
+                "covers": [
+                    "leg_l",
+                    "leg_r"
+                ],
+                "specifically_covers": [
+                    "leg_lower_l",
+                    "leg_lower_r"
+                ],
+                "coverage": 100,
+                "encumbrance": 1
             }
         ]
     }

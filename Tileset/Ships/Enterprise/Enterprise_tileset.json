@@ -72,23 +72,43 @@
                         "rotates": false
                     },
                     {
-                        "id": "Enterprise_stockings_shoe",
+                        "id": "Enterprise_stockings",
                         "fg": 4,
                         "rotates": false
                     },
                     {
-                        "id": "overlay_worn_Enterprise_stockings_shoe",
+                        "id": "overlay_worn_Enterprise_stockings",
                         "fg": 4,
                         "rotates": false
                     },
                     {
-                        "id": "npc_Enterprise_stockings_shoe",
+                        "id": "npc_Enterprise_stockings",
                         "fg": 4,
                         "rotates": false
                     },
                     {
-                        "id": "overlay_mutation_npc_Enterprise_stockings_shoe",
+                        "id": "overlay_mutation_npc_Enterprise_stockings",
                         "fg": 4,
+                        "rotates": false
+                    },
+                    {
+                        "id": "Enterprise_shoe",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_worn_Enterprise_shoe",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "npc_Enterprise_shoe",
+                        "fg": 5,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_mutation_npc_Enterprise_shoe",
+                        "fg": 5,
                         "rotates": false
                     }
                 ]
