@@ -110,6 +110,12 @@
         "vanity": true,
         "category": [
             "Ship_Destroyer"
+        ],
+        "types": [
+            "hair_style",
+            "skin_tone",
+            "hair_color",
+            "eye_color"
         ]
     }
 ]

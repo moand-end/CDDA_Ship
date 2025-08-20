@@ -15,7 +15,7 @@
         ],
         "tiles-new": [
             {
-                "file": "Tileset/Ships/Enterprise/Enterprise_2.png",
+                "file": "Tileset/Ships/Enterprise/Enterprise.png",
                 "sprite_width": 32,
                 "sprite_height": 36,
                 "sprite_offset_x": 0,
@@ -32,63 +32,23 @@
                         "rotates": false
                     },
                     {
-                        "id": "Enterprise_Navy_cap",
-                        "fg": 2,
-                        "rotates": false
-                    },
-                    {
-                        "id": "overlay_worn_Enterprise_Navy_cap",
-                        "fg": 2,
-                        "rotates": false
-                    },
-                    {
-                        "id": "npc_Enterprise_Navy_cap",
-                        "fg": 2,
-                        "rotates": false
-                    },
-                    {
-                        "id": "overlay_mutation_npc_Enterprise_Navy_cap",
-                        "fg": 2,
-                        "rotates": false
-                    },
-                    {
                         "id": "Enterprise_Ship_Equipment",
-                        "fg": 3,
+                        "fg": 2,
                         "rotates": false
                     },
                     {
                         "id": "overlay_worn_Enterprise_Ship_Equipment",
-                        "fg": 3,
+                        "fg": 2,
                         "rotates": false
                     },
                     {
                         "id": "npc_Enterprise_Ship_Equipment",
-                        "fg": 3,
+                        "fg": 2,
                         "rotates": false
                     },
                     {
                         "id": "overlay_mutation_npc_Enterprise_Ship_Equipment",
-                        "fg": 3,
-                        "rotates": false
-                    },
-                    {
-                        "id": "Enterprise_stockings",
-                        "fg": 4,
-                        "rotates": false
-                    },
-                    {
-                        "id": "overlay_worn_Enterprise_stockings",
-                        "fg": 4,
-                        "rotates": false
-                    },
-                    {
-                        "id": "npc_Enterprise_stockings",
-                        "fg": 4,
-                        "rotates": false
-                    },
-                    {
-                        "id": "overlay_mutation_npc_Enterprise_stockings",
-                        "fg": 4,
+                        "fg": 2,
                         "rotates": false
                     },
                     {

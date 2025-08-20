@@ -116,6 +116,12 @@
         "vanity": true,
         "category": [
             "Ship_Battleship"
+        ],
+        "types": [
+            "hair_style",
+            "skin_tone",
+            "hair_color",
+            "eye_color"
         ]
     }
 ]

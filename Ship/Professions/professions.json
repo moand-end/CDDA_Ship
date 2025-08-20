@@ -106,12 +106,13 @@
     "items": {
       "both": {
         "items": [
+          "New_Jersey_clothes",
           "Ship_relieve_pain",
           "damage_control"
         ],
         "entries": [
           {
-            "item": "Enterprise_Ship_Equipment",
+            "item": "New_Jersey_Ship_Equipment",
             "contents-group": "Ship_Storage_Space_group"
           },
           {
@@ -162,8 +163,6 @@
     "items": {
       "both": {
         "items": [
-          "Enterprise_Navy_cap",
-          "Enterprise_stockings",
           "Enterprise_shoe",
           "Ship_relieve_pain",
           "damage_control"
