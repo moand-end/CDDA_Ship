@@ -70,6 +70,16 @@
                         "id": "overlay_mutation_npc_Enterprise_shoe",
                         "fg": 5,
                         "rotates": false
+                    },
+                    {
+                        "id": "Flight_deck",
+                        "fg": 7,
+                        "rotates": false
+                    },
+                    {
+                        "id": "overlay_wielded_Flight_deck",
+                        "fg": 7,
+                        "rotates": false
                     }
                 ]
             }
