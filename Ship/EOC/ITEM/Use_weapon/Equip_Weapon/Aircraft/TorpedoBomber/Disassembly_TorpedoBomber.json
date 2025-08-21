@@ -37,7 +37,7 @@
             {
                 "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "-=",
                     "3"
                 ]
@@ -45,17 +45,17 @@
             {
                 "if": {
                     "math": [
-                        "u_Ship_TorpedoBomber_count",
+                        "u_Ship_Aircraft_count",
                         ">",
-                        "u_Ship_TorpedoBomber_count_max"
+                        "u_Ship_Aircraft_count_max"
                     ]
                 },
                 "then": [
                     {
                         "math": [
-                            "u_Ship_TorpedoBomber_count",
+                            "u_Ship_Aircraft_count",
                             "=",
-                            "u_Ship_TorpedoBomber_count_max"
+                            "u_Ship_Aircraft_count_max"
                         ]
                     }
                 ]
@@ -100,7 +100,7 @@
             {
                 "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "-=",
                     "4"
                 ]
@@ -108,17 +108,17 @@
             {
                 "if": {
                     "math": [
-                        "u_Ship_TorpedoBomber_count",
+                        "u_Ship_Aircraft_count",
                         ">",
-                        "u_Ship_TorpedoBomber_count_max"
+                        "u_Ship_Aircraft_count_max"
                     ]
                 },
                 "then": [
                     {
                         "math": [
-                            "u_Ship_TorpedoBomber_count",
+                            "u_Ship_Aircraft_count",
                             "=",
-                            "u_Ship_TorpedoBomber_count_max"
+                            "u_Ship_Aircraft_count_max"
                         ]
                     }
                 ]
@@ -163,7 +163,7 @@
             {
                 "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "-=",
                     "5"
                 ]
@@ -171,17 +171,17 @@
             {
                 "if": {
                     "math": [
-                        "u_Ship_TorpedoBomber_count",
+                        "u_Ship_Aircraft_count",
                         ">",
-                        "u_Ship_TorpedoBomber_count_max"
+                        "u_Ship_Aircraft_count_max"
                     ]
                 },
                 "then": [
                     {
                         "math": [
-                            "u_Ship_TorpedoBomber_count",
+                            "u_Ship_Aircraft_count",
                             "=",
-                            "u_Ship_TorpedoBomber_count_max"
+                            "u_Ship_Aircraft_count_max"
                         ]
                     }
                 ]
@@ -226,7 +226,7 @@
             {
                 "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "-=",
                     "6"
                 ]
@@ -234,17 +234,17 @@
             {
                 "if": {
                     "math": [
-                        "u_Ship_TorpedoBomber_count",
+                        "u_Ship_Aircraft_count",
                         ">",
-                        "u_Ship_TorpedoBomber_count_max"
+                        "u_Ship_Aircraft_count_max"
                     ]
                 },
                 "then": [
                     {
                         "math": [
-                            "u_Ship_TorpedoBomber_count",
+                            "u_Ship_Aircraft_count",
                             "=",
-                            "u_Ship_TorpedoBomber_count_max"
+                            "u_Ship_Aircraft_count_max"
                         ]
                     }
                 ]

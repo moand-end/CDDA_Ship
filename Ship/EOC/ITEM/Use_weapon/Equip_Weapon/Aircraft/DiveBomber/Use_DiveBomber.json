@@ -49,7 +49,7 @@
                     "算了"
                 ],
                 "hide_failing": true,
-                "title": "装备界面\n飞机数量:<u_val:Ship_DiveBomber_count>/<u_val:Ship_DiveBomber_count_max>",
+                "title": "装备界面\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>",
                 "descriptions": [
                     "飞机数量+3",
                     "飞机数量+4",
@@ -114,7 +114,7 @@
                     "算了"
                 ],
                 "hide_failing": true,
-                "title": "拆卸界面\n飞机数量:<u_val:Ship_DiveBomber_count>/<u_val:Ship_DiveBomber_count_max>"
+                "title": "拆卸界面\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
             }
         ]
     }

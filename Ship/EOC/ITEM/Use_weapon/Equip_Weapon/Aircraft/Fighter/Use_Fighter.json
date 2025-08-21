@@ -49,7 +49,7 @@
                     "算了"
                 ],
                 "hide_failing": true,
-                "title": "装备界面\n飞机数量:<u_val:Ship_Fighter_count>/<u_val:Ship_Fighter_count_max>\n航空基础属性:<u_val:Ship_Stats_Base_Aviation>\n航空性能属性:<u_val:Ship_Stats_property_Aviation>\n航空成长属性:<u_val:Ship_Stats_Growth_Value_Aviation>\n航空属性:<u_val:Ship_Stats_Aviation>\n航空属性综合:<u_val:Ship_Stats_Aviation_comprehensive>",
+                "title": "装备界面\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>\n航空基础属性:<u_val:Ship_Stats_Base_Aviation>\n航空性能属性:<u_val:Ship_Stats_property_Aviation>\n航空成长属性:<u_val:Ship_Stats_Growth_Value_Aviation>\n航空属性:<u_val:Ship_Stats_Aviation>\n航空属性综合:<u_val:Ship_Stats_Aviation_comprehensive>",
                 "descriptions": [
                     "航空+3",
                     "航空+4",
@@ -114,7 +114,7 @@
                     "算了"
                 ],
                 "hide_failing": true,
-                "title": "拆卸界面\n飞机数量:<u_val:Ship_Fighter_count>/<u_val:Ship_Fighter_count_max>\n航空基础属性:<u_val:Ship_Stats_Base_Aviation>\n航空性能属性:<u_val:Ship_Stats_property_Aviation>\n航空成长属性:<u_val:Ship_Stats_Growth_Value_Aviation>\n航空属性:<u_val:Ship_Stats_Aviation>\n航空属性综合:<u_val:Ship_Stats_Aviation_comprehensive>"
+                "title": "拆卸界面\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>\n航空基础属性:<u_val:Ship_Stats_Base_Aviation>\n航空性能属性:<u_val:Ship_Stats_property_Aviation>\n航空成长属性:<u_val:Ship_Stats_Growth_Value_Aviation>\n航空属性:<u_val:Ship_Stats_Aviation>\n航空属性综合:<u_val:Ship_Stats_Aviation_comprehensive>"
             }
         ]
     }

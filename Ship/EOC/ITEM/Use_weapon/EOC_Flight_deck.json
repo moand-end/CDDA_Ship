@@ -1,0 +1,18 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_Flight_deck",
+        "effect": [
+            {
+                "run_eoc_selector": [
+                    "EOC_Ship_U_Panel"
+                ],
+                "names": [
+                    "返回"
+                ],
+                "hide_failing": true,
+                "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
+            }
+        ]
+    }
+]

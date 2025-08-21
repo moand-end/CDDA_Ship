@@ -1,40 +1,39 @@
 [
     {
         "type": "effect_on_condition",
-        "id": "EOC_Equip_Douglas_TBD_Devastator_T1_0",
+        "id": "EOC_Equip_Douglas_SBD_Dauntless_T1_0",
         "condition": {
             "and": [
                 {
                     "math": [
-                        "u_Equip_Douglas_TBD_Devastator_T1",
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
                         "!=",
                         "1"
                     ]
                 },
                 {
-                    "u_has_item": "Item_Douglas_TBD_Devastator_T1"
+                    "u_has_item": "Item_Douglas_SBD_Dauntless_T1"
                 }
             ]
         },
         "effect": [
             {
-                "u_consume_item": "Item_Douglas_TBD_Devastator_T1",
+                "u_consume_item": "Item_Douglas_SBD_Dauntless_T1",
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Douglas_TBD_Devastator_T1"
+                "u_add_bionic": "bio_Douglas_SBD_Dauntless_T1"
             },
             {
                 "math": [
-                    "u_Equip_Douglas_TBD_Devastator_T1",
+                    "u_Equip_Douglas_SBD_Dauntless_T1",
                     "=",
                     "1"
                 ]
             },
             {
-                "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "+=",
                     "3"
                 ]
@@ -43,40 +42,39 @@
     },
     {
         "type": "effect_on_condition",
-        "id": "EOC_Equip_Douglas_TBD_Devastator_T1_1",
+        "id": "EOC_Equip_Douglas_SBD_Dauntless_T1_1",
         "condition": {
             "and": [
                 {
                     "math": [
-                        "u_Equip_Douglas_TBD_Devastator_T1",
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
                         "!=",
                         "1"
                     ]
                 },
                 {
-                    "u_has_item": "Item_Douglas_TBD_Devastator_T1_1"
+                    "u_has_item": "Item_Douglas_SBD_Dauntless_T1_1"
                 }
             ]
         },
         "effect": [
             {
-                "u_consume_item": "Item_Douglas_TBD_Devastator_T1_1",
+                "u_consume_item": "Item_Douglas_SBD_Dauntless_T1_1",
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Douglas_TBD_Devastator_T1_1"
+                "u_add_bionic": "bio_Douglas_SBD_Dauntless_T1_1"
             },
             {
                 "math": [
-                    "u_Equip_Douglas_TBD_Devastator_T1",
+                    "u_Equip_Douglas_SBD_Dauntless_T1",
                     "=",
                     "1"
                 ]
             },
             {
-                "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "+=",
                     "4"
                 ]
@@ -85,40 +83,39 @@
     },
     {
         "type": "effect_on_condition",
-        "id": "EOC_Equip_Douglas_TBD_Devastator_T1_2",
+        "id": "EOC_Equip_Douglas_SBD_Dauntless_T1_2",
         "condition": {
             "and": [
                 {
                     "math": [
-                        "u_Equip_Douglas_TBD_Devastator_T1",
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
                         "!=",
                         "1"
                     ]
                 },
                 {
-                    "u_has_item": "Item_Douglas_TBD_Devastator_T1_2"
+                    "u_has_item": "Item_Douglas_SBD_Dauntless_T1_2"
                 }
             ]
         },
         "effect": [
             {
-                "u_consume_item": "Item_Douglas_TBD_Devastator_T1_2",
+                "u_consume_item": "Item_Douglas_SBD_Dauntless_T1_2",
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Douglas_TBD_Devastator_T1_2"
+                "u_add_bionic": "bio_Douglas_SBD_Dauntless_T1_2"
             },
             {
                 "math": [
-                    "u_Equip_Douglas_TBD_Devastator_T1",
+                    "u_Equip_Douglas_SBD_Dauntless_T1",
                     "=",
                     "1"
                 ]
             },
             {
-                "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "+=",
                     "5"
                 ]
@@ -127,40 +124,39 @@
     },
     {
         "type": "effect_on_condition",
-        "id": "EOC_Equip_Douglas_TBD_Devastator_T1_3",
+        "id": "EOC_Equip_Douglas_SBD_Dauntless_T1_3",
         "condition": {
             "and": [
                 {
                     "math": [
-                        "u_Equip_Douglas_TBD_Devastator_T1",
+                        "u_Equip_Douglas_SBD_Dauntless_T1",
                         "!=",
                         "1"
                     ]
                 },
                 {
-                    "u_has_item": "Item_Douglas_TBD_Devastator_T1_3"
+                    "u_has_item": "Item_Douglas_SBD_Dauntless_T1_3"
                 }
             ]
         },
         "effect": [
             {
-                "u_consume_item": "Item_Douglas_TBD_Devastator_T1_3",
+                "u_consume_item": "Item_Douglas_SBD_Dauntless_T1_3",
                 "count": 1
             },
             {
-                "u_add_bionic": "bio_Douglas_TBD_Devastator_T1_3"
+                "u_add_bionic": "bio_Douglas_SBD_Dauntless_T1_3"
             },
             {
                 "math": [
-                    "u_Equip_Douglas_TBD_Devastator_T1",
+                    "u_Equip_Douglas_SBD_Dauntless_T1",
                     "=",
                     "1"
                 ]
             },
             {
-                "//": "最大TBD蹂躏者飞机数量",
                 "math": [
-                    "u_Ship_TorpedoBomber_count_max",
+                    "u_Ship_Aircraft_count_max",
                     "+=",
                     "6"
                 ]

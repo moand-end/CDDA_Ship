@@ -29,6 +29,12 @@
             "NO_DROP",
             "UNBREAKABLE",
             "TRADER_AVOID"
-        ]
+        ],
+        "use_action": {
+            "type": "effect_on_conditions",
+            "effect_on_conditions": [
+                "EOC_Flight_deck"
+            ]
+        }
     }
 ]
