@@ -1,0 +1,47 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_Fighter",
+        "effect": [
+            {
+                "u_message": "你召唤了净化者！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_Fighter",
+        "effect": [
+            {
+                "u_message": "你召唤了净化者！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_Fighter",
+        "effect": [
+            {
+                "u_message": "你召唤了净化者！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": 1,
+                "min_radius": 1,
+                "max_radius": 1
+            }
+        ]
+    }
+]

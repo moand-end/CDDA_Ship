@@ -1,0 +1,17 @@
+[
+    {
+        "id": "Ship_DiveBomber",
+        "type": "json_flag",
+        "info": "这是轰炸机"
+    },
+    {
+        "id": "Ship_ Fighter",
+        "type": "json_flag",
+        "info": "这是战斗机"
+    },
+    {
+        "id": "Ship_TorpedoBomber",
+        "type": "json_flag",
+        "info": "这是鱼雷机"
+    }
+]

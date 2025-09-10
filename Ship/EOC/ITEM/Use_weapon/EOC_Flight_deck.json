@@ -1,18 +1,73 @@
 [
-    {
-        "type": "effect_on_condition",
-        "id": "EOC_Flight_deck",
-        "effect": [
-            {
-                "run_eoc_selector": [
-                    "EOC_Ship_U_Panel"
-                ],
-                "names": [
-                    "返回"
-                ],
-                "hide_failing": true,
-                "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
-            }
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Flight_deck",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_Fighter_Stting_Settings",
+          "EOC_summon_DiveBomber_Settings",
+          "EOC_summon_TorpedoBomber_Settings",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤战斗机",
+          "召唤轰炸机",
+          "召唤鱼雷机",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_Fighter_Stting_1",
+          "EOC_summon_Fighter_Stting_All",
+          "EOC_summon_Fighter_Stting_Customize",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤一架战斗机",
+          "召唤全部战斗机",
+          "召唤自定义战斗机",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_1",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          "=",
+          "1"
         ]
-    }
+      }
+    ]
+  }
 ]
