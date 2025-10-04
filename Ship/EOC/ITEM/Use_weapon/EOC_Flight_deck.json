@@ -67,6 +67,9 @@
           "=",
           "1"
         ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
       }
     ]
   }
