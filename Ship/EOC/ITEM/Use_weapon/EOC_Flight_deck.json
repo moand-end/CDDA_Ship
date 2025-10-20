@@ -17,13 +17,13 @@
           "关闭"
         ],
         "hide_failing": true,
-        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
       }
     ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_summon_Fighter",
+    "id": "EOC_summon_Fighter_Stting_Settings",
     "condition": {
       "math": [
         "u_Ship_Aircraft_count",
@@ -46,7 +46,7 @@
           "关闭"
         ],
         "hide_failing": true,
-        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count_max>/<u_val:Ship_Aircraft_count_max>"
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
       }
     ]
   },
@@ -66,6 +66,70 @@
           "u_Ship_Fighter_count",
           "=",
           "1"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_All",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          "=",
+          "u_Ship_Aircraft_count"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_Customize",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          " =",
+          " num_input('你要启动多少架战斗机?',1)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Fighter_count",
+            ">",
+            "u_Ship_Aircraft_count"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Fighter_count",
+              "=",
+              "u_Ship_Aircraft_count"
+            ]
+          }
         ]
       },
       {
