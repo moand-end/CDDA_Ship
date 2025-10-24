@@ -1357,6 +1357,22 @@
                     "=",
                     "u_Ship_Aircraft_count_max"
                 ]
+            },
+            {
+                "//": "召唤飞机的最小距离",
+                "math": [
+                    "u_Ship_Aircraft_spawn_min_radius",
+                    "=",
+                    "2"
+                ]
+            },
+            {
+                "//": "召唤飞机的最大距离",
+                "math": [
+                    "u_Ship_Aircraft_spawn_max_radius",
+                    "=",
+                    "5"
+                ]
             }
         ]
     },

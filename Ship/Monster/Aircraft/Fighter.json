@@ -1,0 +1,122 @@
+[
+    {
+        "id": "Ship_Grumman_F4F_Wildcat",
+        "type": "MONSTER",
+        "name": {
+            "str": "F4F野猫"
+        },
+        "description": "",
+        "default_faction": "Ship_Aircraft",
+        "bodytype": "ROBOT",
+        "species": [
+            "ROBOT"
+        ],
+        "diff": 20,
+        "volume": "500 L",
+        "weight": "100 kg",
+        "hp": 500,
+        "regenerates": 0,
+        "speed": 100,
+        "material": [
+            "steel"
+        ],
+        "phase": "SOLID",
+        "symbol": "H",
+        "color": "light_cyan",
+        "aggression": -100,
+        "morale": 100,
+        "luminance": 1,
+        "emit_fields": [
+            "emit_Ship_Level_Modifier"
+        ],
+        "special_attacks": [
+            [
+                "PARROT",
+                175
+            ],
+            {
+                "type": "gun",
+                "cooldown": 4,
+                "gun_type": "sairen_DD_Cannon",
+                "fake_skills": [
+                    [
+                        "gun",
+                        4
+                    ],
+                    [
+                        "pistol",
+                        4
+                    ]
+                ],
+                "ranges": [
+                    [
+                        0,
+                        25,
+                        "DEFAULT"
+                    ]
+                ]
+            }
+        ],
+        "flags": [
+            "SEES",
+            "HEARS",
+            "NO_BREATHE",
+            "FIREPROOF",
+            "ACIDPROOF",
+            "PRIORITIZE_TARGETS",
+            "RANGED_ATTACKER"
+        ]
+    },
+    {
+        "id": "emit_Ship_Level_Modifier",
+        "type": "emit",
+        "field": "fd_Ship_Aircraft_Level_Up",
+        "qty": 1,
+        "intensity": 1,
+        "chance": 100
+    },
+    {
+        "id": "fd_Ship_Aircraft_Level_Up",
+        "type": "field_type",
+        "intensity_levels": [
+            {
+                "name": "...",
+                "color": "black",
+                "effects": [
+                    {
+                        "effect_id": "Effect_Ship_Aircraft_Level_Up",
+                        "body_part": "torso",
+                        "min_duration": "60 seconds",
+                        "max_duration": "60 seconds"
+                    }
+                ]
+            }
+        ],
+        "priority": -1,
+        "half_life": "1 seconds",
+        "phase": "gas",
+        "display_items": true,
+        "display_field": false
+    },
+    {
+        "type": "effect_type",
+        "id": "Effect_Ship_Aircraft_Level_Up",
+        "name": [
+            "飞机提升效果"
+        ],
+        "desc": [
+            "飞机提升效果"
+        ],
+        "rating": "good",
+        "enchantments": [
+            {
+                "values": [
+                    {
+                        "value": "RANGED_DAMAGE",
+                        "add": 10000
+                    }
+                ]
+            }
+        ]
+    }
+]
