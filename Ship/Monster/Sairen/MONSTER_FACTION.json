@@ -18,7 +18,8 @@
             "attack_player_only",
             "nether_player_hate",
             "nether_hate_humans",
-            "zombie"
+            "zombie",
+            "Siren"
         ]
     }
 ]

@@ -1,7 +1,6 @@
 [
     {
         "id": "Ship_Grumman_F4F_Wildcat",
-        "type": "MONSTER",
         "name": {
             "str": "F4F野猫"
         },
@@ -26,9 +25,6 @@
         "aggression": -100,
         "morale": 100,
         "luminance": 1,
-        "emit_fields": [
-            "emit_Ship_Level_Modifier"
-        ],
         "special_attacks": [
             [
                 "PARROT",
@@ -85,7 +81,6 @@
                 "effects": [
                     {
                         "effect_id": "Effect_Ship_Aircraft_Level_Up",
-                        "body_part": "torso",
                         "min_duration": "60 seconds",
                         "max_duration": "60 seconds"
                     }
@@ -99,6 +94,7 @@
         "display_field": false
     },
     {
+        "//": "emit是骗局！！！！！！！！！",
         "type": "effect_type",
         "id": "Effect_Ship_Aircraft_Level_Up",
         "name": [
@@ -113,7 +109,7 @@
                 "values": [
                     {
                         "value": "RANGED_DAMAGE",
-                        "add": 10000
+                        "add": 100000
                     }
                 ]
             }
