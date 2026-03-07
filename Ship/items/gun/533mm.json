@@ -1,0 +1,68 @@
+[
+  {
+    "id": "533mm_Quintuple_Torpedo_Mount_T1",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "三联装533mm口径鱼雷发射器舰装T1" },
+    "description": "三联装533mm口径鱼雷发射器舰装T1",
+    "weight": "100 g",
+    "volume": "30 ml",
+    "price": "1000000 USD",
+    "to_hit": { "grip": "weapon", "length": "long", "surface": "every", "balance": "good" },
+    "melee_damage": { "bash": 100, "stab": 0, "cut": 0 },
+    "material": [ "steel" ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [ "533mm" ],
+    "skill": "rifle",
+    "dispersion": 0,
+    "durability": 10,
+    "barrel_volume": "250 ml",
+    "flags": [
+      "NEVER_JAMS",
+      "NO_DROP",
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USES_BIONIC_POWER",
+      "BIONIC_GUN"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [ "533mm_caliber_torpedo_ammunition_bay" ]
+      }
+    ]
+  },
+  {
+    "id": "533mm_Quintuple_Torpedo_Mount_T1_1",
+    "copy-from": "533mm_Quintuple_Torpedo_Mount_T1",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "三联装533mm口径鱼雷发射器舰装T1+1" },
+    "description": "三联装533mm口径鱼雷发射器舰装T1+1",
+    "melee_damage": { "bash": 105, "stab": 0, "cut": 0 }
+  },
+  {
+    "id": "533mm_Quintuple_Torpedo_Mount_T1_2",
+    "copy-from": "533mm_Quintuple_Torpedo_Mount_T1",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "三联装533mm口径鱼雷发射器舰装T1+2" },
+    "description": "三联装533mm口径鱼雷发射器舰装T1+2",
+    "melee_damage": { "bash": 110, "stab": 0, "cut": 0 }
+  },
+  {
+    "id": "533mm_Quintuple_Torpedo_Mount_T1_3",
+    "copy-from": "533mm_Quintuple_Torpedo_Mount_T1",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "三联装533mm口径鱼雷发射器舰装T1+3" },
+    "description": "三联装533mm口径鱼雷发射器舰装T1+3",
+    "melee_damage": { "bash": 115, "stab": 0, "cut": 0 }
+  }
+]

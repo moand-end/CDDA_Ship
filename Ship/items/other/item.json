@@ -1,0 +1,59 @@
+[
+  {
+    "type": "ITEM",
+    "id": "Laffey_Full_body_pillow",
+    "name": { "str": "拉菲等身抱枕" },
+    "description": "一个比人还大的拉菲抱枕，抱着她睡一定很舒服吧！",
+    "category": "other",
+    "material": [ "cotton" ],
+    "weight": "2000 g",
+    "volume": "40 L",
+    "longest_side": "155 cm",
+    "price": "600 USD",
+    "price_postapoc": "20 USD",
+    "symbol": "s",
+    "color": "white",
+    "flags": [ "SLEEP_AID" ]
+  },
+  {
+    "id": "petroleum",
+    "type": "ITEM",
+    "category": "other",
+    "name": { "str": "石油" },
+    "description": "黑漆漆的石油，液体黄金。",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "material": [ "petroleum" ],
+    "symbol": "$",
+    "color": "yellow",
+    "use_action": { "target": "petroleum_food", "moves": 0, "type": "transform" }
+  },
+  {
+    "id": "Supplies",
+    "type": "ITEM",
+    "category": "other",
+    "name": { "str": "物资" },
+    "description": "各种物资的统称，用处巨大，哪里都需要用到它~",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "material": [ "steel" ],
+    "symbol": "$",
+    "color": "yellow"
+  },
+  {
+    "id": "Purity_head",
+    "type": "ITEM",
+    "category": "other",
+    "name": { "str_sp": "净化者的头" },
+    "description": "一颗由净化者掉落的头，或许我们可以做一些有趣的事情。",
+    "weight": "4000 g",
+    "volume": "2 L",
+    "symbol": ";",
+    "color": "light_cyan",
+    "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ "EOC_Purity_head_use_determine" ] }
+  }
+]

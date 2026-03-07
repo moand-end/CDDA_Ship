@@ -1,0 +1,9 @@
+[
+  {
+    "type": "SPECIES",
+    "id": "SIREN",
+    "description": "a Siren",
+    "footsteps": "mechanical whirring.",
+    "bleeds": "fd_mechanical_fluid"
+  }
+]

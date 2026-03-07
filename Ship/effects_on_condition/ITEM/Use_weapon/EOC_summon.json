@@ -1,0 +1,104 @@
+[
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_Fighter",
+        "effect": [
+            {
+                "u_message": "你召唤了<u_val:Ship_Fighter_count>架战斗机！"
+            },
+            {
+                "u_spawn_monster": "Ship_Grumman_F4F_Wildcat",
+                "real_count": {
+                    "math": [
+                        "u_Ship_Fighter_count"
+                    ]
+                },
+                "min_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_min_radius"
+                    ]
+                },
+                "max_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_max_radius"
+                    ]
+                }
+            },
+            {
+                "math": [
+                    "u_Ship_Aircraft_count",
+                    "-=",
+                    "u_Ship_Fighter_count"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_DiveBomber",
+        "effect": [
+            {
+                "u_message": "你召唤了<u_val:Ship_DiveBomber_count>架轰炸机！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": {
+                    "math": [
+                        "u_Ship_DiveBomber_count"
+                    ]
+                },
+                "min_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_min_radius"
+                    ]
+                },
+                "max_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_max_radius"
+                    ]
+                }
+            },
+            {
+                "math": [
+                    "u_Ship_Aircraft_count",
+                    "-=",
+                    "u_Ship_DiveBomber_count"
+                ]
+            }
+        ]
+    },
+    {
+        "type": "effect_on_condition",
+        "id": "EOC_summon_TorpedoBomber",
+        "effect": [
+            {
+                "u_message": "你召唤了<u_val:Ship_TorpedoBomber_count>架鱼雷机！"
+            },
+            {
+                "u_spawn_monster": "Purity_1",
+                "real_count": {
+                    "math": [
+                        "u_Ship_TorpedoBomber_count"
+                    ]
+                },
+                "min_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_min_radius"
+                    ]
+                },
+                "max_radius": {
+                    "math": [
+                        "u_Ship_Aircraft_spawn_max_radius"
+                    ]
+                }
+            },
+            {
+                "math": [
+                    "u_Ship_Aircraft_count",
+                    "-=",
+                    "u_Ship_TorpedoBomber_count"
+                ]
+            }
+        ]
+    }
+]

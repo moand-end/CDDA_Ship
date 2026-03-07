@@ -1,0 +1,240 @@
+[
+  {
+    "id": "New_Jersey_cos",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": "新泽西cos服",
+    "description": "新泽西cos服。",
+    "weight": "2000 g",
+    "volume": "2 L",
+    "price": "100 USD",
+    "price_postapoc": "10 USD",
+    "symbol": "*",
+    "color": "light_red",
+    "material": [ "cotton" ],
+    "material_thickness": 2,
+    "environmental_protection": 2,
+    "armor": [
+      {
+        "coverage": 50,
+        "encumbrance": 5,
+        "covers": [ "leg_l", "leg_r", "torso", "arm_l", "arm_r", "hand_l", "hand_r", "head", "foot_l", "foot_r", "mouth", "eyes" ]
+      }
+    ],
+    "warmth": 0,
+    "flags": [ "VARSIZE", "PADDED" ]
+  },
+  {
+    "id": "Laffey_shirt",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": "拉菲的衬衫",
+    "description": "拉菲的衬衫",
+    "weight": "2000 g",
+    "volume": "2 L",
+    "price": "100 USD",
+    "price_postapoc": "10 USD",
+    "symbol": "*",
+    "color": "white",
+    "warmth": 5,
+    "material": [ "cotton" ],
+    "material_thickness": 0.1,
+    "flags": [ "VARSIZE", "SKINTIGHT", "PADDED", "UNBREAKABLE" ],
+    "armor": [
+      { "coverage": 90, "covers": [ "torso" ] },
+      {
+        "coverage": 100,
+        "covers": [ "arm_l", "arm_r" ],
+        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ]
+      },
+      { "coverage": 50, "covers": [ "arm_l", "arm_r" ], "specifically_covers": [ "arm_upper_l", "arm_upper_r" ] }
+    ]
+  },
+  {
+    "id": "Laffey_cloth",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "拉菲的衣服" },
+    "description": "拉菲的衣服",
+    "weight": "580 g",
+    "volume": "2250 ml",
+    "price": "25 USD",
+    "price_postapoc": "1 USD",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "armor": [
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 95, "encumbrance": 1 },
+      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 85 },
+      { "covers": [ "arm_l", "arm_r" ], "coverage": 100 }
+    ],
+    "warmth": 15,
+    "material_thickness": 0.25,
+    "flags": [ "VARSIZE", "POCKETS", "OUTER", "UNBREAKABLE" ]
+  },
+  {
+    "id": "Laffey_skirt",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "拉菲的裙子" },
+    "description": "拉菲的裙子",
+    "weight": "115 g",
+    "volume": "250 ml",
+    "price": "30 USD",
+    "price_postapoc": "10 cent",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "pink",
+    "material_thickness": 0.5,
+    "flags": [ "VARSIZE", "SKINTIGHT", "UNBREAKABLE" ],
+    "armor": [ { "coverage": 80, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] } ]
+  },
+  {
+    "id": "Laffey_stockings",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "拉菲的丝袜" },
+    "description": "拉菲的丝袜。",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 0.1,
+    "flags": [ "VARSIZE", "SKINTIGHT", "UNBREAKABLE" ],
+    "armor": [
+      { "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ],
+        "coverage": 100
+      },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 60 }
+    ]
+  },
+  {
+    "id": "New_Jersey_clothes",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "新泽西的服装" },
+    "description": "新泽西的服装。",
+    "weight": "600 g",
+    "volume": "500 ml",
+    "price": "25 USD",
+    "price_postapoc": "50 cent",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 20,
+    "material_thickness": 0.1,
+    "flags": [ "VARSIZE", "SKINTIGHT", "WATER_FRIENDLY" ],
+    "armor": [
+      { "coverage": 100, "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ] }
+    ]
+  },
+  {
+    "id": "Enterprise_Navy_cap",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": "企业的海军帽",
+    "description": "拉菲的衬衫",
+    "weight": "2000 g",
+    "volume": "2 L",
+    "price": "100 USD",
+    "price_postapoc": "10 USD",
+    "symbol": "*",
+    "color": "white",
+    "warmth": 5,
+    "material": [ "cotton" ],
+    "material_thickness": 0.1,
+    "flags": [ "VARSIZE", "PADDED", "UNBREAKABLE" ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [ "head" ],
+        "specifically_covers": [ "head_forehead", "head_crown", "head_nape", "head_ear_r", "head_ear_l" ]
+      }
+    ]
+  },
+  {
+    "id": "Enterprise_stockings",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "企业的丝袜" },
+    "description": "企业的丝袜",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [ "cotton" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 10,
+    "material_thickness": 0.1,
+    "flags": [ "VARSIZE", "SKINTIGHT", "UNBREAKABLE" ],
+    "armor": [
+      { "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ],
+        "coverage": 100
+      },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 60 }
+    ]
+  },
+  {
+    "id": "Enterprise_shoe",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "name": { "str": "企业的长筒靴" },
+    "description": "企业的长筒靴",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [ "leather" ],
+    "symbol": "[",
+    "color": "white",
+    "warmth": 20,
+    "material_thickness": 2,
+    "environmental_protection": 2,
+    "flags": [ "VARSIZE", "UNBREAKABLE", "WATERPROOF" ],
+    "armor": [
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
+        "material": [
+          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
+          { "type": "rubber", "covered_by_mat": 100, "thickness": 4 }
+        ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      {
+        "covers": [ "foot_l", "foot_r" ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2 } ],
+        "coverage": 100
+      },
+      {
+        "covers": [ "leg_l", "leg_r" ],
+        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ],
+        "coverage": 100,
+        "encumbrance": 1
+      },
+      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 60 }
+    ]
+  }
+]

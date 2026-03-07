@@ -1,0 +1,472 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_Flight_deck",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_Fighter_Stting_Settings",
+          "EOC_summon_DiveBomber_Settings",
+          "EOC_summon_TorpedoBomber_Settings",
+          "EOC_summon_Settings",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤战斗机",
+          "召唤轰炸机",
+          "召唤鱼雷机",
+          "召唤设置",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>\n生成距离:<u_val:Ship_Aircraft_spawn_min_radius>/<u_val:Ship_Aircraft_spawn_max_radius>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_Settings",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_Fighter_Stting_1",
+          "EOC_summon_Fighter_Stting_All",
+          "EOC_summon_Fighter_Stting_Customize",
+          "EOC_Flight_deck",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤一架战斗机",
+          "召唤全部战斗机",
+          "召唤自定义战斗机",
+          "返回",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_DiveBomber_Settings",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_DiveBomber_Stting_1",
+          "EOC_summon_DiveBomber_Stting_All",
+          "EOC_summon_DiveBomber_Stting_Customize",
+          "EOC_Flight_deck",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤一架轰炸机",
+          "召唤全部轰炸机",
+          "召唤自定义轰炸机",
+          "返回",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_TorpedoBomber_Settings",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_summon_TorpedoBomber_Stting_1",
+          "EOC_summon_TorpedoBomber_Stting_All",
+          "EOC_summon_TorpedoBomber_Stting_Customize",
+          "EOC_Flight_deck",
+          "EOC_Ship_end"
+        ],
+        "names": [
+          "召唤一架鱼雷机",
+          "召唤全部鱼雷机",
+          "召唤自定义鱼雷机",
+          "返回",
+          "关闭"
+        ],
+        "hide_failing": true,
+        "title": "姓名：<u_name>\n飞机数量:<u_val:Ship_Aircraft_count>/<u_val:Ship_Aircraft_count_max>"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Settings",
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Aircraft_spawn_max_radius",
+          "=",
+          " num_input('你想要召唤最大距离是多少?',5)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Aircraft_spawn_max_radius",
+            ">",
+            "25"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Aircraft_spawn_max_radius",
+              "=",
+              "25"
+            ]
+          }
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Aircraft_spawn_max_radius",
+            "<",
+            "1"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Aircraft_spawn_max_radius",
+              "=",
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "math": [
+          "u_Ship_Aircraft_spawn_min_radius",
+          "=",
+          " num_input('你想要召唤最小距离是多少?',2)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Aircraft_spawn_min_radius",
+            "<",
+            "1"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Aircraft_spawn_min_radius",
+              "=",
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Aircraft_spawn_min_radius",
+            ">",
+            "u_Ship_Aircraft_spawn_max_radius"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Aircraft_spawn_min_radius",
+              "=",
+              "u_Ship_Aircraft_spawn_max_radius"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_1",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          "=",
+          "1"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_All",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          "=",
+          "u_Ship_Aircraft_count"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_Fighter_Stting_Customize",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_Fighter_count",
+          "=",
+          " num_input('你要启动多少架战斗机?',1)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_Fighter_count",
+            ">",
+            "u_Ship_Aircraft_count"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_Fighter_count",
+              "=",
+              "u_Ship_Aircraft_count"
+            ]
+          }
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_Fighter"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_DiveBomber_Stting_1",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_DiveBomber_count",
+          "=",
+          "1"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_DiveBomber"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_DiveBomber_Stting_All",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_DiveBomber_count",
+          "=",
+          "u_Ship_Aircraft_count"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_DiveBomber"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_DiveBomber_Stting_Customize",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_DiveBomber_count",
+          "=",
+          " num_input('你要启动多少架轰炸机?',1)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_DiveBomber_count",
+            ">",
+            "u_Ship_Aircraft_count"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_DiveBomber_count",
+              "=",
+              "u_Ship_Aircraft_count"
+            ]
+          }
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_DiveBomber"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_TorpedoBomber_Stting_1",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_TorpedoBomber_count",
+          "=",
+          "1"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_TorpedoBomber"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_TorpedoBomber_Stting_All",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_TorpedoBomber_count",
+          "=",
+          "u_Ship_Aircraft_count"
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_TorpedoBomber"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_summon_TorpedoBomber_Stting_Customize",
+    "condition": {
+      "math": [
+        "u_Ship_Aircraft_count",
+        ">",
+        "0"
+      ]
+    },
+    "effect": [
+      {
+        "math": [
+          "u_Ship_TorpedoBomber_count",
+          "=",
+          " num_input('你要启动多少架鱼雷机?',1)"
+        ]
+      },
+      {
+        "if": {
+          "math": [
+            "u_Ship_TorpedoBomber_count",
+            ">",
+            "u_Ship_Aircraft_count"
+          ]
+        },
+        "then": [
+          {
+            "math": [
+              "u_Ship_TorpedoBomber_count",
+              "=",
+              "u_Ship_Aircraft_count"
+            ]
+          }
+        ]
+      },
+      {
+        "run_eocs": "EOC_summon_TorpedoBomber"
+      }
+    ]
+  }
+]
