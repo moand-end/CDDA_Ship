@@ -1,0 +1,24 @@
+[
+  {
+    "id": "petroleum_food",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
+    "comestible_type": "FOOD",
+    "name": { "str": "石油" },
+    "description": "石油，好喝！",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "spoils_in": 0,
+    "stim": 40,
+    "quench": 30,
+    "healthy": 1,
+    "calories": 500,
+    "fun": 5,
+    "symbol": "$",
+    "color": "yellow",
+    "use_action": [ "PETFOOD" ],
+    "petfood": [ "JNFOOD" ]
+  }
+]

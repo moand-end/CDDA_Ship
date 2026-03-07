@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MONSTER_FACTION",
+    "name": "Siren"
+  },
+  {
+    "type": "MONSTER_FACTION",
+    "name": "Ship_Aircraft",
+    "base_faction": "player",
+    "hate": [ "attack_player_only", "nether_player_hate", "nether_hate_humans", "zombie", "Siren" ]
+  }
+]
